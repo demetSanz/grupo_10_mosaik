@@ -4,7 +4,7 @@
 * Pedro Clementi (38)
 * Nahuel Gonzalez (37)
 * Luis Crescente (26)
-* Carlos Salvucci
+* Carlos Salvucci (25)
 * Elias Sanchez (37)
 
 ## Proyecto integrador Marketplace "Mosaik"
