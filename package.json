@@ -1,0 +1,22 @@
+{
+  "name": "grupo_10_mosaik",
+  "version": "1.0.0",
+  "description": "Proyecto integrador del grupo 10 de DH",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demetSanz/grupo_10_mosaik.git"
+  },
+  "author": "Grupo 10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demetSanz/grupo_10_mosaik/issues"
+  },
+  "homepage": "https://github.com/demetSanz/grupo_10_mosaik#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
