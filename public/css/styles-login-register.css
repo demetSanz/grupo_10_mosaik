@@ -1,0 +1,361 @@
+/*Estilos Generales*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin-top: 80px;
+    }
+
+p{
+    font-size: 12px;
+}
+
+
+li{
+    font-size: 12px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*Estilos del HEADER*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #FFCCCC;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 10;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.logo{
+    height: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+
+.mosaik-logo1{
+    
+    height: 80px;
+    width: 100px;
+}
+
+.mosaik-logo2{
+    display: none;
+}
+
+.menu{
+    height: 80px;
+    margin-right: 120px;
+    display: none;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;    
+}
+
+.menu nav ul li a:hover{
+    color: #0c6ab0;    
+}
+
+.menu nav ul li a i{
+    display: none;
+}
+
+.fa-user,
+.fa-shopping-cart{
+    font-size: 30px;
+    color: black;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #fafafa;
+    border-radius: 100%;
+    color: #787878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+
+/*ESTILOS MAIN*/
+
+main{
+    padding: 20px 5px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+/*FORMULARIO*/
+
+.contenedor-formularios{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.contenedor-formularios p{
+    font-size: 14px;
+    color: black;
+}
+
+
+
+.create-form{
+    padding: 50px 15px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    background-color: #ebebeb;
+    border-top: 1px solid #ebebeb;
+    
+}
+
+.create-form .titulo-form{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.create-form .titulo-form h3{
+    font-size: 20px;
+    color: red;
+}
+
+.create-form .titulo-form .title-bar{
+    color: black;
+}
+
+.create-form .titulo-form a{
+    color: black;
+    text-decoration: underline;
+}
+
+.control-formulario{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.control-formulario .label-title{
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
+
+}
+
+.control-formulario .selector-radio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+
+
+.control-formulario .elecciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.control-formulario .elecciones label{
+    margin-bottom: 20px;
+}
+
+
+.control{
+    width: 70%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton-centrado{
+    text-align: center;
+}
+
+.boton-formulario{
+    background-color: #FF6666;
+    width: 50%;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
+.boton-registro,
+.boton-borrado{
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: right;
+}
+
+.boton-registro{
+    background-color: #FF6666;    
+    
+}
+
+
+.boton-borrado{
+    background-color: #e79d12c9;
+}
+
+.boton-formulario:hover,
+.boton-registro:hover{
+    background-color: #ff66665e;
+    cursor: pointer;
+}
+
+.boton-borrado:hover{
+    background-color: #aa5b00;
+    cursor: pointer;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.no-user{
+    text-align: center;
+}
+
+.no-user a{
+    color: #FF6666;
+    font-weight: bold;
+}
+
+
+/*Media Queries*/
+
+@media screen and (min-width:481px){
+
+    .mosaik-logo2{
+        display: flex;
+
+    }
+
+    main{
+        padding: 20px;
+        max-width: 769px;
+    }
+
+    .contenedor-formularios{
+        width: 481px;
+    }
+
+
+}
+
+
+
+@media screen and (min-width:769px){
+
+    .menu{
+        display: flex;
+    }
+
+    #icon-menu{
+        display: none;
+    }
+
+    .contenedor-formularios{
+        width: 100%;
+    }
+}

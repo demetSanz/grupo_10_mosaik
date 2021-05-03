@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+
+    <body class="container">
+
+        <header>
+            <%- include('./partials/header-login'); %>
+        </header>
+            
+        <main>
+
+            <!--Formularios-->
+            <div class="contenedor-formularios">
+
+                <form action="/" method="GET" class="create-form">
+                    
+                    <div class="titulo-form">
+                        
+                        <h3>Registrate</h3>
+
+                        <h3 class="title-bar">|</h3>
+                        
+                        <h3><a href="/login.ejs">Ingresá</a></h3>
+                        
+                    </div>
+                
+                    <div class="control-formulario">
+                        <input type="text" name="usuario" placeholder="Ingresá tu e-mail" class="control" required>
+                    </div>
+
+                    <div class="control-formulario">
+                        
+                        <input type="password" name="password" placeholder="Elegí tu contraseña" class="control" required>
+                    </div>
+
+                    <div class="control-formulario">
+                        
+                        <input type="password" name="password" placeholder="Repetí la contraseña" class="control" required>
+                    </div>
+                    
+                    <div class="boton-centrado">
+                    <button type="submit" class="boton-formulario">Creá tu cuenta</button>
+                    </div>
+
+                    <div class="no-user">
+                        <p>¿Ya tenés una cuenta? ¡Hacé clic <a href="/login.ejs">aquí</a>!</p>
+                    </div>
+
+            </form>
+
+            </div>
+        
+        </main>
+
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+
+    </body>
+</html>
