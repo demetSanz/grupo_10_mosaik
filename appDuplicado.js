@@ -7,6 +7,9 @@ const port = 3003; // Colocamos el puerto en una constante para que pueda modifi
 app.use(
     express.static(path.resolve(__dirname, 'public'))
     );
+    app.use(
+        express.static(path.resolve(__dirname, '/public/images'))
+        );
     
 
 // Advertimos en la consola que el servidor se encuentra activo sobre el puerto determinado en la constante 'port'
