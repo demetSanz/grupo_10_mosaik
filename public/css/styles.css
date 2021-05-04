@@ -994,3 +994,145 @@ main{
 }
 
 /* ESTILOS DETALLES DE PRODUCTO FIN */
+
+/* ESTILOS ELIAS*/
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-elias {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+.slide1 {
+    width: 100%;
+    padding: 0;
+}
+
+/*Seccion Home de 4 valores*/
+
+.home-valores{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+/* .img-elias {
+    width: 100px;
+    height: 100px;
+} */
+
+.valores i {
+    font-size: 50px;
+    color: goldenrod; /*estilo de 4 iconos de valores*/
+}
+
+.valores i:hover{ /*efecto color rojo sobre iconos home*/
+    color:red;
+}
+
+.tarjeta-valores {
+    width: 120px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.nombre-valor{
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+/*Estilo de Home Promociones*/
+
+.home-promociones{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.promo{
+    padding: 0;
+    margin: 0;
+    border-radius: 0.188em;
+}
+
+.promociones{
+    width: 45%;
+    margin: 5px;
+}
+
+.promociones:hover{
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.promociones img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Seccion Home Lo Mas Visto*/
+
+.titular{
+    color: red;
+}
+
+.seccion-mas-visto{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.producto-elias{
+    position: relative;
+    border-radius: 5%;
+    padding-top: 5px;
+}
+
+.producto-elias:hover{
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.producto-descripcion{
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.precio-elias{
+    font-weight: bold;
+}
+
+.medidas{
+    font-size: 10px;
+    color: gray;
+}
+
+.producto-descripcion i {
+    color: red;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    
+}
+
+.producto-descripcion i:hover {
+    color: gray;
+}
+
+/* FIN ESTILOS ELIAS*/
