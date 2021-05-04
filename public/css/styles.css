@@ -15,7 +15,7 @@ html, body {
     font-family: sans-serif;
     font-size: 1em;
     line-height: 1.5;
-    background: #FED0D1;
+    background: #FFD4C5;
 }
 
 .sr-only {
@@ -994,3 +994,90 @@ main{
 }
 
 /* ESTILOS DETALLES DE PRODUCTO FIN */
+
+
+/*FOOTER*/
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: black;
+    }
+    
+    .footer > * {
+    flex:  1 100%;
+    }
+    
+    .l-footer {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+    text-align: -webkit-center;
+    }
+    
+    h2 {
+    font-weight: 400;
+    font-size: 15px;
+    }
+    
+    .footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+    
+    .footer li {
+    line-height: 2em;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    }
+    
+    .r-footer {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    
+    .r-footer > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+    }
+    
+    .box a {
+    color: #999;
+    }
+    
+    .h-box {
+    column-count: 2;
+    column-gap: 1.25em;
+    }
+    
+    .b-footer {
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+    }
+    
+    .l-footer p {
+    padding-right: 20%;
+    color: #999;
+    }   
+    
+    @media screen and (min-width: 600px) {
+    .r-footer > * {
+    flex: 1;
+    }
+    
+    .features {
+    flex-grow: 2;
+    }
+    
+    .l-footer {
+    flex: 1 0px;
+    }
+    
+    .r-footer {
+    flex: 2 0px;
+    }
+    }
+    /*FIN DEL FOOTER*/
