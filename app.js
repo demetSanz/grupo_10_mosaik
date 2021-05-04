@@ -35,3 +35,7 @@ app.get('/register.ejs', function(req, res) {
 app.get('/carrito.ejs', function(req, res) {
     res.render('carrito');
 });
+
+app.get('/detalle-de-producto.ejs', function(req, res) {
+    res.render('detalle-de-producto');
+});
