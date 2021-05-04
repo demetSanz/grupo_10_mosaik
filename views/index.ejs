@@ -6,15 +6,125 @@
 <body>
     <%- include('./partials/header'); %>
 
-    <main>
-        <!-- INICIO DEL CONTENIDO DE CADA PAGINA -->
-        <h1>
-            INICIO DEL MAIN
-            </h1>
-            <p>
-            CHICOS: ACA tienen que poner el Contenido 
-            </p>
-            <!-- FIN DEL CONTENIDO DE CADA PAGINA -->
+    <main class="main-elias">
+        
+        <!--Main-Banner Slider-->
+        
+        <div class="main-banner">
+          <a href="#">  
+            <img class="slide1" src="./images/banner3.jpg">
+          </a>
+        </div>
+
+        <!--4 Valores Destacados horizontal-->
+
+        <section class="home-valores">
+        
+          <article class="valores">
+              <i class="fas fa-award"></i>
+              <div class="tarjeta-valores">
+                  <p class="nombre-valor">Calidad</p>
+                  <p class="texto-valor">Aseguramos la mejora calidad de insumos.</p>
+
+              </div>
+          </article>
+
+          <article class="valores">
+            <i class="fas fa-concierge-bell"></i>
+              <div class="tarjeta-valores">
+                <p class="nombre-valor">Servicio</p>
+                <p class="texto-valor">24/7 un asesor disponible para su obra.</p>
+              </div>
+          </article>
+
+          <article class="valores">
+            <i class="fas fa-hands-helping"></i>
+            <div class="tarjeta-valores">
+              <p class="nombre-valor">Asoramiento</p>
+              <p class="texto-valor">Nuestros expertos lo ayudan a tomar decisiones.</p>
+            </div>
+          </article>
+
+          <article class="valores">
+            <i class="fas fa-tools"></i>
+            <div class="tarjeta-valores">
+              <p class="nombre-valor">Instalación</p>
+              <p class="texto-valor">Todos nuestros productos, colocados llave en mano.</p>
+            </div>
+          </article>
+        </section>
+        
+        <!--4 Promociones en Home-->
+
+        <section class="home-promociones">
+
+          <div class="promociones">
+            <a href="/">
+              <img class="promo" src="/images/Especial-calefacción.jpeg">
+            </a>
+          </div>
+          <div class="promociones">
+            <a href="/">
+              <img class="promo" src="/images/Especial-calefacción.jpeg">
+            </a>
+          </div>
+          <div class="promociones">
+            <a href="/">
+              <img class="promo" src="/images/Especial-calefacción.jpeg">
+            </a>
+          </div>
+          <div class="promociones">
+            <a href="/">
+              <img class="promo" src="/images/Especial-calefacción.jpeg">
+            </a>
+          </div>
+
+        </section>
+
+        <!--Seccion Lo Mas Visto-->
+
+        <h2 class="titular">Lo más Visto</h2>
+
+        <section class="seccion-mas-visto">
+          
+            <article class="producto-elias">
+                <img src='./images/mesada_johnson.jpg' class="img";>
+                <div class="producto-descripcion">
+                    <i class="fas fa-tags"></i>
+                    <p class="precio-elias">$49.999</p>
+                    <p class="medidas">40 cm x 180 cm</p>
+                    <p class="nombre-producto">Mesada Johnson</p>
+                </div>
+            </article>
+            <article class="producto-elias">
+              <img src='./images/mesada_johnson.jpg' class="img";>
+              <div class="producto-descripcion">
+                  <i class="fas fa-tags"></i>
+                  <p class="precio-elias">$49.999</p>
+                  <p class="medidas">40 cm x 180 cm</p>
+                  <p class="nombre-producto">Mesada Johnson</p>
+              </div>
+          </article>
+          <article class="producto-elias">
+            <img src='./images/mesada_johnson.jpg' class="img";>
+            <div class="producto-descripcion">
+                <i class="fas fa-tags"></i>
+                <p class="precio-elias">$49.999</p>
+                <p class="medidas">40 cm x 180 cm</p>
+                <p class="nombre-producto">Mesada Johnson</p>
+            </div>
+        </article>
+        <article class="producto-elias">
+          <img src='./images/mesada_johnson.jpg' class="img";>
+          <div class="producto-descripcion">
+              <i class="fas fa-tags"></i>
+              <p class="precio-elias">$49.999</p>
+              <p class="medidas">40 cm x 180 cm</p>
+              <p class="nombre-producto">Mesada Johnson</p>
+          </div>
+      </article>
+        </section>
+
     </main>
 
     <%- include('./partials/footer'); %>
