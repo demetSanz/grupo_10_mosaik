@@ -31,3 +31,7 @@ app.get('/login.ejs', function(req, res) {
 app.get('/register.ejs', function(req, res) {
     res.render('register');
 });
+
+app.get('/carrito.ejs', function(req, res) {
+    res.render('carrito');
+});

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+    <%- include('./partials/header'); %>
+
+    <main class="carrito-root">
+     
+
+
+        <!--Barra  de cabecera   / solo muestra los divs  en vista desktop-->
+        <section>
+         <div class="carrito-top-bar">
+            <div class="carrito-logo-top-bar"><img src="/images/mosaik-noblank.png" alt="loco pequeño"  width="40%"></div>
+            <div class="carrito-datos-bar"><p>Producto</p> </div>
+            <div class="carrito-datos-bar"> <p>Detalle</p> </div>
+            <div class="carrito-datos-bar"> <p>Cantidad</p> </div>           
+            <div class="carrito-datos-bar-total"> <p>Total</p> </div>
+           
+            <div class="carrito-icon"><i class="far fa-trash-alt"></i>
+            </div>
+        </div>
+        <!--  formulario  donde  se muestran los productos dentro del nuestro carrito (ul/li)-->
+        <form action="" method="get"  class="compras">
+           <ul class="compras-item">
+            <li> 
+                <!--plantilla de  muestra de producto-->
+                <article class="compras-producto">
+                    <figure class="compras-foto" ><img src="/images/mosaicos-c1.png" alt="imagen de producto" width="100%"></figure> 
+                    <span class="carrito-descripcion">  mosaico clementi</span>
+                    <!--se  agrega un input number para definir cantidad de compra (debemos modificarlo !!)-->
+                    <label for="cantidad">
+                         <input class="btn-cantidad" type="number" name="cantidad" id="compras"  min="1" value="1">
+                    </label>                    
+                    <P class="compras-total">$999999 </P>
+                    <!--Se agrega un boto de eliminar en cada producto-->
+                    <label class="carrito-eliminar" for="eliminar">
+                        <input class="btn-eliminar" type="button" value="eliminar"  name="eliminar" id="compras">
+                    </label>
+               
+                </article>
+                <!--*******************************-->
+            </li>
+            <li> 
+                <article class="compras-producto">
+                    <figure class="compras-foto" ><img src="/images/mosaico-c2.png" alt="imagen de producto" width="100%"></figure> 
+                    <span class="carrito-descripcion"> mosaico bautista</span>
+                    <label for="cantidad">
+                         <input class="btn-cantidad" type="number" name="cantidad" id="compras"  min="1" value="1">
+                    </label>                    
+                    <P class="compras-total">$999999 </P>
+                    
+                    <label class="eliminar" for="eliminar">
+                        <input class="btn-eliminar" type="button" value="eliminar"  name="eliminar" id="compras">
+                    </label>
+               
+                </article>
+            </li>
+           </ul>
+
+           <!--botones funcionalidad de carrito agregar/vaciar / calculo de envio  -->
+            <div class="carrito-btn">
+            <label class="btn-funcion" for="agregar">
+                <input type="button" value="Agregar Producto" name="agregar" id="compras">
+            </label>
+            <label class="btn-funcion" for="agregar">
+                <input type="button" value="Vaciar" name="vaciar" id="compras">
+            </label>
+            <!--botones en  area de confirmarcion de comprar-->
+            <div class="compras-resumen">          
+                
+                <div class="resumen-valores">  <label class="btn-resumen" for="envio">
+                    <input type="button" value="Envio" name="envio" id="compras">
+                </label>    <p>$11111</p> </div>
+                <div class="resumen-valores"> <p>Total</p>    <p>$22222</p> </div>
+                
+                <div><label class="btn-comprar" for="comprar">
+                    <input type="button" value="Comprar" name="comprar" id="compras">
+                </label>
+                </div>
+            </div>
+
+            </div>
+
+        </form>
+        
+         <!--****************************-->
+
+         
+
+     <!--imagen publicidad-->
+     <div class="carrito-publi">
+         <figure><img src="./images/carrito-publicidad.jpg" alt="imagen publicitaria" width="100%"></figure>
+     </div>
+     </main>
+
+    <%- include('./partials/footer'); %>
+</body>
+</html>
