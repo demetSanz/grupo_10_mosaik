@@ -15,7 +15,6 @@ html, body {
     font-family: sans-serif;
     font-size: 1em;
     line-height: 1.5;
-    color: #F34A4E;
     background: #FED0D1;
 }
 
@@ -82,9 +81,28 @@ img {
     padding: 20px;
     margin: 0 auto;
 }
+.logo{
+    height: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+
+.mosaik-logo1{
+    
+    height: 80px;
+    width: 100px;
+}
+
+.mosaik-logo2{
+    display: none;
+}
 .main-header .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -100,8 +118,252 @@ img {
     padding: .5em 1.5em;
 }
 
-@media (min-width:960px) {
+/* Dropdown Button */
+.dropbtn {
+    border: none;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #343534;
+    text-decoration: none;
+    background-color: white;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+
+@media screen and (min-width:481px){
+
+    .mosaik-logo2{
+        display: flex;
+
+    }
+
+    main{
+        padding: 20px;
+        max-width: 769px;
+    }
+    
+    .contenedor-formularios{
+        width: 481px;
+    }
+}
+
+/*ESTILOS MAIN*/
+
+main{
+    padding: 20px 5px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/*FORMULARIO*/
+
+.contenedor-formularios{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.contenedor-formularios p{
+    font-size: 14px;
+    color: black;
+}
+
+
+
+.create-form{
+    padding: 50px 15px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    background-color: #ebebeb;
+    border-top: 1px solid #ebebeb;
+    
+}
+
+.create-form .titulo-form{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.create-form .titulo-form h3{
+    font-size: 20px;
+    color: red;
+}
+
+.create-form .titulo-form .title-bar{
+    color: black;
+}
+
+.create-form .titulo-form a{
+    color: black;
+    text-decoration: underline;
+}
+
+.control-formulario{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.control-formulario .label-title{
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
+
+}
+
+.control-formulario .selector-radio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+
+
+.control-formulario .elecciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.control-formulario .elecciones label{
+    margin-bottom: 20px;
+}
+
+
+.control{
+    width: 70%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton-centrado{
+    text-align: center;
+}
+
+.boton-formulario{
+    background-color: #FF6666;
+    width: 50%;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
+.boton-registro,
+.boton-borrado{
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: right;
+}
+
+.boton-registro{
+    background-color: #FF6666;    
+    
+}
+
+
+.boton-borrado{
+    background-color: #e79d12c9;
+}
+
+.boton-formulario:hover,
+.boton-registro:hover{
+    background-color: #ff66665e;
+    cursor: pointer;
+}
+
+.boton-borrado:hover{
+    background-color: #aa5b00;
+    cursor: pointer;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.no-user{
+    text-align: center;
+}
+
+.no-user a{
+    color: #FF6666;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width:769px){
+
+    .menu{
+        display: flex;
+    }
+
+    #icon-menu{
+        display: none;
+    }
+
+    .contenedor-formularios{
+        width: 100%;
+    }
     .main-header .container {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
