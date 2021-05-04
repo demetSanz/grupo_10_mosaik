@@ -410,7 +410,7 @@ main{
    
 }
 .carrito-top-bar div{
-     width: 25%;
+     width: 20%;
          
 }
 
@@ -540,6 +540,9 @@ main{
     justify-content: space-between;
 }
 
+.carrito-publi{
+    margin-top: 20px;
+}
 /******************************************/
 
 
@@ -632,10 +635,21 @@ main{
     .resumen-valores p{
         padding: 5px;
         font-size: 15px;
-    }  
+    } 
+    .compras-item {
+        width: 80%;
+        margin-left: 25px;
+        margin-top: 10px;
+    } 
 }
 
 @media(min-width: 769px){
+   .compras-item{
+     width: 80%;
+    margin-left: 60px;
+    margin-top: 10px;
+   }
+   
     .carrito-top-bar{
         width: 90%;
         margin-left: 40px;
