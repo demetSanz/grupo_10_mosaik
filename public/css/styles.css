@@ -401,7 +401,7 @@ main{
 /* estilo de  barra top*/
 .carrito-top-bar{
     display: flex; 
-    background-color: #FF6666; 
+    background-color: #e40606; 
     color: white;
     justify-content: space-around;
     
@@ -476,7 +476,7 @@ main{
     border: none;
     margin-top: 8px;
     background-color:white;;
-    color:#FF6666;
+    color:#e40606;
     font-size: 16px;
     cursor:pointer;
     transition: all 650ms; 
@@ -508,7 +508,7 @@ main{
     border: none;
     margin: 0px;
     background-color:white;;
-    color:#fd4b15;
+    color:#e40606;
     font-size: 15px;
     cursor:pointer;
     transition: all 650ms;
@@ -517,7 +517,7 @@ main{
 
 .btn-comprar input{
     cursor: pointer;
-    background-color:  #FF6666;
+    background-color:  #e40606;
     color: white;   
     width: 100%;
     padding: 8px;
@@ -540,6 +540,7 @@ main{
     justify-content: space-between;
 }
 
+
 .carrito-publi{
     margin-top: 20px;
 }
@@ -555,17 +556,20 @@ main{
     }
    .compras-foto{
        margin: 0px;
+      padding: 10px;
    }
    .compras-producto{
        flex-wrap: wrap;
        padding: 5px;
+       justify-content: space-around;
+
    }
    
    .compras-foto, .carrito-descripcion{
        width: 48%;
     }
     .resumen-valores p{
-        padding: 5px;
+        padding: 5px 5px 5px 0px;
         font-size: 15px;
     }  
     .carrito-btn{
@@ -613,14 +617,19 @@ main{
         display: none;
     }
 
-    
+    .carrito-top-bar{
+        justify-content: flex-start;
+    }
+    .carrito-top-bar img{
+        width: 20%;
+    }
     .carrito-icon i{
         display: none;
     }
     .carrito-datos-bar-detalle{
         display: none;
         }
-        .carrito-datos-bar-cantidad{
+     .carrito-datos-bar-cantidad{
            display: none;
         }
     
@@ -633,7 +642,7 @@ main{
         flex-direction: column;
     }
     .resumen-valores p{
-        padding: 5px;
+        padding: 5px 5px 5px 0px;
         font-size: 15px;
     } 
     .compras-item {
@@ -699,7 +708,7 @@ main{
     
     }
     .carrito-datos-bar{
-       background-color: #FF6666;
+       background-color: #e40606;
     }
     
 }
