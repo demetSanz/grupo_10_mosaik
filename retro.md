@@ -29,3 +29,28 @@
 * Procrastinar tareas hasta el cierre del sprint
 
 
+# Retrospectiva Sprint 2
+
+## Que hicimos bien
+
+* Continuamos distribuyendo de forma adecuada el trabajo a realizar
+* Realizamos instancias de colaboracion entre los integrantes para cumplir los distintos objetivos
+
+## Que podemos mejorar
+
+* No logramos dejar de procrastinar tareas
+* El ritmo de actualización en Trello, para que no quede para el final
+* Darle una mayor impronta al diseño grafico y los estilos del sitio
+
+
+## Deberiamos empezar a 
+
+* Trabajar en el diseño grafico del sitio
+* Trabajar en la estilización del sitio acorde a lo envisionado en los Wireframes
+* Ampliar los canales de comunicación dentro de los integrantes del equipo
+
+
+## Deberiamos dejar de hacer
+
+* Procrastinar tareas hasta el cierre del sprint
+* Hacer más eficiente la organizacion individual de los tiempos para el trabajo
