@@ -729,6 +729,9 @@ main{
   /*MOBILE*/
 
 @media (max-width: 480px) {
+    .producto-banner{
+        display: none;
+    }
     .producto-main{
         padding: 5px 5px;
         flex-direction: column;
@@ -833,6 +836,9 @@ main{
 }
     /*TABLE*/
 @media (min-width: 481px) {
+    .producto-banner{
+        text-align: center;
+    }
   .producto-main{
         padding: 20px 5px;
         width: 90%;
@@ -946,7 +952,9 @@ main{
 
     .producto-pie-de-foto2{
         width: 50%;
-        margin-top: 30px;
+        border-radius: 5px;
+        width: auto;
+        height: auto;
     }
     .producto-sub-descripcion{
         border-top: 1px solid #ebebeb;
