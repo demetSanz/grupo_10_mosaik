@@ -14,7 +14,9 @@
 
 * Hacer públicos los archivos (Disponibilizar Trello de forma Publica)
 * Ingresar todas las consignas al github en el momento en que se van disponibilizando
-* Seguir optimizando la comunicación grupal para lograr mayor sincronia en el trabajo final
+* Seguir optimizando la comunicación grupal para lograr mayor sincronia en el trabajo final.
+* Tener cuidado con los archivos que se suben a la raiz ejemplo el archivo rar y los wireframes, ambos van dentro de public
+* Dejar únicamente los archivos que correspondan para las entregas
 
 ## Deberiamos empezar a 
 
