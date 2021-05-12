@@ -2,7 +2,7 @@
   "name": "grupo_10_mosaik",
   "version": "1.0.0",
   "description": "Proyecto integrador del grupo 10 de DH",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
