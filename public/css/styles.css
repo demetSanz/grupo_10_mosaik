@@ -15,7 +15,7 @@ html, body {
     font-family: sans-serif;
     font-size: 1em;
     line-height: 1.5;
-    background: #FFD4C5;
+    background: white;
 }
 
 .sr-only {
@@ -61,6 +61,10 @@ html, body {
 .main-nav ul {
     margin: 0;
     padding: 0;
+}
+
+.fa-shopping-cart{
+    font-size: 15px;
 }
 
 .center {
@@ -189,7 +193,7 @@ img {
 
     main{
         padding: 20px;
-        max-width: 769px;
+        
     }
     
     .contenedor-formularios{
@@ -1122,11 +1126,12 @@ main{
 }
 
 .main-elias {
-    background-color: white;
+    
     text-align: center;
     display: flex;
-    padding-top: 10px;
+    margin-top: 5px;
     flex-direction: column;
+    max-width: 1200px;
 }
 
 .slide1 {
@@ -1139,7 +1144,7 @@ main{
 .home-valores{
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
     align-content: center;
     align-items: center;
 }
@@ -1148,6 +1153,15 @@ main{
     width: 100px;
     height: 100px;
 } */
+
+.valores{
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: auto;
+}
 
 .valores i {
     font-size: 50px;
@@ -1168,6 +1182,11 @@ main{
     font-weight: bold;
     font-size: 12px;
     padding-top: 5px;
+}
+
+.texto-valor{
+    margin:6px;
+    padding: 0px 5px;
 }
 
 /*Estilo de Home Promociones*/
@@ -1250,6 +1269,15 @@ main{
 
 .producto-descripcion i:hover {
     color: gray;
+}
+
+@media screen and (min-width:769px){
+
+.home-valores .valores{
+    margin: 0;
+    display: block;
+}
+
 }
 
 /* FIN ESTILOS ELIAS*/
