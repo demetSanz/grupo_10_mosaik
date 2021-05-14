@@ -67,6 +67,10 @@ html, body {
     font-size: 15px;
 }
 
+.fa-user{
+    font-size: 30px;
+}
+
 .center {
     margin-top: 4em;
     text-align: center;
