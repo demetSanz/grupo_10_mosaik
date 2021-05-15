@@ -4,13 +4,13 @@ const mainController = require('../controllers/mainController.js');
 // Navegacion (utilizamos res.render() y este buscará en la carpeta de views las distintas vistas
 router.get('/',mainController.index);
 
-router.get('/login.ejs', mainController.login);
+router.get('/login', mainController.login);
 
-router.get('/register.ejs',mainController.register );
+router.get('/register',mainController.register );
 
-router.get('/carrito.ejs',mainController.carrito);
+router.get('/carrito',mainController.carrito);
 
-router.get('/detalle-de-producto.ejs',mainController.detalle_de_producto);
+router.get('/detalle-de-producto',mainController.detalle_de_producto);
 
 router.get('/adm-edit',mainController.adm_edit);
 

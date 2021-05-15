@@ -17,7 +17,7 @@
                 
                     <div class="control-formulario">
                         <label for="Nombre de Producto">Nombre de Producto</label>
-                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo" value="parque cerezo">
+                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo" value="<%= nombre %>">
                     </div>
     
                     <div class="control-formulario">
@@ -38,9 +38,9 @@
                     <div class="control-formulario">
                         <label class="label-title">Categoria</label>
                         <div class="elecciones">
-                            <label><input type="radio" name="perfil" value="Griferia">Griferia</label>
-                            <label><input type="radio" name="perfil" value="Sanitarios">Sanitarios</label>
-                            <label><input type="radio" name="perfil" value="Pisos" checked>Pisos</label>
+                            <label><input type="radio" name="perfil" value="Griferia" <%= categoria.toLowerCase() == "griferia" ? "checked" : "" %> >Griferia</label>
+                            <label><input type="radio" name="perfil" value="Sanitarios" <%= categoria.toLowerCase() == "sanitarios" ? "checked" : "" %>>Sanitarios</label>
+                            <label><input type="radio" name="perfil" value="Pisos" <%= categoria.toLowerCase() == "pisos" ? "checked" : "" %>>Pisos</label>
                         </div>
                 
                     </div>

@@ -22,7 +22,11 @@ let mainController = {
     },
 
     adm_edit: function(req, res) {
-        res.render('adm-edit');
+        res.render('adm-edit', {
+            nombre: "parque cerezo",
+            marca: "cortinez",
+            categoria: "pisos"
+        });
     },
     adm_create: function(req, res) {
         res.render('adm-create'); 
