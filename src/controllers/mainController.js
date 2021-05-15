@@ -18,8 +18,16 @@ let mainController = {
     },
 
     detalle_de_producto : function(req, res) {
-        res.render('detalle-de-producto')
-    }
+        res.render('detalle-de-producto');
+    },
+
+    adm_edit: function(req, res) {
+        res.render('adm-edit');
+    },
+    adm_create: function(req, res) {
+        res.render('adm-create'); 
+    },
+
 }
 
 

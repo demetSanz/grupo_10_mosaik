@@ -12,5 +12,9 @@ router.get('/carrito.ejs',mainController.carrito);
 
 router.get('/detalle-de-producto.ejs',mainController.detalle_de_producto);
 
+router.get('/adm-edit',mainController.adm_edit);
+
+router.get('/adm-create',mainController.adm_create);
+
 
 module.exports = router;

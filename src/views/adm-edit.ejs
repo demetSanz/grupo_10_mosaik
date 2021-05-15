@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>  
+    <%- include('./partials/header'); %>
+    <main>
+
+        <!--Formularios-->
+            <div class="contenedor-formularios">
+                <form action="/" method="GET" class="create-form">
+    
+                    <div class="titulo_form">
+                        <h3>Editar el Producto</h3>
+                    </div>  
+                
+                    <div class="control-formulario">
+                        <label for="Nombre de Producto">Nombre de Producto</label>
+                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo" value="parque cerezo">
+                    </div>
+    
+                    <div class="control-formulario">
+                        <label for="marca">Marca del Producto</label>
+                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva" value="Cortinez">
+                    </div>
+                    
+                    <div class="control-formulario">
+                        <label for="descripcion">Descripcion del Producto</label>
+                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²" value="metro por caja 1.47">
+                    </div>
+
+                    <!-- <div class="control-formulario">
+                        <label class="foto"><i class="fas fa-camera"></i>Subir una imagen del Producto:
+                        <input type="file" name="avatar" accept=".jpg .png" class="control"></label>   
+                    </div> -->
+    
+                    <div class="control-formulario">
+                        <label class="label-title">Categoria</label>
+                        <div class="elecciones">
+                            <label><input type="radio" name="perfil" value="Griferia">Griferia</label>
+                            <label><input type="radio" name="perfil" value="Sanitarios">Sanitarios</label>
+                            <label><input type="radio" name="perfil" value="Pisos" checked>Pisos</label>
+                        </div>
+                
+                    </div>
+                    
+                    <div class="control-formulario">
+                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control" value="245"></label>   
+                    </div>
+
+                    <!-- Agregar campo de Oferta -->
+
+                    <div class="control-formulario">
+                        <label for="medidas">Medidas</label>
+                        <div class="elecciones">
+                            <label><input type="checkbox" name="perfil" value="medidas1">35x60</label>
+                            <label><input type="checkbox" name="perfil" value="medidas2">30x45</label>
+                            <label><input type="checkbox" name="perfil" value="medidas3"checked>45x90</label>
+                            <label><input type="checkbox" name="perfil" value="medidas4" >20x120</label>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="botones">
+                        <button type="reset" class="boton-borrado">Borrar</button>
+                        <button type="submit" class="boton-registro">Edit</button>
+                    </div>
+            
+                </form>
+            </div>
+    
+    
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+</html>
