@@ -4,7 +4,7 @@ let mainController = {
     index:  function(req, res) {
         res.render('index')
     },
-
+ 
     adm_edit: function(req, res) {
         res.render('adm-edit', {
             nombre: "parque cerezo",
@@ -12,7 +12,7 @@ let mainController = {
             descripcion: "metro por caja 1.47",
             categoria: "pisos",
             precio: 245,
-            medidas: "20x120" ,
+            medidas: "30x45" ,
         });
     },
 

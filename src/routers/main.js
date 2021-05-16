@@ -19,4 +19,4 @@ router.get('/adm-edit',mainController.adm_edit);
 router.get('/adm-create',mainController.adm_create);
 
 
-module.exports = router;
+module.exports = router; 
