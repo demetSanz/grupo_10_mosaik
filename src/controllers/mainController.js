@@ -5,29 +5,17 @@ let mainController = {
         res.render('index')
     },
 
-    login:function(req, res) {
-        res.render('login');
-    } ,
-
-    register: function(req, res) {
-        res.render('register');
-    },
-
-    carrito: function(req, res) {
-        res.render('carrito');
-    },
-
-    detalle_de_producto : function(req, res) {
-        res.render('detalle-de-producto');
-    },
-
     adm_edit: function(req, res) {
         res.render('adm-edit', {
             nombre: "parque cerezo",
             marca: "cortinez",
-            categoria: "pisos"
+            descripcion: "metro por caja 1.47",
+            categoria: "pisos",
+            precio: 245,
+            medidas: "20x120" ,
         });
     },
+
     adm_create: function(req, res) {
         res.render('adm-create'); 
     },

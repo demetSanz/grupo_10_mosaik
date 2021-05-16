@@ -22,12 +22,12 @@
     
                     <div class="control-formulario">
                         <label for="marca">Marca del Producto</label>
-                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva" value="Cortinez">
+                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva" value="<%= marca %>">
                     </div>
                     
                     <div class="control-formulario">
                         <label for="descripcion">Descripcion del Producto</label>
-                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²" value="metro por caja 1.47">
+                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²" value="<%= descripcion %>">
                     </div>
 
                     <!-- <div class="control-formulario">
@@ -46,7 +46,7 @@
                     </div>
                     
                     <div class="control-formulario">
-                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control" value="245"></label>   
+                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control" value="<%= precio %>"></label>   
                     </div>
 
                     <!-- Agregar campo de Oferta -->
@@ -54,10 +54,10 @@
                     <div class="control-formulario">
                         <label for="medidas">Medidas</label>
                         <div class="elecciones">
-                            <label><input type="checkbox" name="perfil" value="medidas1">35x60</label>
-                            <label><input type="checkbox" name="perfil" value="medidas2">30x45</label>
-                            <label><input type="checkbox" name="perfil" value="medidas3"checked>45x90</label>
-                            <label><input type="checkbox" name="perfil" value="medidas4" >20x120</label>
+                            <label><input type="checkbox" name="perfil" value="35x60" <%= medidas== "35x60" ? "checked" : "" %> >35x60</label>
+                            <label><input type="checkbox" name="perfil" value="30x45" <%= medidas== "30x45" ? "checked" : "" %> >30x45</label>
+                            <label><input type="checkbox" name="perfil" value="45x90" <%= medidas== "45x90" ? "checked" : "" %> >45x90</label>
+                            <label><input type="checkbox" name="perfil" value="20x120" <%= medidas== "20x120" ? "checked" : "" %> >20x120</label>
                         </div>
                         
                     </div>
