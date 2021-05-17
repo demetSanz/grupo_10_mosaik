@@ -1050,7 +1050,7 @@ main{
     flex-flow: row wrap;
     padding: 50px;
     color: #fff;
-    background-color: black;
+    background-color: rgb(100 100 100 / 1);
     }
     
     .footer > * {
