@@ -1048,7 +1048,7 @@ main{
 .footer {
     display: flex;
     flex-flow: row wrap;
-    padding: 50px;
+    padding: 15px;
     color: #fff;
     background-color: rgb(100 100 100 / 1);
     }
@@ -1096,7 +1096,7 @@ main{
     }
     
     .h-box {
-    column-count: 2;
+    
     column-gap: 1.25em;
     }
     
@@ -1116,9 +1116,6 @@ main{
     flex: 1;
     }
     
-    .features {
-    flex-grow: 2;
-    }
     
     .l-footer {
     flex: 1 0px;
@@ -1142,14 +1139,17 @@ main{
     
     text-align: center;
     display: flex;
-    margin-top: 5px;
+    padding: 15px;
     flex-direction: column;
     max-width: 1200px;
+    background-color: #ebebeb;
 }
+
 
 .slide1 {
     width: 100%;
     padding: 0;
+    
 }
 
 /*Seccion Home de 4 valores*/
@@ -1235,7 +1235,9 @@ main{
 /*Seccion Home Lo Mas Visto*/
 
 .titular{
-    color: red;
+    color: #FF6666;
+    font-size: 20px ;
+    font-weight: bold;
 }
 
 .seccion-mas-visto{
@@ -1294,3 +1296,206 @@ main{
 }
 
 /* FIN ESTILOS ELIAS*/
+
+/* ESTILO EDIT-CREATE*/
+
+/*FORMULARIO*/
+
+.contenedor-formularios-edit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+   
+}
+
+
+
+.contenedor-formularios-edit p{
+    font-size: 14px;
+    color: black;
+}
+
+
+
+.create-form-edit{
+    padding: 15px 15px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    background-color: #ebebeb;
+    border-top: 1px solid #ebebeb;
+    
+}
+
+.create-form-edit .titulo-form-edit{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.create-form-edit .titulo-form-edit h3{
+    font-size: 20px;
+    color: rgb(241, 120, 120);
+    text-align: center;
+}
+
+.create-form-edit .titulo-form-edit .title-bar{
+    color: black;
+}
+
+.create-form-edit .titulo-form-edit a{
+    color: black;
+    text-decoration: underline;
+}
+
+.control-formulario-edit{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.control-formulario-edit .label-title-edit{
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
+
+}
+
+.control-formulario-edit .selector-radio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+
+
+.control-formulario-edit .elecciones-edit{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.control-formulario-edit .elecciones-edit label{
+    margin-bottom: 20px;
+}
+
+
+.control-formulario-edit .foto {
+    font-weight: bold;
+}
+
+
+.control-formulario-edit .foto i{
+    padding: 0 8px;
+}
+
+.control-edit{
+    width: 80px;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+}
+
+
+
+.boton-centrado{
+    text-align: center;
+}
+
+.boton-formulario{
+    background-color: #FF6666;
+    width: 50%;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
+.boton-registro-edit,
+.boton-borrado{
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: right;
+}
+
+.boton-registro-edit{
+    background-color: #FF6666;    
+    
+}
+
+
+.boton-borrado{
+    background-color: #e79d12c9;
+}
+
+.boton-formulario:hover,
+.boton-registro-edit:hover{
+    background-color: #ff66665e;
+    cursor: pointer;
+}
+
+.boton-borrado:hover{
+    background-color: #aa5b00;
+    cursor: pointer;
+}
+
+.botones-edit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.no-user{
+    text-align: center;
+}
+
+.no-user a{
+    color: #FF6666;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width:769px){
+
+    .menu{
+        display: flex;
+    }
+
+    #icon-menu{
+        display: none;
+    }
+
+    .contenedor-formularios-edit{
+        width: 100%;
+
+    }
+
+    .contenedor-formularios-edit,
+    .control-edit,
+    .control{
+        font-size: 18px;
+    }
+
+    .main-header .container {
+        justify-content: space-around;
+    }
+}

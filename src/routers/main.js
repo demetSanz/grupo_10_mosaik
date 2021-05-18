@@ -10,13 +10,13 @@ router.get('/login', usersController.login);
 
 router.get('/register',usersController.register);
 
-router.get('/carrito',productsController.carrito);
+router.get('/cart',productsController.cart);
 
-router.get('/detalle-de-producto',productsController.detalle_de_producto);
+router.get('/products',productsController.products);
 
-router.get('/adm-edit',mainController.adm_edit);
+router.get('/edit',mainController.edit);
 
-router.get('/adm-create',mainController.adm_create);
+router.get('/create',mainController.create);
 
 
 module.exports = router; 

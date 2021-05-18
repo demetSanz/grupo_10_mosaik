@@ -8,25 +8,25 @@
     <main>
 
         <!--Formularios-->
-            <div class="contenedor-formularios">
-                <form action="/" method="GET" class="create-form">
+            <div class="contenedor-formularios-edit">
+                <form action="/" method="GET" class="create-form-edit">
     
-                    <div class="titulo_form">
-                        <h3>Editar el Producto</h3>
+                    <div class="titulo-form-edit">
+                        <h3>Editar el producto</h3>
                     </div>  
                 
-                    <div class="control-formulario">
-                        <label for="Nombre de Producto">Nombre de Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="Nombre de Producto">Nombre de producto</label>
                         <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo" value="<%= nombre %>">
                     </div>
     
-                    <div class="control-formulario">
-                        <label for="marca">Marca del Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="marca">Marca del producto</label>
                         <input type="text" name="marca" class="control" placeholder="Ej: Ilva" value="<%= marca %>">
                     </div>
                     
-                    <div class="control-formulario">
-                        <label for="descripcion">Descripcion del Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="descripcion">Descripción del producto</label>
                         <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²" value="<%= descripcion %>">
                     </div>
 
@@ -35,9 +35,9 @@
                         <input type="file" name="avatar" accept=".jpg .png" class="control"></label>   
                     </div> -->
     
-                    <div class="control-formulario">
-                        <label class="label-title">Categoria</label>
-                        <div class="elecciones">
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit">Categoría</label>
+                        <div class="elecciones-edit">
                             <label><input type="radio" name="perfil" value="Griferia" <%= categoria.toLowerCase() == "griferia" ? "checked" : "" %> >Griferia</label>
                             <label><input type="radio" name="perfil" value="Sanitarios" <%= categoria.toLowerCase() == "sanitarios" ? "checked" : "" %>>Sanitarios</label>
                             <label><input type="radio" name="perfil" value="Pisos" <%= categoria.toLowerCase() == "pisos" ? "checked" : "" %>>Pisos</label>
@@ -45,15 +45,16 @@
                 
                     </div>
                     
-                    <div class="control-formulario">
-                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control" value="<%= precio %>"></label>   
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="pesos">Precio</label>
+                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control-edit" value="<%= precio %>"></label>
                     </div>
  
                     <!-- Agregar campo de Oferta -->
 
-                    <div class="control-formulario">
-                        <label for="medidas">Medidas</label>
-                        <div class="elecciones">
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="medidas">Medidas</label>
+                        <div class="elecciones-edit">
                             <label><input type="checkbox" name="perfil" value="35x60" <%= medidas== "35x60" ? "checked" : "" %> >35x60</label>
                             <label><input type="checkbox" name="perfil" value="30x45" <%= medidas== "30x45" ? "checked" : "" %> >30x45</label>
                             <label><input type="checkbox" name="perfil" value="45x90" <%= medidas== "45x90" ? "checked" : "" %> >45x90</label>
@@ -62,10 +63,9 @@
                         
                     </div>
     
-                    <div class="botones">
+                    <div class="botones-edit">
                         <button type="reset" class="boton-borrado">Borrar</button>
-                        <button type="submit" class="boton-registro">Edit</button>
-                    </div>
+                        <a href="/"><button type="submit" class="boton-registro-edit">Guardar</button></a>
             
                 </form>
             </div>

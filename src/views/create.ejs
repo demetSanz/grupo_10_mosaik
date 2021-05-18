@@ -8,36 +8,36 @@
     <main>
 
         <!--Formularios-->
-            <div class="contenedor-formularios">
-                <form action="/" method="GET" class="create-form">
+            <div class="contenedor-formularios-edit">
+                <form action="/" method="GET" class="create-form-edit">
     
-                    <div class="titulo_form">
-                        <h3>Ingresa el Producto</h3>
+                    <div class="titulo-form-edit">
+                        <h3>Ingresá el producto</h3>
                     </div>  
                 
-                    <div class="control-formulario">
-                        <label for="Nombre de Producto">Nombre de Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="Nombre de Producto">Nombre de producto</label>
                         <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo">
                     </div>
     
-                    <div class="control-formulario">
-                        <label for="marca">Marca del Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="marca">Marca del producto</label>
                         <input type="text" name="marca" class="control" placeholder="Ej: Ilva">
                     </div>
                     
-                    <div class="control-formulario">
-                        <label for="descripcion">Descripcion del Producto</label>
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="descripcion">Descripción del producto</label>
                         <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²">
                     </div>
 
-                    <div class="control-formulario">
-                        <label class="foto"><i class="fas fa-camera"></i>Subir una imagen del Producto:
+                    <div class="control-formulario-edit">
+                        <label class="foto"><i class="fas fa-camera"></i>Subir una imagen del producto
                         <input type="file" name="avatar" accept=".jpg .png" class="control"></label>   
                     </div>
     
-                    <div class="control-formulario">
-                        <label class="label-title">Categoria</label>
-                        <div class="elecciones">
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit">Categoría</label>
+                        <div class="elecciones-edit">
                             <label><input type="radio" name="perfil" value="Griferia">Griferia</label>
                             <label><input type="radio" name="perfil" value="Sanitarios">Sanitarios</label>
                             <label><input type="radio" name="perfil" value="Pisos">Pisos</label>
@@ -45,15 +45,16 @@
                 
                     </div>
                     
-                    <div class="control-formulario">
-                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control" value="$"></label>   
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="pesos">Precio</label>
+                        <label class="label-title-edit" for="pesos">$<input type="number" name="pesos" placeholder="Precio" class="control-edit" value="$"></label>   
                     </div>
 
                     <!-- Agregar campo de Oferta -->
 
-                    <div class="control-formulario">
-                        <label for="medidas">Medidas</label>
-                        <div class="elecciones">
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="medidas">Medidas</label>
+                        <div class="elecciones-edit">
                             <label><input type="checkbox" name="perfil" value="medidas1">35x60</label>
                             <label><input type="checkbox" name="perfil" value="medidas2">30x45</label>
                             <label><input type="checkbox" name="perfil" value="medidas3">45x90</label>
@@ -62,9 +63,9 @@
                         
                     </div>
     
-                    <div class="botones">
+                    <div class="botones-edit">
                         <button type="reset" class="boton-borrado">Borrar</button>
-                        <button type="submit" class="boton-registro">Crear</button>
+                        <a href="/"><button type="submit" class="boton-registro-edit">Crear</button></a>
                     </div>
             
                 </form>
