@@ -412,6 +412,7 @@ main{
     background-color: white;
     font-size: 14px;
     width: 90%;
+    margin-top: 20px;
     
 }
 
@@ -738,6 +739,21 @@ main{
 }
 .producto-descuento-article{
     color: #39b54a;
+}
+
+.producto-descripcion{
+    position: relative;
+    top: -10px;
+    z-index: -1;
+    transition: all 450ms;
+    
+}
+
+.producto-elias:hover .producto-descripcion{
+    display: block;
+    margin-top: 20px;
+    z-index: 2;
+    
 }
 
 
@@ -1173,7 +1189,9 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-content: space-around;
     margin-right: auto;
+    padding: 10px;
 }
 
 .valores i {
@@ -1254,6 +1272,9 @@ main{
     position: relative;
     border-radius: 5%;
     padding-top: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+    background-color: #ebebeb;
 }
 
 .producto-elias:hover{
@@ -1275,7 +1296,7 @@ main{
 }
 
 .producto-descripcion i {
-    color: red;
+    color: #FF6666;
     position: absolute;
     right: 5px;
     top: 5px;
@@ -1291,6 +1312,11 @@ main{
 .home-valores .valores{
     margin: 0;
     display: block;
+}
+
+.producto-descripcion{
+    font-size: 15px;
+
 }
 
 }
