@@ -1,11 +1,16 @@
 const path = require('path');
+const fs = require('fs');
+
+// requerir base de datos desde fs
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsBD = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let productsController={
     index: function (req, res){
-        if(req.query.categoria == 'pisos'){
-            res.render('pisos')
-        }
-        res.render('products');
+        let categoria = productsBD.filter(
+            producto => producto.category == req.query.categoria
+        );
+        res.render('products', {categoria});
     },
 
     cart: function(req, res) {
