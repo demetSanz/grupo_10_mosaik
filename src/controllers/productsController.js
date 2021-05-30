@@ -1,12 +1,19 @@
 const path = require('path');
 
 let productsController={
+    index: function (req, res){
+        if(req.query.categoria == 'pisos'){
+            res.render('pisos')
+        }
+        res.render('products');
+    },
+
     cart: function(req, res) {
         res.render('cart');
     },
  
-    products : function(req, res) {
-        res.render('products');
+    detail : function(req, res) {
+        res.render('detail');
     },
     edit: function(req, res) {
         res.render('edit', {
