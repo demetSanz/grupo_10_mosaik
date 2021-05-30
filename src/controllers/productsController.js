@@ -7,10 +7,15 @@ const productsBD = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let productsController={
     index: function (req, res){
+        if(req.query.categoria === undefined) {
         let categoria = productsBD.filter(
-            producto => producto.category == req.query.categoria
+            products => products.category == req.query.categoria
         );
         res.render('products', {categoria});
+        } else {
+        let categoria = productsBD;
+        res.render('products', {categoria});    
+        }
     },
 
     cart: function(req, res) {

@@ -3,17 +3,17 @@
         "id": 1,
         "name": "",
         "price": 100,
-        "discount": 50,
+        "size": 50,
         "category": "pisos",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": ".jpg"
+        "image": "imagen-2.jpg"
     },
     {
         "id": 2,
         "name": "  ",
         "price": 500,
-        "discount": 3,
-        "category": "griferias",
+        "size": 3,
+        "category": "sanitarios",
         "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
         "image": ".jpg"
     },
@@ -21,8 +21,8 @@
         "id": 3,
         "name": "",
         "price": 72999,
-        "discount": 25,
-        "category": "griferias",
+        "size": 25,
+        "category": "sanitarios",
         "description": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenidos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
         "image": ".jpg"
     },
@@ -31,8 +31,8 @@
         "name": "Heladera no fros",
         "description": "Disfrutá de la frescura de tus alimentos y almacenalos de manera práctica y cómoda en tu heladera Whirlpool, la protagonista de tu cocina. Su sistema no frost evita la generación de escarcha y te permitirá conservar el sabor y las propiedades nutritivas de los productos.A su vez, su freezer cuenta con una capacidad de 86 litros, que facilitará la distribución y el orden de tus congelados para que no te preocupes por la falta de espacio.",
         "price": 47900,
-        "discount": 10,
-        "category": "griferias",
+        "size": 10,
+        "category": "sanitarios",
         "image": ".jpg"
     },
     {
@@ -40,8 +40,8 @@
         "name": "Nikon ",
         "description": "Incluye la cámara D3500, el objetivo zoom AF-P DX NIKKOR 18-55mm y el superteleobjetivo zoom compacto AF-P DX NIKKOR 70-300mm. Ambos objetivos enfocan de forma rápida y silenciosa, lo que resulta ideal para grabar metraje de vídeo sin que se escuche apenas el ruido del accionamiento.",
         "price": 53000,
-        "discount": 20,
-        "category": "griferias",
+        "size": 20,
+        "category": "griferia",
         "image": ".jpg"
     },
     {
@@ -49,8 +49,8 @@
         "name": "Aire Acondicionado 3200w Frio / Calor",
         "description": "AIRE SPLIT 3200W TACA-3200WCHSA/KC FC TCL. Capacidad frio 3200 Watts. Capacidad calor 3300 Watts. Potencia Electrica(W)frio 996. Potencia Electrica(W)calor 1028. Eficiencia energética calor C. Eficiencia energética frio A. Frigorias 2750 UNIDAD INTERIOR. Peso Bruto 10kg. Peso Neto 7 kg",
         "price": 20999,
-        "discount": 12,
-        "category": "griferias",
+        "size": 12,
+        "category": "griferia",
         "image": "img-aire-acondicionado.jpg"
     },
     {
@@ -58,8 +58,8 @@
         "name": "",
         "description": "PROCESADOR / CHIPSET. CPU: Intel Core i3(8a generación) 8130U / 2.2 GHz. Velocidad turbo máxima: 3, 4 GHz. Numero de núcleos: Doble núcleo. Cache: 4 MB. Arquitectura de 64 bit: ss. MEMORIA CACHÉ. Tamaño instalada: 4 MB. ALMACENAMIENTO. Interfaz Serial ATA - 600",
         "price": 36700,
-        "discount": 5,
-        "category": "griferias",
+        "size": 5,
+        "category": "griferia",
         "image": "img-laptop-lenovo.jpg"
     },
     {
@@ -67,8 +67,8 @@
         "name": "",
         "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
         "price": 148000,
-        "discount": 2,
-        "category": "griferias",
+        "size": 2,
+        "category": "griferia",
         "image": "img-iphone-11.jpg"
     },
     {
@@ -76,18 +76,18 @@
         "name": "",
         "description": "El teclado mágico combina un diseño elegante con una batería recargable incorporada y funciones clave mejoradas. Con un mecanismo de tijera estable debajo de cada tecla, así como un recorrido de teclas optimizado y un perfil bajo, el Teclado Mágico ofrece una experiencia de escritura notablemente cómoda y precisa.",
         "price": 11399,
-        "discount": 0,
+        "size": 0,
         "category": "pisos",
-        "image": "img-apple-magic-keyboard.jpg"
+        "image": "imagen-1.jpg"
     },
     {
         "id": 10,
         "name": "",
         "description": "Uso más cómodo para la mano derecha gracias a la forma contorneada con recubrimiento de goma blanda. Duración de las pilas hasta 18 meses, gracias al diseño para ahorrar energía.El M280 entra automáticamente en estado de suspensión cuando no se está usando.",
         "price": 1200,
-        "discount": 10,
+        "size": 10,
         "category": "pisos",
-        "image": "img-mouse-logitech.jpg"
+        "image": "imagen-3.jpg"
     }
    
 ]
