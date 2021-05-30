@@ -17,25 +17,37 @@
         </div>
 
         <!--Seccion Griferias-->
+        <% for(let i=0; i < categoriasTipos.length; i++){ %>
 
+        <% let currentCategoria = categoriasTipos[i] %>
 
-
-        <h2 class="titular"> <%= categoria[0].category.toUpperCase() %></h2>
-
+        <h2 class="titular"> <%= currentCategoria.toUpperCase() %></h2>
+            
         <section class="seccion-mas-visto">
-            <% for(let i=0; i < categoria.length; i++){ %>
+            <% for(let i=0; i < productos.length; i++){ 
+                
+                let currentProducto = productos[i];
+                
+                if (currentProducto.category == currentCategoria){
+                
+                %>
+
             <article class="producto-elias">
-                <img src='./images/products/<%= categoria[i].image %>' class="img";>
+                <img src='./images/products/<%= currentProducto.image %>' class="img";>
                 <div class="producto-descripcion">
                     <i class="fas fa-tags"></i>
-                    <p class="precio-elias"><%= categoria[i].price %></p>
-                    <p class="medidas"><%= categoria[i].size %></p>
-                    <p class="nombre-producto"><%= categoria[i].name %></p>
+                    <p class="precio-elias"><%= currentProducto.price %></p>
+                    <p class="medidas"><%= currentProducto.size %></p>
+                    <p class="nombre-producto"><%= currentProducto.name %></p>
                 </div>
             </article>
+
+            <% } %>
+              
            <% } %>
       </article>
         </section>
+        <% } %>
 
     </main>
 

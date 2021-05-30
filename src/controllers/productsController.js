@@ -5,16 +5,20 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productsBD = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+
 let productsController={
     index: function (req, res){
-        if(req.query.categoria === undefined) {
-        let categoria = productsBD.filter(
-            products => products.category == req.query.categoria
-        );
-        res.render('products', {categoria});
+        if(!req.query.categoria) {
+            let productos = productsBD;
+            let categoriasTipos = ['pisos', 'griferia', 'sanitarios'];
+            res.render('products', {productos, categoriasTipos});  
         } else {
-        let categoria = productsBD;
-        res.render('products', {categoria});    
+            let productos = productsBD.filter(
+                products => products.category == req.query.categoria
+            );
+            let categoriasTipos = [req.query.categoria];
+            res.render('products', {productos, categoriasTipos});  
         }
     },
 
