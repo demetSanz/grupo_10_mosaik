@@ -32,15 +32,17 @@
                 
                 %>
 
-            <article class="producto-elias">
-                <img src='./images/products/<%= currentProducto.image %>' class="img";>
-                <div class="producto-descripcion">
-                    <i class="fas fa-tags"></i>
-                    <p class="precio-elias"><%= currentProducto.price %></p>
-                    <p class="medidas"><%= currentProducto.size %></p>
-                    <p class="nombre-producto"><%= currentProducto.name %></p>
-                </div>
-            </article>
+           <a href="/products/detail/<%= currentProducto.id %>"> 
+                <article class="producto-elias" >
+                    <img src='./images/products/<%= currentProducto.image %>' class="img">
+                    <div class="producto-descripcion">
+                        <i class="fas fa-tags"></i>
+                        <p class="precio-elias"><%= currentProducto.price %></p>
+                        <p class="medidas"><%= currentProducto.size %></p>
+                        <p class="nombre-producto"><%= currentProducto.name %></p>
+                    </div>
+                </article>
+            </a>
 
             <% } %>
               

@@ -9,7 +9,7 @@
 
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
-                <form action="/" method="GET" class="create-form-edit">
+                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST">
     
                     <div class="titulo-form-edit">
                         <h3>Editar el producto</h3>
@@ -17,17 +17,17 @@
                 
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="Nombre de Producto">Nombre de producto</label>
-                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo" value="<%= nombre %>">
+                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo">
                     </div>
     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="marca">Marca del producto</label>
-                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva" value="<%= marca %>">
+                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva">
                     </div>
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="descripcion">Descripción del producto</label>
-                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²" value="<%= descripcion %>">
+                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²">
                     </div>
 
                     <!-- <div class="control-formulario">
@@ -38,16 +38,17 @@
                     <div class="control-formulario-edit">
                         <label class="label-title-edit">Categoría</label>
                         <div class="elecciones-edit">
-                            <label><input type="radio" name="perfil" value="Griferia" <%= categoria.toLowerCase() == "griferia" ? "checked" : "" %> >Griferia</label>
-                            <label><input type="radio" name="perfil" value="Sanitarios" <%= categoria.toLowerCase() == "sanitarios" ? "checked" : "" %>>Sanitarios</label>
-                            <label><input type="radio" name="perfil" value="Pisos" <%= categoria.toLowerCase() == "pisos" ? "checked" : "" %>>Pisos</label>
+                            <label><input type="radio" name="perfil" value="Griferia" >Griferia</label>
+                            <label><input type="radio" name="perfil" value="Sanitarios" >Sanitarios</label>
+                            <label><input type="radio" name="perfil" value="Pisos">Pisos</label>
+                            <!-- <%= //categoria.toLowerCase() == "pisos" ? "checked" : "" %> -->
                         </div>
                 
                     </div>
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="pesos">Precio</label>
-                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control-edit" value="<%= precio %>"></label>
+                        <label for="pesos">$<input type="number" name="pesos" placeholder="Precio del Producto $" class="control-edit"></label>
                     </div>
  
                     <!-- Agregar campo de Oferta -->
@@ -55,17 +56,18 @@
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="medidas">Medidas</label>
                         <div class="elecciones-edit">
-                            <label><input type="checkbox" name="perfil" value="35x60" <%= medidas== "35x60" ? "checked" : "" %> >35x60</label>
-                            <label><input type="checkbox" name="perfil" value="30x45" <%= medidas== "30x45" ? "checked" : "" %> >30x45</label>
-                            <label><input type="checkbox" name="perfil" value="45x90" <%= medidas== "45x90" ? "checked" : "" %> >45x90</label>
-                            <label><input type="checkbox" name="perfil" value="20x120" <%= medidas== "20x120" ? "checked" : "" %> >20x120</label>
+                            <label><input type="checkbox" name="perfil" value="35x60"  >35x60</label>
+                            <label><input type="checkbox" name="perfil" value="30x45"  >30x45</label>
+                            <label><input type="checkbox" name="perfil" value="45x90"  >45x90</label>
+                            <label><input type="checkbox" name="perfil" value="20x120"  >20x120</label>
+                            <!-- <%= //medidas== "20x120" ? "checked" : "" %> -->
                         </div>
                         
                     </div>
     
                     <div class="botones-edit">
-                        <button type="reset" class="boton-borrado">Borrar</button>
-                        <a href="/"><button type="submit" class="boton-registro-edit">Guardar</button></a>
+                        <button type="reset" class="boton-borrado">Reiniciar</button>
+                        <button type="submit" class="boton-registro-edit">Guardar</button>
             
                 </form>
             </div>

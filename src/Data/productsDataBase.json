@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "",
+        "name": "flores",
         "price": 100,
         "size": 50,
         "category": "pisos",
@@ -88,6 +88,14 @@
         "size": 10,
         "category": "pisos",
         "image": "imagen-3.jpg"
+    },
+    {
+        "id": 11
+    },
+    {
+        "id": 12
+    },
+    {
+        "id": 13
     }
-   
 ]

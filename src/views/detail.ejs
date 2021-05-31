@@ -21,13 +21,16 @@
                 </div>
             </div>
                 <div class="producto-descripcion-producto" >
-                    <h3 class="producto-marca">ATELIER SIENA</h3>
-                    <p class="producto-precio">$99999</p>
-                    <h1 class="producto-descripcion">Descripcion</h1>
-                    <p class="producto-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium maiores expedita odit, saepe impedit adipisci beatae eveniet libero excepturi quos eius iure provident repellendus voluptatum veritatis corporis, id iste?</p>
+                    <h3 class="producto-marca"><%=product.name%></h3>
+                    <p class="producto-precio">$<%=product.price%></p>
+                    <h1 class="producto-descripcion"><%=product.size%>></h1>
+                    <p class="producto-texto"> <%= product.description %></p>
                     
                     <label for="" class="producto-cantidad">Cantidad: <input class="producto-inp-cantidad" type="number" > </label>
                     <button class="producto-button">Agregar al carrito</button>
+                    <a href="/products/<%= product.id %>/edit/" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
                 </div>
             </div>
            

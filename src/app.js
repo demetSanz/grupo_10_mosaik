@@ -4,6 +4,7 @@ const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
 const rutasMain = require('./routers/main'); // exportamos routers main
 const routersProducts = require('./routers/products');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 /* Configuraciones */
 app.use(
@@ -23,6 +24,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use('/', rutasMain);
 app.use('/products',routersProducts);
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 // app.use('users', usersRoutes);
 // app.use('products', productsRoutes);

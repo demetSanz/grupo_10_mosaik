@@ -9,25 +9,25 @@
 
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
-                <form action="/" method="GET" class="create-form-edit">
+                <form action="/products" method="POST" class="create-form-edit">
     
                     <div class="titulo-form-edit">
                         <h3>Ingresá el producto</h3>
                     </div>  
                 
                     <div class="control-formulario-edit">
-                        <label class="label-title-edit" for="Nombre de Producto">Nombre de producto</label>
-                        <input type="text" name="Nombre de Producto" class="control" placeholder="Ej: parque cerezo">
+                        <label class="label-title-edit" for="name">Nombre de producto</label>
+                        <input type="text" id="name" name="name" class="control" placeholder="Ej: parque cerezo">
                     </div>
     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="marca">Marca del producto</label>
-                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva">
+                        <input type="text" id="marca" name="marca" class="control" placeholder="Ej: Ilva">
                     </div>
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="descripcion">Descripción del producto</label>
-                        <input type="textarea" name="descripcion" class="control" placeholder="Ingrese medidas m²">
+                        <input type="textarea" id="descripcion" name="descripcion" class="control" placeholder="Ingrese medidas m²">
                     </div>
 
                     <div class="control-formulario-edit">
@@ -65,7 +65,7 @@
     
                     <div class="botones-edit">
                         <button type="reset" class="boton-borrado">Borrar</button>
-                        <a href="/"><button type="submit" class="boton-registro-edit">Crear</button></a>
+                       <button type="submit" class="boton-registro-edit">Crear</button>
                     </div>
             
                 </form>
