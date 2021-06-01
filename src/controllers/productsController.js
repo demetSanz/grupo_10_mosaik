@@ -38,7 +38,7 @@ let productsController={
     detail : function(req, res) {
         let idProduct = req.params.id;
 		let product =productsBD.find(product => product.id == idProduct)
-        res.render('detail',{product});
+        res.render('detail',{product,productsBD});
     },
     edit: function(req, res) {
      
@@ -54,10 +54,11 @@ let productsController={
 		productsBD.forEach(product=>{
 			if(product.id ==  idProduct){
 				product.name = req.body.name;
-				// product.price = req.body.price;
-                // product.size = req.body.size;
-				// product.category= req.body.category;
-				// product.description= req.body.description;
+				product.price = req.body.price;
+                product.marca = req.body.marca,
+                product.size = req.body.size;
+				product.category= req.body.category;
+				product.description= req.body.description;
 			}
 		});
 		
@@ -73,7 +74,6 @@ let productsController={
     },
 
     store: function(req,res){
-        console.log(req.body);
         let newProduct ={
             id: lastId() +1,
              ...req.body

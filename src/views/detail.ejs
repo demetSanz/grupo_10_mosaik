@@ -12,25 +12,26 @@
         <article class=producto-main-art>
             <div class="producto-div-article">
             <div class="producto-div-mobile">
-                <img src="/images/products/imagen-1.jpg" alt="Foto-del-producto" class="producto-img-producto">
+                <img src="/images/products/<%= product.image%>" alt="Foto-del-producto" class="producto-img-producto">
                 <div class="producto-sub-foto">
-                    <img src="/images/products/imagen-1.jpg" alt="Foto-del-producto" class="producto-pie-de-foto"> 
-                    <img src="/images/products/imagen-1.jpg" alt="Foto-del-producto" class="producto-pie-de-foto"> 
-                    <img src="/images/products/imagen-1.jpg" alt="Foto-del-producto" class="producto-pie-de-foto"> 
-                    <img src="/images/products/imagen-1.jpg" alt="Foto-del-producto" class="producto-pie-de-foto">
+                    <img src="/images/products/<%= product.image%>" alt="Foto-del-producto" class="producto-pie-de-foto"> 
+                    <img src="/images/products/<%= product.image%>" alt="Foto-del-producto" class="producto-pie-de-foto"> 
+                    <img src="/images/products/<%= product.image%>" alt="Foto-del-producto" class="producto-pie-de-foto"> 
+                    <img src="/images/products/<%= product.image%>" alt="Foto-del-producto" class="producto-pie-de-foto">
                 </div>
             </div>
                 <div class="producto-descripcion-producto" >
                     <h3 class="producto-marca"><%=product.name%></h3>
                     <p class="producto-precio">$<%=product.price%></p>
-                    <h1 class="producto-descripcion"><%=product.size%>></h1>
+                    <p class="producto-texto"> <%= product.marca%></p>
+                    <h1 class="producto-texto"><%=product.size%></h1>
                     <p class="producto-texto"> <%= product.description %></p>
                     
                     <label for="" class="producto-cantidad">Cantidad: <input class="producto-inp-cantidad" type="number" > </label>
                     <button class="producto-button">Agregar al carrito</button>
-                    <a href="/products/<%= product.id %>/edit/" class="action-button edit">EDITAR PRODUCTO</a>
+                    <a href="/products/<%= product.id %>/edit/" class="producto-button">EDITAR PRODUCTO</a>
 						<form action="/products/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+							<button type="submit" class="producto-button">ELIMINAR</button>
                 </div>
             </div>
            

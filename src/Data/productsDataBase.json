@@ -2,98 +2,127 @@
     {
         "id": 1,
         "name": "flores",
-        "price": 100,
-        "size": 50,
+        "price": "100",
+        "marca": "Ilva",
+        "size": "35x60",
         "category": "pisos",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
         "image": "imagen-2.jpg"
     },
     {
         "id": 2,
-        "name": "  ",
-        "price": 500,
-        "size": 3,
+        "name": "Inodoro Largo Axis",
+        "price": "500",
+        "marca": "DECA",
+        "size": "35x60",
         "category": "sanitarios",
-        "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
-        "image": ".jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "sanitarios_3.jpg"
     },
     {
         "id": 3,
-        "name": "",
-        "price": 72999,
-        "size": 25,
+        "name": "Bidet 3 Agujero Blanco Varese",
+        "price": "72999",
+        "marca": "FERRUM",
+        "size": "35x60",
         "category": "sanitarios",
-        "description": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenidos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
-        "image": ".jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "sanitarios_2.jpg"
     },
     {
         "id": 4,
-        "name": "Heladera no fros",
-        "description": "Disfrutá de la frescura de tus alimentos y almacenalos de manera práctica y cómoda en tu heladera Whirlpool, la protagonista de tu cocina. Su sistema no frost evita la generación de escarcha y te permitirá conservar el sabor y las propiedades nutritivas de los productos.A su vez, su freezer cuenta con una capacidad de 86 litros, que facilitará la distribución y el orden de tus congelados para que no te preocupes por la falta de espacio.",
-        "price": 47900,
-        "size": 10,
+        "name": "Lavatorio Andina 3 Agujeros Blanco",
+        "price": "47900",
+        "marca": "FERRUM",
+        "size": "35x60",
         "category": "sanitarios",
-        "image": ".jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "sanitarios_1.jpg"
     },
     {
         "id": 5,
-        "name": "Nikon ",
-        "description": "Incluye la cámara D3500, el objetivo zoom AF-P DX NIKKOR 18-55mm y el superteleobjetivo zoom compacto AF-P DX NIKKOR 70-300mm. Ambos objetivos enfocan de forma rápida y silenciosa, lo que resulta ideal para grabar metraje de vídeo sin que se escuche apenas el ruido del accionamiento.",
-        "price": 53000,
-        "size": 20,
+        "name": "Grifería para Lavatorio Doblecomando Gredos",
+        "price": "53000",
+        "marca": "FV",
+        "size": "35x60",
         "category": "griferia",
-        "image": ".jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "griferia_1.jpg"
     },
     {
         "id": 6,
-        "name": "Aire Acondicionado 3200w Frio / Calor",
-        "description": "AIRE SPLIT 3200W TACA-3200WCHSA/KC FC TCL. Capacidad frio 3200 Watts. Capacidad calor 3300 Watts. Potencia Electrica(W)frio 996. Potencia Electrica(W)calor 1028. Eficiencia energética calor C. Eficiencia energética frio A. Frigorias 2750 UNIDAD INTERIOR. Peso Bruto 10kg. Peso Neto 7 kg",
-        "price": 20999,
-        "size": 12,
+        "name": "Grifería para Cocina de Mesada Self",
+        "price": "20999",
+        "marca": "HIDROMET",
+        "size": "35x60",
         "category": "griferia",
-        "image": "img-aire-acondicionado.jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "griferia_2.jpg"
     },
     {
         "id": 7,
-        "name": "",
-        "description": "PROCESADOR / CHIPSET. CPU: Intel Core i3(8a generación) 8130U / 2.2 GHz. Velocidad turbo máxima: 3, 4 GHz. Numero de núcleos: Doble núcleo. Cache: 4 MB. Arquitectura de 64 bit: ss. MEMORIA CACHÉ. Tamaño instalada: 4 MB. ALMACENAMIENTO. Interfaz Serial ATA - 600",
-        "price": 36700,
-        "size": 5,
+        "name": "Grifería para Cocina con Pico Flexible negro",
+        "price": "36700",
+        "marca": "PIAZZA",
+        "size": "35x60",
         "category": "griferia",
-        "image": "img-laptop-lenovo.jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
+        "image": "griferia_3.jpg"
     },
     {
         "id": 8,
-        "name": "",
-        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
-        "price": 148000,
-        "size": 2,
+        "name": "Grifería para Cocina de Mesada Self",
+        "price": "148000",
+        "marca": "HIDROMET",
+        "size": "35x60",
         "category": "griferia",
-        "image": "img-iphone-11.jpg"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum..",
+        "image": "griferia_2.jpg"
     },
     {
         "id": 9,
         "name": "",
-        "description": "El teclado mágico combina un diseño elegante con una batería recargable incorporada y funciones clave mejoradas. Con un mecanismo de tijera estable debajo de cada tecla, así como un recorrido de teclas optimizado y un perfil bajo, el Teclado Mágico ofrece una experiencia de escritura notablemente cómoda y precisa.",
-        "price": 11399,
-        "size": 0,
+        "price": "11399",
+        "marca": "Ilva",
+        "size": "35x60",
         "category": "pisos",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
         "image": "imagen-1.jpg"
     },
     {
         "id": 10,
         "name": "",
-        "description": "Uso más cómodo para la mano derecha gracias a la forma contorneada con recubrimiento de goma blanda. Duración de las pilas hasta 18 meses, gracias al diseño para ahorrar energía.El M280 entra automáticamente en estado de suspensión cuando no se está usando.",
-        "price": 1200,
-        "size": 10,
+        "price": "1200",
+        "marca": "Ilva",
+        "size": "35x60",
         "category": "pisos",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum..",
         "image": "imagen-3.jpg"
     },
     {
         "id": 11,
         "name": "grupo 10 mosaik",
-        "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price",
+        "pesos": "15000",
+        "marca": "Ilva",
         "category": "pisos",
-        "pesos": "15000"
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum."
+    },
+    {
+        "id": 12,
+        "name": "prueba",
+        "marca": "prueba",
+        "descripcion": "lorem ipsui",
+        "category": "griferia",
+        "price": "10000",
+        "size": "size"
+    },
+    {
+        "id": 13,
+        "name": "prueba3",
+        "marca": "prueba3",
+        "descripcion": "lorem ipsui",
+        "category": "pisos",
+        "price": "10000",
+        "size": "45x90"
     }
 ]
