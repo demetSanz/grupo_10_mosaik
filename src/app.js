@@ -11,7 +11,8 @@ app.use(
     express.static(path.resolve(__dirname, '../public'))
 );
 
-
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 // Advertimos en la consola que el servidor se encuentra activo sobre el puerto determinado en la constante 'port'
 app.listen(port, () =>
     console.log('Servidor corriendo Grupo 10 DH en el puerto ' + port)

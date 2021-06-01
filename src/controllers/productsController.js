@@ -73,9 +73,10 @@ let productsController={
     },
 
     store: function(req,res){
+        console.log(req.body);
         let newProduct ={
             id: lastId() +1,
-             ...req.body,
+             ...req.body
             // name: req.body.name,
    			// price:req.body.price,
             // size: req.body.size,
