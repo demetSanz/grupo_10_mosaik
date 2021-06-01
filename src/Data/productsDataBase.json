@@ -124,5 +124,24 @@
         "category": "pisos",
         "price": "10000",
         "size": "45x90"
+    },
+    {
+        "id": 14,
+        "name": "prueba 5",
+        "marca": "prueba 5",
+        "descripcion": "lorem ipsui 5",
+        "category": "sanitarios",
+        "price": "5000",
+        "size": "30x45"
+    },
+    {
+        "id": 15,
+        "name": "multer prueba",
+        "marca": "multer prueba",
+        "descripcion": "multer prueba",
+        "category": "sanitarios",
+        "price": "10000",
+        "size": "35x60",
+        "image": "image-1622574138878.jpg"
     }
 ]

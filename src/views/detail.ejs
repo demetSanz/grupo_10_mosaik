@@ -29,9 +29,12 @@
                     
                     <label for="" class="producto-cantidad">Cantidad: <input class="producto-inp-cantidad" type="number" > </label>
                     <button class="producto-button">Agregar al carrito</button>
+
                     <a href="/products/<%= product.id %>/edit/" class="producto-button">EDITAR PRODUCTO</a>
+
 						<form action="/products/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="producto-button">ELIMINAR</button>
+                        </form>>
                 </div>
             </div>
            

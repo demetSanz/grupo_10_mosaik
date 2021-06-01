@@ -9,7 +9,7 @@
 
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
-                <form action="/products" method="POST" class="create-form-edit">
+                <form action="/products" method="POST" enctype="multipart/form-data" class="create-form-edit">
     
                     <div class="titulo-form-edit">
                         <h3>Ingresá el producto</h3>
@@ -29,11 +29,11 @@
                         <label class="label-title-edit" for="descripcion">Descripción del producto</label>
                         <input type="textarea" id="descripcion" name="descripcion" class="control" placeholder="Ingrese una descripcion">
                     </div>
-<!-- 
+ 
                     <div class="control-formulario-edit">
-                        <label class="foto"><i class="fas fa-camera"></i>Subir una imagen del producto
-                        <input type="file" name="avatar" accept=".jpg .png" class="control"></label>   
-                    </div> -->
+                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subir una imagen del producto
+                        <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png" class="control"></label>   
+                    </div> 
     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit">Categoría</label>

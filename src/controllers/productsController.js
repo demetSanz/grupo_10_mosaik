@@ -76,7 +76,8 @@ let productsController={
     store: function(req,res){
         let newProduct ={
             id: lastId() +1,
-             ...req.body
+             ...req.body,
+             image: req.file.filename
             // name: req.body.name,
    			// price:req.body.price,
             // size: req.body.size,
@@ -93,6 +94,18 @@ let productsController={
 		fs.writeFileSync(path.resolve(__dirname, '../data/productsDataBase.json'),newProductJson);
 		
 		res.redirect('/products');
+    },
+    destroy: function (req,res){
+        let idProduct = req.params.id;
+
+        let newList = productsBD.filter(product =>{ 
+			return product.id != idProduct;
+		});
+
+        let newListJson = JSON.stringify(newList, null, 4);
+        fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+
+        return res.redirect('/products');
     }
 };
 
