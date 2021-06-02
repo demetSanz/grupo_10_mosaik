@@ -10,7 +10,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 app.use(
     express.static(path.resolve(__dirname, '../public'))
 );
-
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 // Advertimos en la consola que el servidor se encuentra activo sobre el puerto determinado en la constante 'port'
@@ -25,7 +25,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use('/', rutasMain);
 app.use('/products',routersProducts);
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
 
 // app.use('users', usersRoutes);
 // app.use('products', productsRoutes);

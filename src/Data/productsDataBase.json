@@ -45,7 +45,7 @@
         "price": "53000",
         "marca": "FV",
         "size": "35x60",
-        "category": "griferia",
+        "category": "griferias",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
         "image": "griferia_1.jpg"
     },
@@ -55,7 +55,7 @@
         "price": "20999",
         "marca": "HIDROMET",
         "size": "35x60",
-        "category": "griferia",
+        "category": "griferias",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
         "image": "griferia_2.jpg"
     },
@@ -65,7 +65,7 @@
         "price": "36700",
         "marca": "PIAZZA",
         "size": "35x60",
-        "category": "griferia",
+        "category": "griferias",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum.",
         "image": "griferia_3.jpg"
     },
@@ -75,7 +75,7 @@
         "price": "148000",
         "marca": "HIDROMET",
         "size": "35x60",
-        "category": "griferia",
+        "category": "griferias",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum..",
         "image": "griferia_2.jpg"
     },
@@ -98,50 +98,5 @@
         "category": "pisos",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum..",
         "image": "imagen-3.jpg"
-    },
-    {
-        "id": 11,
-        "name": "grupo 10 mosaik",
-        "pesos": "15000",
-        "marca": "Ilva",
-        "category": "pisos",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, debitis cupiditate harum repellendus necessitatibus ad accusantium autem. Velit, eos ipsum."
-    },
-    {
-        "id": 12,
-        "name": "prueba",
-        "marca": "prueba",
-        "descripcion": "lorem ipsui",
-        "category": "griferia",
-        "price": "10000",
-        "size": "size"
-    },
-    {
-        "id": 13,
-        "name": "prueba3",
-        "marca": "prueba3",
-        "descripcion": "lorem ipsui",
-        "category": "pisos",
-        "price": "10000",
-        "size": "45x90"
-    },
-    {
-        "id": 14,
-        "name": "prueba 5",
-        "marca": "prueba 5",
-        "descripcion": "lorem ipsui 5",
-        "category": "sanitarios",
-        "price": "5000",
-        "size": "30x45"
-    },
-    {
-        "id": 15,
-        "name": "multer prueba",
-        "marca": "multer prueba",
-        "descripcion": "multer prueba",
-        "category": "sanitarios",
-        "price": "10000",
-        "size": "35x60",
-        "image": "image-1622574138878.jpg"
     }
 ]

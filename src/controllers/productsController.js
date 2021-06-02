@@ -20,7 +20,7 @@ let productsController={
     index: function (req, res){
         if(!req.query.categoria) {
             let productos = productsBD;
-            let categoriasTipos = ['pisos', 'griferia', 'sanitarios'];
+            let categoriasTipos = ['pisos', 'griferias', 'sanitarios'];
             res.render('products', {productos, categoriasTipos});  
         } else {
             let productos = productsBD.filter(
@@ -95,18 +95,23 @@ let productsController={
 		
 		res.redirect('/products');
     },
-    destroy: function (req,res){
+    destroy:  (req,res)=> {
+            
+
         let idProduct = req.params.id;
 
-        let newList = productsBD.filter(product =>{ 
-			return product.id != idProduct;
-		});
+        let newList = productsBD.filter(product =>product.id != idProduct);
 
         let newListJson = JSON.stringify(newList, null, 4);
         fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
 
-        return res.redirect('/products');
+        res.redirect("/products");
+       
+        
     }
+
+    
+    
 };
 
 module.exports = productsController;
