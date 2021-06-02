@@ -2,8 +2,9 @@ const express = require('express'); // Requerimos express
 const app = express(); // Llamamos express dentro de la constante app
 const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
-const rutasMain = require('./routers/main'); // exportamos routers main
-const routersProducts = require('./routers/products');
+const routerMain = require('./routers/mainRoutes'); // importamos routers main
+const routersProducts = require('./routers/productsRoutes');
+const routerUsers = require('./routers/userRoutes');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 /* Configuraciones */
@@ -23,8 +24,9 @@ app.listen(port, () =>
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'views'));
 
-app.use('/', rutasMain);
+app.use('/', routerMain);
 app.use('/products',routersProducts);
+app.use ('/user', routerUsers)
 
 
 // app.use('users', usersRoutes);

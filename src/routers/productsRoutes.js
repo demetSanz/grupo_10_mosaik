@@ -18,6 +18,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
+// -------------------
+// -- RUTAS PRODUCTOS -- 
+// -------------------
+
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index);
 

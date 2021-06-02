@@ -11,24 +11,39 @@
             <!--Formularios-->
             <div class="contenedor-formularios">
 
-                <form action="/" method="GET" class="create-form">
+                <div class="titulo-form">
                     
-                    <div class="titulo-form">
-                        
-                        <h3><a href="./register">Registrate</a></h3>
-                        <h3 class="title-bar">|</h3>
-                        
-                        <h3>Ingresá</h3>
-                        
-                    </div>
+                    <h3><a href="./register" class="reg-pop">Registrate</a></h3>
+                    <h3 class="title-bar">|</h3>
+                    
+                    <h3>Ingresá</h3>
+                    
+                </div>
+
+                <form action="/user/login" method="POST" class="create-form">
+                    
                 
                     <div class="control-formulario">
-                        <input type="text" name="usuario" placeholder="Ingresá tu e-mail" class="control" required>
+                        <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control" value= "<%= locals.oldData ? oldData.email : null %> ">
                     </div>
+                    <% if (locals.errors && errors.email) { %>
+
+                        <div class="text-danger">
+                            <%= errors.email.msg  %> 
+                        </div>
+                        
+                    <% } %>
 
                     <div class="control-formulario">
-                        <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control" required>
+                        <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control">
                     </div>
+                    <% if (locals.errors && errors.password) { %>
+
+                        <div class="text-danger">
+                            <%= errors.password.msg  %> 
+                        </div>
+                        
+                    <% } %>
                     
                     <div class="boton-centrado">
                     <button type="submit" class="boton-formulario">Ingresá a tu cuenta</button>

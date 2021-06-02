@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('./partials/head'); %>
+
+</head>
+
+<body>
+
+    <%- include('./partials/header-login'); %>
+
+    <main class="main-profile">
+
+        <div class="profile-title">
+                       
+            <h2>¡Te damos la bienvenida nuevamente!</h2>
+                   
+        </div>
+
+        <div class="cont-profile">
+
+            <article class="modify-profile">
+
+                <ul class="option-list">
+
+                    <li>Cambiá tus datos personales</li>
+                    <li>Cambiá tus datos de pago</li>
+                    <li>Cambiá tus direcciones de envío</li>
+                    <li>Historial de compras</li>
+                    <li>Promos</li>
+
+                </ul>
+            </article>
+
+            <div class="icon-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <article class="show-profile">
+                <h3>Perfil</h3>
+                <form action="/user/profile" method="GET" class="profile-form" enctype="multipart/form-data">
+                    
+                
+                    <div class="profile-form-control">
+                        <label for="name">Nombre y Apellido:</label>
+                        <input type="text" name="name" placeholder="" class="control-profile" required>
+                    </div>
+
+                    <div class="profile-form-control">
+                        <label for="address">Dirección:</label>                        
+                        <input type="text" name="address" placeholder="" class="control-profile" required>
+                    </div>
+
+                    <div class="profile-form-control">
+                        <label for="celular">Celular: </label>
+                        <input type="number" name="number" placeholder="" class="control-profile" required>
+                    </div>
+
+                    <div class="profile-form-control">
+                        <label for="payment">Datos de pago: </label>
+                        <input type="text" name="payment" placeholder="" class="control-profile" required>
+                    </div>
+
+                    <div class="profile-form-control">
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" placeholder="" class="control-profile" required>
+                    </div>
+
+                    <div class="profile-form-control">
+                        <label for="imagen">Avatar: </label>
+                        <input type="file" name="avatar" class="control-profile" required>
+                    </div>
+
+                </form>
+            </article>
+
+            </div>
+
+    </main>
+
+    <%- include('./partials/footer'); %>
+</body>
+</html>
