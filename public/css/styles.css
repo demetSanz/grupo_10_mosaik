@@ -4,6 +4,9 @@
 a{
     text-decoration:none;
 }
+.simg {
+    width: 30%;
+}
 ::-moz-selection {
     background: #F34A4E;
     color: #FFF;

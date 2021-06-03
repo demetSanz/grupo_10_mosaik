@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head"); %>
+<body>
+    <%- include("./partials/header"); %>
+    <main class="main-elias">
+        <div>
+            <h2>Resultados de la búsqueda: </h2>
+        </div>
+        <div>   
+            <% for(let i =0; i < products.length; i++) {%>
+            <section class="producto-elias">
+                <a href="/products/detail/<%= products[i].id %>"<%= products[i] %>>
+                    <figure >
+                        <img src="/images/products/<%= products[i].image %>" alt="imagen del producto" class="simg">
+                    </figure>
+                    <article>
+                        <p class="nombre-producto"> <%= products[i].name %> </p>
+                        <p class="precio-elias">$ <%= products[i].price %></p>
+                        <p class="medidas"> <%= products[i].description %></p>
+                    </article>
+                </a>
+            </section>
+            <% } %>
+            
+        </div>
+    </main>
+
+    <%- include("./partials/footer"); %>
+</body>
+</html>
