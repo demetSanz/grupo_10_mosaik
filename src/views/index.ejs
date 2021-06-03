@@ -6,25 +6,29 @@
 <body>
     <%- include('./partials/header'); %>
 
-    <main class="main-elias">
-        
-        <!--Main-Banner Slider-->
-        
-        <div class="main-banner">
-          <a href="#">  
-            <img class="slide1" src="./images/promo3.jpeg">
-          </a>
-        </div>
+    <!--Main-Banner Slider-->
+
+    <div class="main-banner">
+      <a href="#">  
+        <img class="slide1" src="./images/promo3.jpeg">
+      </a>
+    </div>
+
+
+    <main class="main-elias">     
+
 
         <!--4 Valores Destacados horizontal-->
 
         <section class="home-valores">
+
+          <div class="dos-valores">
         
           <article class="valores">
               <i class="fas fa-award"></i>
               <div class="tarjeta-valores">
                   <p class="nombre-valor">Calidad</p>
-                  <p class="texto-valor">Los mejores materiales e insumos</p>
+                  <p class="texto-valor">Los mejores materiales</p>
 
               </div>
           </article>
@@ -33,28 +37,39 @@
             <i class="fas fa-concierge-bell"></i>
               <div class="tarjeta-valores">
                 <p class="nombre-valor">Servicio</p>
-                <p class="texto-valor">24/7 disponible para su obra</p>
+                <p class="texto-valor">24/7 disponible para tu obra</p>
               </div>
           </article>
+
+          </div>
+
+          <div class="dos-valores">
 
           <article class="valores">
             <i class="fas fa-hands-helping"></i>
             <div class="tarjeta-valores">
-              <p class="nombre-valor">Asoramiento</p>
-              <p class="texto-valor">Nuestros expertos están para ayudarlo</p>
+              <p class="nombre-valor">Asesoramiento</p>
+              <p class="texto-valor">Estamos para ayudarte</p>
             </div>
           </article>
 
           <article class="valores">
             <i class="fas fa-tools"></i>
             <div class="tarjeta-valores">
-              <p class="nombre-valor">Instalación</p>
-              <p class="texto-valor">Colocados llave en mano.</p>
+              <p class="nombre-valor">Seguridad</p>
+              <p class="texto-valor">Satisfacción garantizada</p>
             </div>
           </article>
+
+        </div>
+
         </section>
-        
-        <!--4 Promociones en Home-->
+      </main>
+      
+      <h2 class="titular">Destacados</h2>
+
+        <main class="main-elias">
+        <!--4 Promociones en Home-->        
 
         <section class="home-promociones">
 
@@ -68,62 +83,56 @@
               <img class="promo" src="/images/augustus terra.jpeg">
             </a>
           </div>
-          <div class="promociones">
+          <!-- <div class="promociones">
             <a href="/">
               <img class="promo" src="/images/promo6.jpg">
             </a>
-          </div>
-          <!-- <div class="promociones">
-            <a href="/">
-              <img class="promo" src="/images/Especial-calefacción.jpeg">
-            </a>
           </div> -->
 
+
         </section>
+      </main>
+
+      <h2 class="titular">Lo más visto</h2>
+
+        <main class="main-elias">
 
         <!--Seccion Lo Mas Visto-->
-
-        <h2 class="titular">Lo más Visto</h2>
 
         <section class="seccion-mas-visto">
           
             <article class="producto-elias">
                 <img src='./images/pavimenti zirconio.jpeg' class="img";>
+                <p class="precio-elias">$49.999</p>
+                <p class="nombre-producto">Pavimenti Zirconio</p>
                 <div class="producto-descripcion">
-                    <i class="fas fa-tags"></i>
-                    <p class="precio-elias">$49.999</p>
+                    <i class="fas fa-tags"></i>                    
                     <p class="medidas">40 cm x 180 cm</p>
-                    <p class="nombre-producto">Pavimenti Zirconio</p>
                 </div>
-            </article>
-            <!-- <article class="producto-elias">
-              <img src='./images/mesada_johnson.jpg' class="img";>
-              <div class="producto-descripcion">
-                  <i class="fas fa-tags"></i>
-                  <p class="precio-elias">$49.999</p>
-                  <p class="medidas">40 cm x 180 cm</p>
-                  <p class="nombre-producto">Mesada Johnson</p>
-              </div>
-          </article> -->
+          </article>
+
           <article class="producto-elias">
             <img src='./images/parquet cerezo.jpeg' class="img";>
+            <p class="precio-elias">$49.999</p>
+            <p class="nombre-producto">Parquet Cerezo</p>
             <div class="producto-descripcion">
                 <i class="fas fa-tags"></i>
-                <p class="precio-elias">$49.999</p>
                 <p class="medidas">40 cm x 180 cm</p>
-                <p class="nombre-producto">Parquet Cerezo</p>
+
             </div>
         </article>
+
         <article class="producto-elias">
           <img src='./images/pavimenti roccia.jpeg' class="img";>
+          <p class="precio-elias">$49.999</p>
+          <p class="nombre-producto">Pavimenti Roccia</p>
           <div class="producto-descripcion">
               <i class="fas fa-tags"></i>
-              <p class="precio-elias">$49.999</p>
               <p class="medidas">40 cm x 180 cm</p>
-              <p class="nombre-producto">Pavimenti Roccia</p>
+
           </div>
-      </article>
-        </section>
+        </article>
+      </section>
 
     </main>
 

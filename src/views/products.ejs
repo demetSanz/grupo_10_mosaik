@@ -6,24 +6,24 @@
 <body>
     <%- include('./partials/header'); %>
 
-    <main class="main-elias">
-        
-        <!--Main-Banner Slider-->
-        
-        <div class="main-banner">
-          <a href="#">  
-            <img class="slide1" src="./images/promo3.jpeg">
-          </a>
-        </div>
+    <div class="main-banner">
+        <a href="#">  
+          <img class="slide1" src="./images/promo3.jpeg">
+        </a>
+      </div>
 
-        <!--Seccion Griferias-->
+    <main class="main-elias">
+
+        <!--Main-Banner Slider-->
+
+        <!--Seccion Productos-->
         <% for(let i=0; i < categoriasTipos.length; i++){ %>
 
         <% let currentCategoria = categoriasTipos[i] %>
 
         <h2 class="titular"> <%= currentCategoria.toUpperCase() %></h2>
             
-        <section class="seccion-mas-visto">
+        <section class="seccion-mas-visto2">
             <% for(let i=0; i < productos.length; i++){ 
                 
                 let currentProducto = productos[i];
@@ -35,10 +35,10 @@
            <a href="/products/detail/<%= currentProducto.id %>"> 
                 <article class="producto-elias" >
                     <img src='./images/products/<%= currentProducto.image %>' class="img">
-                    <div class="producto-descripcion">
-                        <i class="fas fa-tags"></i>
-                        <p class="nombre-producto"><%= currentProducto.name %></p>
+                    <p class="nombre-producto"><%= currentProducto.name %></p>
                         <p class="precio-elias">$<%= currentProducto.price %></p>
+                    <div class="producto-descripcion">
+                   
                         <p class="medidas"><%= currentProducto.description%></p>
                     </div>
                 </article>
@@ -47,8 +47,7 @@
             <% } %>
               
            <% } %>
-      </article>
-        </section>
+         </section>
         <% } %>
 
     </main>

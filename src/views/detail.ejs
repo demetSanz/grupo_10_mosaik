@@ -6,9 +6,15 @@
 <body>
     <%- include('./partials/header'); %>
     <main class="producto-main">
-        <div class = 'producto-banner'>
+        <ul class="breadcrumb">
+            <li><a href="/products">Volver al listado</a></li>
+            <!-- <li><a href="/products/?categoria=<%#= product.category%>"><%#= product.category.toUpperCase()%></a></li> -->
+             <li><%=product.name%></li>
+          </ul>
+
+        <!-- <div class = 'producto-banner'>
             <img src="/images/banner3.jpg" alt="imagen-banner" >
-        </div>
+        </div> -->
         <article class=producto-main-art>
             <div class="producto-div-article">
             <div class="producto-div-mobile">

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "flores",
+        "name": "Mosaico Sanchez",
         "price": "100",
         "marca": "Ilva",
         "size": "35x60",
@@ -81,7 +81,7 @@
     },
     {
         "id": 9,
-        "name": "",
+        "name": "Mosaico Crescente",
         "price": "11399",
         "marca": "Ilva",
         "size": "35x60",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "name": "",
+        "name": "Mosaico Clementi",
         "price": "1200",
         "marca": "Ilva",
         "size": "35x60",
