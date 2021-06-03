@@ -42,7 +42,7 @@ a{
     top:10px;
     animation: move 4s linear infinite;
 }
-@-webkit-keyframes move{
+@keyframes move{
     0%{
         transform: rotate(0deg);
     }
@@ -113,45 +113,45 @@ a{
 #d1{
     top:33%;
     left: 35%;
-    -webkit-filter:blur(3px);
+    filter:blur(3px);
 }
 #d2{
     top:53%;
     left: 55%;
-    -webkit-filter:blur(1px);
+    filter:blur(1px);
 }
 #d3{
     top:53%;
     left: 75%;
-    -webkit-filter:blur(4px);
+    filter:blur(4px);
 }
 #d4{
     top:53%;
     left: 40%;
-    -webkit-filter:blur(1px);
+    filter:blur(1px);
 }
 #d5{
     top:65%;
     left: 37%;
-    -webkit-filter:blur(2px);
+    filter:blur(2px);
 }
 #d6{
     top:70%;
     left: 30%;
-    -webkit-filter:blur(4px);
+    filter:blur(4px);
 }
 #d7{
     top:77%;
     left: 53%;
-    -webkit-filter:blur(2px);
+    filter:blur(2px);
 }
 #d8{
     top:59%;
     left: 64%;
-    -webkit-filter:blur(2px);
+    filter:blur(2px);
 }
 #d9{
     top:44%;
     left: 61%;
-    -webkit-filter:blur(1px);
+    filter:blur(1px);
 }
