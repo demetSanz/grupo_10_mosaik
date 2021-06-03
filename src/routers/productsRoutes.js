@@ -6,17 +6,7 @@ const path = require('path');
 
 const productsController = require('../controllers/productsController.js');
 
-const storage = multer.diskStorage({
-    destination: (req,file, cb) =>{
-        cb(null, path.join(__dirname,'../../public/images/products'));
-    },
-    filename: (req, file, cb) =>{
-        const newFileName = 'image-' + Date.now() + path.extname(file.originalname);
-        cb(null, newFileName);
-    }
-});
-
-const upload = multer({storage});
+const uploadProducts =require("../middleware/multerProducts");
 
 // -------------------
 // -- RUTAS PRODUCTOS -- 
@@ -37,7 +27,7 @@ router.put('/edit/:id', productsController.update);
 
     /*** CREATE ONE PRODUCT ***/ 
 router.get('/create',productsController.create);
-router.post('/', upload.single('image-product') ,productsController.store);
+router.post('/', uploadProducts.single('image-product') ,productsController.store);
 
     /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy); 
