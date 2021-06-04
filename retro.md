@@ -56,3 +56,23 @@
 
 * Procrastinar tareas hasta el cierre del sprint
 * Hacer más eficiente la organizacion individual de los tiempos para el trabajo
+
+# Retrospectiva Sprint 3
+
+## Que hicimos bien
+* Distribuyendo de forma adecuada el trabajo a realizar.
+* El diseño del sitio.
+* Trabajos en encuentros grupales para mejorar el proyecto.
+* Mejoramos mucha la comunicación del grupo.
+
+## Que podemos mejorar
+* Hacer mas actualizaciónes en Trello.
+* La refactorizacion de los codigos y modularizar.
+
+## Deberiamos empezar a 
+* Administrar mejor los tiempos para poder cumplir con los objetivos grupales.
+* Aplicar el 100% de lo que se ve en el dia a dia en playground.
+
+## Deberiamos dejar de hacer
+* Deberiamos dejar de hacer lo que consideramos sencillo al final.
+* .
