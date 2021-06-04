@@ -25,6 +25,8 @@ a{
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* <!-- edicion de los numeros 404 --> */
 #f1,#f2{
     font-family: cursive;
     font-size: 100px;
@@ -32,6 +34,8 @@ a{
     text-shadow: 0 0 10px rgba(255,255,255,.7);
     display: table-cell;
 }
+
+/* <!-- animacion de la luna rotando y capa para la imagen de fondo  --> */
 #circle{
     height: 100px;
     width: 100px;
@@ -50,6 +54,8 @@ a{
         transform: rotate(360deg);
     }
 }
+
+/* <!-- edicion de la luna rotando  --> */
 #smalldot{
     height: 5px;
     width: 5px;
@@ -60,6 +66,8 @@ a{
     left: 65%;
     transform: translate(-50%,-50%);
 }
+
+/* <!-- edicion del del texto  --> */
 #info{
     font-family: cursive;
     font-size: 13px;
@@ -70,6 +78,8 @@ a{
     transform: translateX(-50%);
     text-shadow: 0 0 10px rgba(255,255,255,.8);
 }
+
+/* <!--edicion del boton para volver al menu--> */
 #btn{
     height: 30px;
     width: 140px;
@@ -89,6 +99,8 @@ a{
 #btn:hover{
     cursor: pointer;
 }
+
+/* <!-- edicion del anillo del planeta  --> */
 #ring{
     height: 140px;
     width: 50px;
@@ -102,6 +114,8 @@ a{
     left: 50%;
     transform: translate(-50%,-50%) rotateZ(45deg);
 }
+
+/* <!-- clase del div estrella  --> */
 .dusk{
     height: 5px;
     width: 5px;
@@ -110,6 +124,8 @@ a{
     border-radius: 50%;
     position: absolute;
 }
+
+/* <!-- estilo de las estrella  --> */
 #d1{
     top:33%;
     left: 35%;
