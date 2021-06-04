@@ -45,7 +45,26 @@ html, body {
     margin: 0 0 -10px;
 }
 
-.container .form_search{
+.container-header {
+    width: 960px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.container-header-superior{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container-header .form_search{
     display: flex;
     border: none;
     outline: none;
@@ -53,7 +72,7 @@ html, body {
     padding: 8px;
 }
 
-.container .lupa {
+.container-header .lupa {
     background-color: #FFFFFF;
     border: none;
     padding: 8px;
@@ -66,7 +85,7 @@ html, body {
     padding: 2px;
 }
 
-.container .input{
+.container-header .input{
     box-shadow: 0px 0px 2px #666666;
 }
 
@@ -83,12 +102,24 @@ html, body {
     padding: 0;
 }
 
+.avatar-inicio{
+    padding: 20px;
+    display: initial;
+}
+
 .fa-shopping-cart{
     font-size: 15px;
+    color: rgba(0,0,0,.8);
+}
+
+.avatar-inicio a{
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
 }
 
 .fa-user{
-    font-size: 30px;
+    font-size: 20px;
+
 }
 
 .center {
@@ -121,15 +152,9 @@ img {
     max-width: 100%;
     height: auto;
 }
-.container {
-    width: 960px;
-    max-width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-}
+
 .logo{
     height: 80px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -146,12 +171,7 @@ img {
 .mosaik-logo2{
     display: none;
 }
-.main-header .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
 .main-nav ul {
     margin: 1em 0 .5em;
     text-align: center;
@@ -161,7 +181,7 @@ img {
 }
 .main-nav a {
     display: inline-block;
-    padding: .5em 1.5em;
+    padding: .5em 1.0em;
     font-size: 12px;
 }
 
@@ -451,7 +471,7 @@ div.form-remember .rem-check{
     .contenedor-formularios{
         max-width: 769px;
     }
-    .main-header .container {
+    .main-header .container-header {
         justify-content: space-around;
     }
 }
@@ -1850,7 +1870,7 @@ ul.breadcrumb li a:hover {
         font-size: 18px;
     }
 
-    .main-header .container {
+    .main-header .container-header {
         justify-content: space-around;
     }
 }
