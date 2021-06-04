@@ -10,10 +10,11 @@
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
                 <form action="/products" method="POST" enctype="multipart/form-data" class="create-form-edit">
-    
                     <div class="titulo-form-edit">
                         <h3>Ingresá el producto</h3>
                     </div>  
+                    
+                    <div class="caja-extra-form-edit">
                 
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="name">Nombre de producto</label>
@@ -27,12 +28,12 @@
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="description">Descripción del producto</label>
-                        <input type="textarea" id="description" name="description" class="control" placeholder="Ingrese una descripcion">
+                        <input type="textarea" id="description" name="description" class="control" placeholder="Ingresá una descripcion">
                     </div>
  
                     <div class="control-formulario-edit">
-                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subir una imagen del producto
-                        <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png" class="control"></label>   
+                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subí una imagen del producto
+                        <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png" class="control-foto"></label>   
                     </div> 
     
                     <div class="control-formulario-edit">
@@ -44,7 +45,8 @@
                         </div> 
                 
                     </div>
-                    
+
+                                        
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="price">Precio</label>
                         <label class="label-title-edit" for="price">$<input type="number" name="price" placeholder="Precio" class="control-edit" value="$"></label>   
@@ -61,6 +63,8 @@
                             <label><input type="checkbox" name="size" value="20x120">20x120</label>
                         </div>
                         
+                    </div>
+
                     </div>
     
                     <div class="botones-edit">

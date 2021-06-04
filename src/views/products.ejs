@@ -6,24 +6,23 @@
 <body>
     <%- include('./partials/header'); %>
 
-    <div class="main-banner">
-        <a href="#">  
-          <img class="slide1" src="./images/promo3.jpeg">
-        </a>
-      </div>
 
-    <main class="main-elias">
+    <main class="main-elias-producto">
 
         <!--Main-Banner Slider-->
 
         <!--Seccion Productos-->
+
+        <h3 class="titulo-producto-principal"> LISTADO DE PRODUCTOS</h3>
+
         <% for(let i=0; i < categoriasTipos.length; i++){ %>
 
         <% let currentCategoria = categoriasTipos[i] %>
 
-        <h2 class="titular"> <%= currentCategoria.toUpperCase() %></h2>
+        <h2 class="titular2"> <%= currentCategoria.toUpperCase() %></h2>
             
         <section class="seccion-mas-visto2">
+            
             <% for(let i=0; i < productos.length; i++){ 
                 
                 let currentProducto = productos[i];
@@ -32,23 +31,33 @@
                 
                 %>
 
-           <a href="/products/detail/<%= currentProducto.id %>"> 
+            <a href="/products/detail/<%= currentProducto.id %>" class="producto-enrutador"> 
+                <div class="caja-envolvedora-producto2">
+
                 <article class="producto-elias" >
-                    <img src='./images/products/<%= currentProducto.image %>' class="img">
-                    <p class="nombre-producto"><%= currentProducto.name %></p>
-                        <p class="precio-elias">$<%= currentProducto.price %></p>
-                    <div class="producto-descripcion">
-                   
-                        <p class="medidas"><%= currentProducto.description%></p>
+                    <div class="producto-cajita2">
+                        <img src='./images/products/<%= currentProducto.image %>' class="img-producto">
+                        <p class="nombre-producto-alt"><%= currentProducto.name %></p>
+                            <p class="precio-elias-alt">$<%= currentProducto.price %></p>
+                        <div class="producto-descripcion-2">
+                    
+                            <p class="medidas"><%= currentProducto.description%></p>
+                        </div>
                     </div>
                 </article>
+                </div>
             </a>
+            
 
             <% } %>
               
            <% } %>
-         </section>
+            
+
+        </section>
         <% } %>
+
+        
 
     </main>
 
