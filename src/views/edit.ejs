@@ -9,11 +9,13 @@
 
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
-                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST">
+                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST" class="create-form-edit">
     
                     <div class="titulo-form-edit">
                         <h3>Editar el producto</h3>
                     </div>  
+
+                    <div class="caja-extra-form-edit">
                 
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="name">Nombre de producto</label>
@@ -48,7 +50,7 @@
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="price">Precio</label>
-                        <label for="price">$<input type="number" name="price" placeholder="Precio del Producto $" class="control-edit"></label>
+                        <label class="label-title-edit"  for="price">$<input type="number" name="price" placeholder="Precio" class="control-edit" value="$"></label>
                     </div>
  
                     <!-- Agregar campo de Oferta -->
@@ -63,6 +65,8 @@
                             <!-- <%= //medidas== "20x120" ? "checked" : "" %> -->
                         </div>
                         
+                    </div>
+
                     </div>
     
                     <div class="botones-edit">
