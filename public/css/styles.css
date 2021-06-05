@@ -984,6 +984,15 @@ ul.breadcrumb li a:hover {
         width: 60%;
         margin-top: 15px;
     }
+
+    .caja-envolvedora-producto3{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    
 }
 
 @media(min-width: 1000px){
@@ -992,6 +1001,14 @@ ul.breadcrumb li a:hover {
 
         flex-direction: row;
     }
+
+    .caja-envolvedora-producto3{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
 }
 
 /* FIN ESTILO PRODUCTO ADICIONAL*/
@@ -1090,10 +1107,11 @@ ul.breadcrumb li a:hover {
     font-size: 12px;
     font-weight: 400;
     padding: 12px;
-    width: 40px;
+    width: 40%;
     height: 10px;
     background-color: white;    
     margin-left: 10px;
+    outline: none;
 }
 
 .botones-detail{

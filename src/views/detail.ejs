@@ -13,7 +13,7 @@
         <ul class="breadcrumb">
 
             <li><a href="/products">Volver al listado</a></li>
-            <!-- <li><a href="/products/?categoria=<%#= product.category%>"><%#= product.category.toUpperCase()%></a></li> -->
+            <li><a href="/products?categoria=<%= product.category%>"><%= product.category[0].toUpperCase() + product.category.slice(1)%></a></li><!-- Esto permite poner el primer caracter en mayuscula y el resto en minuscula -->
              <li><%=product.name%></li>
           </ul>
 

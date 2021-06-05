@@ -3,24 +3,36 @@
 <%- include("./partials/head"); %>
 <body>
     <%- include("./partials/header"); %>
-    <main class="main-elias">
+
+
+    
+    <main class="main-elias-producto">
+        
         <div>
-            <h2>Resultados de la búsqueda: </h2>
+            <h2 class="titular2" >Resultados de la búsqueda: </h2>
         </div>
-        <div>   
+
+        <div class="caja-envolvedora-producto3">   
             <% for(let i =0; i < products.length; i++) {%>
+            <div class="caja-envolvedora-producto2">
             <section class="producto-elias">
+                <div class="producto-cajita2">
                 <a href="/products/detail/<%= products[i].id %>"<%= products[i] %>>
                     <figure >
-                        <img src="/images/products/<%= products[i].image %>" alt="imagen del producto" class="simg">
+                        <img src="/images/products/<%= products[i].image %>" alt="imagen del producto" class="img-producto">
                     </figure>
                     <article>
-                        <p class="nombre-producto"> <%= products[i].name %> </p>
-                        <p class="precio-elias">$ <%= products[i].price %></p>
+                        <p class="nombre-producto-alt"> <%= products[i].name %> </p>
+                        <p class="precio-elias-alt">$ <%= products[i].price %></p>
+                        <div class="producto-descripcion-2">
                         <p class="medidas"> <%= products[i].description %></p>
+                        </div>
                     </article>
                 </a>
+                </div>
+                        
             </section>
+            </div>
             <% } %>
             
         </div>
