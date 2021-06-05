@@ -1909,7 +1909,7 @@ ul.breadcrumb li a:hover {
         width: 70%;
 
     }
-
+}
 
 /* ESTILOS TEXT-DANGER*/
 
@@ -1935,25 +1935,22 @@ div.text-danger{
     flex-direction: column;
 }
 
-div.profile-title{
-    display: flex;
-    justify-content: center;
-}
-
-div.profile-title h2{
-    font-size: 20px;
-    padding-bottom: 20px;
-    margin-left: 20px;
-    color: #e40606;
-    font-weight: 500;
+.titular4{
+    text-align: left;
+    color: #FF6666;
+    margin: 20px 0px 20px 50px;
+    font-size: 25px;
+    width: 80%;
+    font-weight: 600;
     
 }
 
 div.cont-profile{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
 
@@ -1961,7 +1958,7 @@ div.cont-profile{
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 130px;
+    top: 230px;
     left: 15px;
     padding: 10px;
     font-size: 20px;
@@ -1991,12 +1988,132 @@ article.modify-profile{
 }
 
 div.icon-menu:hover article.modify-profile{ display: block }
-   
 
+.show-profile{
+    width: 100%;
+}
+
+.titular3{
+    text-align: left;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 10px 0;
+    font-size: 20px;
+    width: 80%;
+    font-weight: 600;
+}
+   
+.profile-form-control{
+
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid #bebebe;
+    border-radius: 6px;
+    align-items: center;
+}
+
+
+
+.caja-extra-form-edit{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+}
+
+
+.control-formulario-edit .label-title-profile{
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
+    width: 70%;
+    text-align: left;
+
+}
+
+.control-formulario-edit .selector-radio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+
+
+.control-formulario-edit .elecciones-edit{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    
+}
+
+.control-formulario-edit .elecciones-edit label{
+    margin-bottom: 20px;
+}
+
+
+.control-formulario-edit .foto {
+    font-weight: bold;
+    text-align: left;
+    width: 70%;
+}
+
+
+.control-formulario-edit .foto i{
+    padding: 0 8px;
+}
+
+.control-profile{
+    width: 70%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    background-color: white;
+}
+
+.control-foto{
+    width: 100%;
+    padding: 8px 8px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+
+}
 
 
 
 @media screen and (min-width:769px){
+
+    .titular4{
+        text-align: left;
+        color: #FF6666;
+        margin: 20px 40px;
+        font-size: 25px;
+        width: 80%;
+        font-weight: 600;
+        
+    }
+
+    .show-profile{
+        width: 60%;
+    }
+
+    .main-profile{
+        padding: 20px 5px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
     article.modify-profile{
         display: block;
@@ -2012,5 +2129,23 @@ div.icon-menu:hover article.modify-profile{ display: block }
         display: none;
         right: 0px;
     }
-}
+
+    .titular3{
+        text-align: left;
+        color: rgba(0, 0, 0, 0.9);
+        margin: 10px auto;
+        font-size: 20px;
+        width: 80%;
+        font-weight: 600;
+    }
+
+    .caja-extra-form-edit{
+        width: 80%;
+        padding: 20px;
+        border: 1px solid #bebebe;
+        border-radius: 10px;
+        align-items: center;
+        margin: 0 10%;
+        background-color: white;
+    }
 }

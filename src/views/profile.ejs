@@ -9,14 +9,12 @@
 <body>
 
     <%- include('./partials/header'); %>
+    
 
-    <main class="main-profile">
+    <div class="main-profile">
 
-        <div class="profile-title">
-                       
-            <h2>¡Te damos la bienvenida nuevamente!</h2>
-                   
-        </div>
+                      
+        <h2 class="titular4">¡Te damos la bienvenida nuevamente!</h2>
 
         <div class="cont-profile">
 
@@ -38,32 +36,34 @@
             </div>
 
             <article class="show-profile">
-                <h3>Perfil</h3>
+                <h3 class="titular3">Perfil</h3>
                 <form action="/user/profile" method="GET" class="profile-form" enctype="multipart/form-data">
                     
-                
+                    <div class="caja-extra-form-edit">
+
+                    
                     <div class="profile-form-control">
-                        <label for="name">Nombre y Apellido:</label>
+                        <label class="label-title-profile">Nombre y Apellido:</label>
                         <input type="text" name="name" placeholder="" class="control-profile" required>
                     </div>
 
                     <div class="profile-form-control">
-                        <label for="address">Dirección:</label>                        
+                        <label class="label-title-profile"">Dirección:</label>                        
                         <input type="text" name="address" placeholder="" class="control-profile" required>
                     </div>
 
                     <div class="profile-form-control">
-                        <label for="celular">Celular: </label>
+                        <label class="label-title-profile">Celular: </label>
                         <input type="number" name="number" placeholder="" class="control-profile" required>
                     </div>
 
                     <div class="profile-form-control">
-                        <label for="payment">Datos de pago: </label>
+                        <label class="label-title-profile">Datos de pago: </label>
                         <input type="text" name="payment" placeholder="" class="control-profile" required>
                     </div>
 
                     <div class="profile-form-control">
-                        <label for="email">E-mail: </label>
+                        <label class="label-title-profile">E-mail: </label>
                         <input type="email" name="email" placeholder="" class="control-profile" required>
                     </div>
 
@@ -72,12 +72,14 @@
                         <input type="file" name="avatar" class="control-profile" required>
                     </div>
 
+                    </div>
+
                 </form>
             </article>
 
             </div>
 
-    </main>
+        </div>
 
     <%- include('./partials/footer'); %>
 </body>
