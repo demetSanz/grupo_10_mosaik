@@ -1983,6 +1983,44 @@ article.modify-profile{
 
 }
 
+.option-list{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    line-height: 55px;
+    justify-content: flex-start;
+    
+}
+
+.selection-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+.selection-list:hover{
+    text-decoration: underline;
+    opacity: 0.5;
+    padding-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;;
+    
+}
+
+.fa-user-cog,
+.fa-money-check-alt,
+.fa-map-marked-alt,
+.fa-history,
+.fa-hand-holding-usd{
+    margin-right: 10px;
+}
+
+
+
 .icon-menu:hover{
     opacity: 0.8;
 }
@@ -2095,7 +2133,7 @@ div.icon-menu:hover article.modify-profile{ display: block }
     .titular4{
         text-align: left;
         color: #FF6666;
-        margin: 20px 40px;
+        margin: 20px 10px;
         font-size: 25px;
         width: 80%;
         font-weight: 600;
@@ -2122,6 +2160,8 @@ div.icon-menu:hover article.modify-profile{ display: block }
         left: auto;
         box-shadow: none;
         transition: none;
+        width: 45%;
+        background-color: #ebebeb;
 
     }
 
@@ -2131,21 +2171,50 @@ div.icon-menu:hover article.modify-profile{ display: block }
     }
 
     .titular3{
-        text-align: left;
-        color: rgba(0, 0, 0, 0.9);
-        margin: 10px auto;
-        font-size: 20px;
-        width: 80%;
-        font-weight: 600;
+    
+        margin: 10px 5px 10px auto;
+    
     }
 
     .caja-extra-form-edit{
-        width: 80%;
+        width: 90%;
         padding: 20px;
-        border: 1px solid #bebebe;
-        border-radius: 10px;
-        align-items: center;
-        margin: 0 10%;
-        background-color: white;
+        margin: 0 5px 0 auto;
+
     }
+
+    .selection-list{
+        background-color: white;
+        border-radius: 10px;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width:1000px){
+
+    .titular4{
+        margin: 0;
+    }
+
+    div.cont-profile{
+        justify-content: space-between;
+        
+    }
+
+    .main-profile{
+        width: 70%;
+    }
+
+    article.modify-profile{
+        width: 35%;
+        margin-top: 20px;
+    }
+    
+    .titular3{
+    
+        margin: 10px 5px 10px 60px;
+    
+    }
+
 }
