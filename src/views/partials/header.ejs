@@ -1,13 +1,15 @@
 <header class="main-header">
   <div class="container-header">
-
+    <div class="container-recuadro">
     <div class="container-header-superior">
+      <div class="container-logos">
         <a href="/" class="logo-link">
           <img src="/images/mosaik-noblank.png" alt="" class="mosaik-logo1">
         </a>
           <a href="/" class="logo-link">
             <img src="/images/mosaik logo nuevo2.jpg" class="mosaik-logo2" alt="">
           </a> 
+        </div>
           
           <form class="form_search" action= "/search" method= "GET">
             <input type="text" name="search" placeholder="Buscar productos, marcas" class="busqueda"> 
@@ -15,15 +17,24 @@
           </form>
           
           <div class="avatar-inicio">
-            <a href="/user/profile"> <i class="fas fa-user"></i></a>
+            <div class="avatar-centrado">
+              <a href="/user/profile"> <i class="fas fa-user"></i></a>
+            </div>
           </div>
       </div>
+    </div>
 
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li>
+          <a href="/products">Todos los productos</a>
+        </li>
+        <li>
+          |
+        </li>
+        <li>
           <div class="dropdown">
-            <button class="dropbtn"><a href="/products" >Productos <i class="fas fa-sort-down"></i></a></button>
+            <button class="dropbtn">Categorías<i class="fas fa-sort-down"></i></button>
             <div class="dropdown-content">
               <a href="/products?categoria=griferias">Griferias</a>
               <a href="/products?categoria=sanitarios">Sanitarios</a>
@@ -31,11 +42,19 @@
             </div>
           </div>
         </li>
+        </ul>
+        <ul class="main-nav-list">
         <li>
-          <a href="/user/register">Registrarse</a>
+          <a href="/user/register">Registrate</a>
+        </li>
+        <li>
+          |
         </li>
         <li>
           <a href="/user/login">Ingresá</a>
+        </li>
+        <li>
+          |
         </li>
         <li>
           <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>

@@ -58,12 +58,29 @@ html, body {
 
 }
 
+.container-recuadro{
+    width: 100%;
+}
+
+.container-recuadro-login{
+    width: 90%;
+}
+
 .container-header-superior{
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 80%;
+    width: 98%;
     justify-content: space-between;
+}
+
+.container-header-superior-login{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 98%;
+    justify-content: space-between;
+
 }
 
 .container-header .form_search{
@@ -87,19 +104,39 @@ html, body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    
+}
+
+.container-logos{
+    display: flex;
+    align-items: center;
 }
 
 .busqueda{
     border-radius: 5px;
     border-color: grey;
     padding: 2px;
+    width: 100%;
 }
 
 .container-header .input{
     box-shadow: 0px 0px 2px #666666;
 }
 
-.main-nav a {
+.main-nav{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav-login{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav a,
+.main-nav-login a{
     font-size: 0.75em;
     font-weight: bold;
     text-transform: uppercase;
@@ -107,14 +144,23 @@ html, body {
     color: #343534;
     text-decoration: none;
 }
-.main-nav ul {
+.main-nav ul,
+.main-nav-login ul{
     margin: 0;
     padding: 0;
+}
+
+.main-nav-login ul{
+    list-style: none;
 }
 
 .avatar-inicio{
     padding: 20px;
     display: initial;
+}
+
+.avatar-centrado{
+    width: 100%;
 }
 
 .fa-shopping-cart{
@@ -255,6 +301,34 @@ img {
     .contenedor-formularios{
         width: 481px;
     }
+}
+
+@media screen and (min-width:1000px){
+
+    .container-header {
+        width: 80%;
+        max-width: auto;
+    }
+
+    .container-header .form_search{
+        width: 50%;
+    }
+
+    .busqueda{
+        border-radius: 5px;
+        border-color: grey;
+        padding: 2px;
+        width: 100%;
+    }
+
+    .container-recuadro-login{
+        width: 52%;
+    }
+
+    .container-header-superior-login{
+        width: 98%;
+    }
+
 }
 
 /*ESTILOS MAIN*/
@@ -1431,6 +1505,15 @@ ul.breadcrumb li a:hover {
     
     column-gap: 1.25em;
     }
+
+    .fa-sink,
+    .fa-toilet,
+    .fa-th,
+    .fa-user-lock{
+        
+        margin: 0px 10px 15px 0;
+    }
+
     
     .b-footer {
     text-align: center;
