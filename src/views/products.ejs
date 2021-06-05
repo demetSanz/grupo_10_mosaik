@@ -31,7 +31,7 @@
                 
                 %>
 
-            <a href="/products/detail/<%= currentProducto.id %>" class="producto-enrutador"> 
+            
                 <div class="caja-envolvedora-producto2">
 
                 <article class="producto-elias" >
@@ -41,7 +41,8 @@
                             <p class="precio-elias-alt">$<%= currentProducto.price %></p>
                         <div class="producto-descripcion-2">
                     
-                            <p class="medidas"><%= currentProducto.description%></p>
+                            <a href="/products/detail/<%= currentProducto.id %>" class="producto-enrutador"><button class="ver-detalle-producto"> Ver producto</button></a>
+
                         </div>
                     </div>
                 </article>

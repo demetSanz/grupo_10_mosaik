@@ -1005,6 +1005,7 @@ ul.breadcrumb li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
 
 
@@ -1044,6 +1045,23 @@ ul.breadcrumb li a:hover {
     z-index: 2;
     
 }
+
+.ver-detalle-producto{
+    background-color: #fda1a1;;
+    width: 80%;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.ver-detalle-producto:hover{
+    opacity: 0.8;
+}
+
 
 
 @media(min-width: 769px){
