@@ -1,7 +1,7 @@
 .body1{
     margin: 0px;
     padding: 0px;
-    background: url(https://www.wallpapersbrowse.com/images/c5/c54hb1w.png), radial-gradient(circle,#158AB2 0%,#1F2A77 20%,#111742 35%,#0D071A 80%);
+    background: url('../images/fondo404.jpg'), radial-gradient(circle,#158AB2 0%,#1F2A77 20%,#111742 35%,#0D071A 80%);
 }
 a{
     text-decoration:none;
