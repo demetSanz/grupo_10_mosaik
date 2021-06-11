@@ -15,9 +15,7 @@
             <li><a href="/products">Listado de Productos</a></li>
            
                 <% if(categoriasTipos.length > 1) {%>
-                    <li>
-                        <a href="/products">Todos los productos</a>
-                    </li> 
+
                     <% } else { %>
                         <li>
                         <a href="/products?categoria=<%= categoriasTipos%>"><%= categoriasTipos[0].charAt(0).toUpperCase() + categoriasTipos[0].slice(1) %></a>
