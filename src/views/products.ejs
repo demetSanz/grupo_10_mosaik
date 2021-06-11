@@ -7,9 +7,28 @@
     <%- include('./partials/header'); %>
 
 
-    <main class="main-elias-producto">
+    <main class="producto-main">
+
+
+        <ul class="breadcrumb" style="margin-bottom: 15px;">
+
+            <li><a href="/products">Listado de Productos</a></li>
+           
+                <% if(categoriasTipos.length > 1) {%>
+                    <li>
+                        <a href="/products">Todos los productos</a>
+                    </li> 
+                    <% } else { %>
+                        <li>
+                        <a href="/products?categoria=<%= categoriasTipos%>"><%= categoriasTipos[0].charAt(0).toUpperCase() + categoriasTipos[0].slice(1) %></a>
+                    </li><!-- Esto permite poner el primer caracter en mayuscula y el resto en minuscula -->
+            
+                        <% } %> 
+
+        </ul>
 
         <!--Main-Banner Slider-->
+        <article class=producto-main-art>
 
         <!--Seccion Productos-->
 
@@ -58,7 +77,7 @@
         </section>
         <% } %>
 
-        
+        </article>
 
     </main>
 
