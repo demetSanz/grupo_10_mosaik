@@ -1,6 +1,8 @@
 const path = require('path');
 const { validationResult } = require ('express-validator');
 
+const {readJson,writeJson,lastId} = require('./helpers');
+const UserBD = readJson('usersDataBase.json');
 
 
 let usersController ={
@@ -34,17 +36,31 @@ let usersController ={
                 errors: resultValidation.mapped(),
                 oldData: req.body
              });
-        };
-
-        return res.send ('Ok, todas las validaciones pasadas correctamente sin errores')
-
+        }else{
+            let newUser ={
+                id: lastId(UserBD) +1,
+                 ...req.body,
+                //  image: req.file.filename
+                // name: req.body.name,
+                   // price:req.body.price,
+                // size: req.body.size,
+                // category: req.body.category,
+                // description: req.body.description,
+            }
+    
+            UserBD.push(newUser);
+    
+            writeJson('usersDataBase.json',UserBD);
+            
+        }
         
+        res.redirect('/user/profile');
     },
 
     profile: function(req,res){
         return res.render('profile');
     }
-
+   
 }
 
 module.exports = usersController;

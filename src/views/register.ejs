@@ -23,7 +23,10 @@
 
                 <form action="/user/register" method="POST" class="create-form">
                     
-                
+                    <div class="control-formulario">
+                        <input type="text" name="name" placeholder="Nombre completo" class="control" value= "<%= locals.oldData ? oldData.name : null %> " >
+                    </div>
+
                     <div class="control-formulario">
                         <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control" value= "<%= locals.oldData ? oldData.email : null %> " >
                     </div>
