@@ -1,19 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
-// requerir base de datos desde fs
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productsBD = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8',null, 4));
-
-const lastId = () => {
-    let ultimo = 0;
-    productsBD.forEach(product => {
-        if (ultimo < product.id) {
-            ultimo = product.id;
-        };
-    });
- return ultimo;
-};
+const {readJson,writeJson ,lastId} =require('./helpers');
+const productsBD = readJson('productsDataBase.json');
 
 
 let productsController={
@@ -75,7 +64,7 @@ let productsController={
 
     store: function(req,res){
         let newProduct ={
-            id: lastId() +1,
+            id: lastId(productsBD) +1,
              ...req.body,
              image: req.file.filename
             // name: req.body.name,
@@ -90,8 +79,10 @@ let productsController={
 
         productsBD.push(newProduct);
         
-		let newProductJson = JSON.stringify(productsBD, null, 4);
-		fs.writeFileSync(path.resolve(__dirname, '../data/productsDataBase.json'),newProductJson);
+		// let newProductJson = JSON.stringify(productsBD, null, 4);
+		// fs.writeFileSync(path.resolve(__dirname, '../data/productsDataBase.json'),newProductJson);
+
+        writeJson('productsDataBase.json',productsBD);
 		
 		res.redirect('/products');
     },
@@ -102,8 +93,10 @@ let productsController={
 
         let newList = productsBD.filter(product =>product.id != idProduct);
 
-        let newListJson = JSON.stringify(newList, null, 4);
-        fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+        // let newListJson = JSON.stringify(newList, null, 4);
+        // fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+
+        writeJson('productsDataBase.json',newList);
 
         res.redirect("/products");
        

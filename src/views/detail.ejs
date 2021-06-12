@@ -64,10 +64,12 @@
 
                         <button class="producto-button-edit"><a href="/products/<%= product.id %>/edit/" class="button-link-style" >Editar producto</a></button>
 
-                        <button type="submit" class="producto-button-delete">Eliminar
-                            <form action="/products/<%= product.id %>?_method=DELETE"  method="POST" style="display: inline-flex" class="detail-form-delete">
-                            </form>
-                        </button>
+                   
+                        <form action="/products/<%= product.id %>?_method=DELETE"  method="POST"  style="display: inline-flex" class="detail-form-delete">
+                            <button type="submit" class="producto-button-delete" >Eliminar
+                            </button>
+                        </form>
+                   
                         
                     </div>
                   </div>  

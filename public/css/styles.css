@@ -1213,6 +1213,12 @@ ul.breadcrumb li a:hover {
     align-items: center;
 }
 
+.producto-button-delete{
+    display: inline-flex;
+    width: 90%;
+    justify-content: center;
+}
+
 .producto-button-add,
 .producto-button-edit,
 .producto-button-delete{
@@ -1460,6 +1466,9 @@ ul.breadcrumb li a:hover {
     width: 70%;
 }
 
+}
+.detail-form-delete{
+    width: 100%;
 }
 /* ESTILOS DETALLES DE PRODUCTO FIN */
 
