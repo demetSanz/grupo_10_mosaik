@@ -26,4 +26,7 @@ router.post('/register', validations, usersController.processRegister);
 // Perfil de usuario (agregar el /:userId una vez se complete el perfil)
 router.get('/profile', usersController.profile);
 
+//Eliminar perfil
+//router.post('/delete',userController.destroy);
+
 module.exports = router; 

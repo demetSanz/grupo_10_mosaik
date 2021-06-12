@@ -41,25 +41,31 @@ let usersController ={
                 id: lastId(UserBD) +1,
                  ...req.body,
                 //  image: req.file.filename
-                // name: req.body.name,
-                   // price:req.body.price,
-                // size: req.body.size,
-                // category: req.body.category,
-                // description: req.body.description,
             }
     
             UserBD.push(newUser);
     
             writeJson('usersDataBase.json',UserBD);
             
-        }
-        
-        res.redirect('/user/profile');
+        }  
+         res.redirect('/user/profile');
     },
 
     profile: function(req,res){
         return res.render('profile');
     }
+   
+    
+    //     res.redirect(`/user/profile`);
+    // },
+
+    // profile: function(req,res){
+    //     // let idUser = req.params.id;
+    //     // console.log(idUser);
+	// 	// let user =UserBD.find(user => user.id == idUser)
+
+    //     return res.render('/profile');
+    // }
    
 }
 
