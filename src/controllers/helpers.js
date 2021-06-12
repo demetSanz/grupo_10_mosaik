@@ -16,9 +16,9 @@ const helpers = {
 
     lastId:  (archivoJson) => {
         let ultimo = 0;
-        archivoJson.forEach(product => {
-            if (ultimo < product.id) {
-                ultimo = product.id;
+        archivoJson.forEach(element => {
+            if (ultimo < element.id) {
+                ultimo = element.id;
             };
         });
     return ultimo;
