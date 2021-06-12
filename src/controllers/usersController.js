@@ -48,7 +48,7 @@ let usersController ={
             writeJson('usersDataBase.json',UserBD);
             
         }  
-         res.redirect('/user/profile');
+        res.redirect('/user/profile');
     },
 
     profile: function(req,res){
