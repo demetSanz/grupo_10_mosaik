@@ -50,10 +50,13 @@ let productsController={
 				product.description= req.body.description;
 			}
 		});
-		
-		let newListJson = JSON.stringify(productsBD, null, 4);
-		fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
-		
+				 
+        
+        writeJson('productsDataBase.json',productsBD);
+               
+       
+
+
 		let product =productsBD.find(product => product.id == idProduct)
 		res.render('detail',{product});
     },
