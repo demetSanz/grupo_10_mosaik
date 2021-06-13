@@ -50,10 +50,13 @@ let productsController={
 				product.description= req.body.description;
 			}
 		});
-		
-		let newListJson = JSON.stringify(productsBD, null, 4);
-		fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
-		
+				 
+        
+        writeJson('productsDataBase.json',productsBD);
+               
+       
+
+
 		let product =productsBD.find(product => product.id == idProduct)
 		res.render('detail',{product});
     },
@@ -67,22 +70,13 @@ let productsController={
             id: lastId(productsBD) +1,
              ...req.body,
              image: req.file.filename
-            // name: req.body.name,
-   			// price:req.body.price,
-            // size: req.body.size,
-			// category: req.body.category,
-			// description: req.body.description,
-
-            // 1_ no podemos hacer editar el producto
-            //2_ al crear trae solo el id y los demas campos no
         }
 
         productsBD.push(newProduct);
         
-		// let newProductJson = JSON.stringify(productsBD, null, 4);
-		// fs.writeFileSync(path.resolve(__dirname, '../data/productsDataBase.json'),newProductJson);
 
         writeJson('productsDataBase.json',productsBD);
+        
 		
 		res.redirect('/products');
     },
@@ -93,8 +87,7 @@ let productsController={
 
         let newList = productsBD.filter(product =>product.id != idProduct);
 
-        // let newListJson = JSON.stringify(newList, null, 4);
-        // fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+        
 
         writeJson('productsDataBase.json',newList);
 

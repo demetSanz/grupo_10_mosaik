@@ -16,5 +16,14 @@
   "celular": "123123",
   "password": "$2a$10$YzJNlCMNbqc8uUg5I1va4O7Dm1WC7/c5ftq1VuxqG5RJ9xYan8Nhi",
   "passwordRe": "$2a$10$6DXvAShuZatAH8ZnP4UCM.4Rx3kSHAU6EsX6B0D/A7nY5VcCTXtPq"
+ },
+ {
+  "id": 3,
+  "category": "cliente",
+  "name": "jorge alfredo mauro 4",
+  "email": "skotsias@clanksa.com.ar",
+  "celular": "123123",
+  "password": "$2a$10$xGifA4Qwv8ykU85.W8Q8QOTAF22o.gOo/a65JNT2VlH2VJP3jJ5UO",
+  "passwordRe": "$2a$10$gSxTji37oz5KTgfUv7yTBOL17M3CD9d21YrQD.jTVMskLpb6NcKIS"
  }
 ]
