@@ -26,6 +26,14 @@
                     <div class="control-formulario">
                         <input type="text" name="name" placeholder="Nombre completo" class="control" value="<%= locals.oldData ? oldData.name : null %>" >
                     </div>
+                                        
+                    <% if (locals.errors && errors.name) { %>
+
+                        <div class="text-danger">
+                            <%= errors.name.msg  %> 
+                        </div>
+                        
+                    <% } %>
 
                     <div class="control-formulario">
                         <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control" value= "<%= locals.oldData ? oldData.email : null %>" >

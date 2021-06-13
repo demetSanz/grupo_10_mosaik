@@ -11,20 +11,21 @@ const validations = require('../middleware/validationUser');
 // -- RUTAS USUARIO -- 
 // -------------------
 
-//Formulario de login
-router.get('/login', usersController.login);
-
-//Procesar el login
-router.post ('/login', validations, usersController.processLogin);
-
 // Formulario de registro
 router.get('/register', usersController.register);
 
 //Procesar el registro
 router.post('/register', validations, usersController.processRegister);
 
+//Formulario de login
+router.get('/login', usersController.login);
+
+//Procesar el login
+router.post('/login',usersController.processLogin);
+
 // Perfil de usuario (agregar el /:userId una vez se complete el perfil)
-router.get('/profile', usersController.profile);
+router.get('/profile/', usersController.profile);
+
 
 //Eliminar perfil
 //router.post('/delete',userController.destroy);

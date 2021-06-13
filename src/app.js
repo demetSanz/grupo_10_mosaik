@@ -1,4 +1,5 @@
 const express = require('express'); // Requerimos express
+const session = require ('express-session'); // Requerimos express-session para iniciar sesiones
 const app = express(); // Llamamos express dentro de la constante app
 const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
@@ -19,6 +20,13 @@ app.listen(port, () =>
     console.log('Servidor corriendo Grupo 10 DH en el puerto ' + port)
 );
 
+//middleware de session (proximamente mover a middlewares)
+//Lo que se coloca aqui es obligatorio para que no tire errores, no tiene funcionalidad per se para el uso de la sesion
+app.use (session({ 
+    secret: 'esto es secreto',
+    resave: false,
+    saveUninitialized:false
+}));
 
 // Procedemos a setear app para que el view engine (motor de visualizacion) sea ejs (Express JS Layouts) tal como se señala en el repositorio npm
 app.set('view engine', 'ejs');

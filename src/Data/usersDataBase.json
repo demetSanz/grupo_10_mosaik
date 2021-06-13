@@ -1,3 +1,20 @@
 [
-   
+ {
+  "id": 1,
+  "category": "cliente",
+  "name": "TEODORO LORENZ  JOHANNES",
+  "email": "elisendairmarava@gmail.com",
+  "celular": "123123",
+  "password": "$2a$10$Tll3WwL1l0ieCpDcjy0N9e5p5Ppg1M8H26OETcmTGA/dwRtbnXXvq",
+  "passwordRe": "$2a$10$iG3oBAjRnqR29RmHBV5tJucutTeuQjBjK5yxuYg4/ZOCgQZjpq8yi"
+ },
+ {
+  "id": 2,
+  "category": "cliente",
+  "name": "TEODORO LORENZ  JOHANNES",
+  "email": "javi@dh.com",
+  "celular": "123123",
+  "password": "$2a$10$YzJNlCMNbqc8uUg5I1va4O7Dm1WC7/c5ftq1VuxqG5RJ9xYan8Nhi",
+  "passwordRe": "$2a$10$6DXvAShuZatAH8ZnP4UCM.4Rx3kSHAU6EsX6B0D/A7nY5VcCTXtPq"
+ }
 ]

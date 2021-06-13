@@ -44,32 +44,32 @@
                     
                     <div class="profile-form-control">
                         <label class="label-title-profile">Nombre y Apellido:</label>
-                        <label for="name" name='name' id="name" <%#=  user.name %>   class="control-profile"></label>
+                        <label for="name" name='name' id="name" class="control-profile"><%= user.name %> </label>
                     </div>
 
                     <div class="profile-form-control">
                         <label class="label-title-profile">Dirección:</label>                        
-                        <input type="text" name="address" placeholder="" class="control-profile">
+                        <label type="text" name="address" <%#= user.adress %>  class="control-profile"></label>
                     </div>
 
                     <div class="profile-form-control">
                         <label class="label-title-profile">Celular: </label>
-                        <input type="number" name="number" placeholder="" class="control-profile">
+                        <label type="number" name="celular" id="celular"  class="control-profile"> <%= user.celular %></label>
                     </div>
 
                     <div class="profile-form-control">
                         <label class="label-title-profile">Datos de pago: </label>
-                        <input type="text" name="payment" placeholder="" class="control-profile">
+                        <label type="text" name="payment" <%#= user.payment %>  class="control-profile"></label>
                     </div>
 
                     <div class="profile-form-control">
                         <label class="label-title-profile">E-mail: </label>
-                        <input type="email" name="email" placeholder="" class="control-profile">
+                        <label type="email" name="email" id="email"  class="control-profile"><%= user.email %> </label>
                     </div>
 
                     <div class="profile-form-control">
                         <label for="imagen">Avatar: </label>
-                        <input type="file" name="avatar" class="control-profile">
+                        <label type="file" name="avatar" class="control-profile">
                     </div>
 
                     </div>
