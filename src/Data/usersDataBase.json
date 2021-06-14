@@ -2,28 +2,31 @@
  {
   "id": 1,
   "category": "cliente",
-  "name": "TEODORO LORENZ  JOHANNES",
-  "email": "elisendairmarava@gmail.com",
-  "celular": "123123",
-  "password": "$2a$10$Tll3WwL1l0ieCpDcjy0N9e5p5Ppg1M8H26OETcmTGA/dwRtbnXXvq",
-  "passwordRe": "$2a$10$iG3oBAjRnqR29RmHBV5tJucutTeuQjBjK5yxuYg4/ZOCgQZjpq8yi"
+  "name": "Sherlock Holmes",
+  "email": "sherlock@gmail.com",
+  "address": "221 B Baker ST",
+  "payment": "AMEX",
+  "celular": "15151515",
+  "password": "$2a$10$Cl/J3eg40lGtzIdYRQsu3u/wvNN/9oYizqhJ8k0/GBb0e24TM7pu2"
  },
  {
   "id": 2,
   "category": "cliente",
-  "name": "TEODORO LORENZ  JOHANNES",
-  "email": "javi@dh.com",
-  "celular": "123123",
-  "password": "$2a$10$YzJNlCMNbqc8uUg5I1va4O7Dm1WC7/c5ftq1VuxqG5RJ9xYan8Nhi",
-  "passwordRe": "$2a$10$6DXvAShuZatAH8ZnP4UCM.4Rx3kSHAU6EsX6B0D/A7nY5VcCTXtPq"
+  "name": "John Watson",
+  "email": "watson@gmail.com",
+  "address": "221 B Baker ST",
+  "payment": "VISA",
+  "celular": "16161616",
+  "password": "$2a$10$u.t5UsCXlMHtS7l/dAkV.utPfjlkzNgMYZYJyTrveGTeSbV.2ivQO"
  },
  {
   "id": 3,
   "category": "cliente",
-  "name": "jorge alfredo mauro 4",
-  "email": "skotsias@clanksa.com.ar",
-  "celular": "123123",
-  "password": "$2a$10$xGifA4Qwv8ykU85.W8Q8QOTAF22o.gOo/a65JNT2VlH2VJP3jJ5UO",
-  "passwordRe": "$2a$10$gSxTji37oz5KTgfUv7yTBOL17M3CD9d21YrQD.jTVMskLpb6NcKIS"
+  "name": "James Moriarty",
+  "email": "moriarty@gmail.com",
+  "address": "187 North Gower Street",
+  "payment": "MASTERCARD",
+  "celular": "12121212",
+  "password": "$2a$10$dyuvqrrowoat/.r3BHgNJezS5x7UJ1.5JiUxMSOGvCzms5kq1A78S"
  }
 ]

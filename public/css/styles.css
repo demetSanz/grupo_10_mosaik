@@ -89,6 +89,7 @@ html, body {
     outline: none;
     color: #666666;
     padding: 8px;
+    width: 70%;
 }
 
 .container-header .lupa {
@@ -126,7 +127,9 @@ html, body {
 .main-nav{
     width: 98%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .main-nav-login{
@@ -150,14 +153,21 @@ html, body {
     padding: 0;
 }
 
-.main-nav-login ul{
+.main-nav-login ul,
+.avatar-centrado ul{
     list-style: none;
 }
 
-.avatar-inicio{
+.main-nav-list{
+    display: flex;
+    align-items: center;
+}
+
+
+/* .avatar-inicio{
     padding: 20px;
     display: initial;
-}
+} */
 
 .avatar-centrado{
     width: 100%;
@@ -251,6 +261,7 @@ img {
     color: #343534;
     text-decoration: none;
     background-color: white;
+    display: flex;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -301,6 +312,14 @@ img {
     .contenedor-formularios{
         width: 481px;
     }
+
+    .main-nav{
+        flex-direction: row;
+    }
+
+    .container-header .form_search{
+        width: 50%;
+    }
 }
 
 @media screen and (min-width:1000px){
@@ -308,10 +327,6 @@ img {
     .container-header {
         width: 80%;
         max-width: auto;
-    }
-
-    .container-header .form_search{
-        width: 50%;
     }
 
     .busqueda{
@@ -460,6 +475,29 @@ main{
     padding: 8px 8px;
     border: 1px solid #bebebe;
     border-radius: 5px;
+}
+
+.control-payment{
+    width: 70%;    
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    color: gray;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.control-form-select{
+    width: 100%;
+    padding: 8px 2px;
+    font-weight: 500;
+    font-size: 18px;
+    color: gray;
+    border: none;
+    margin: 0;
 }
 
 div.form-remember{

@@ -46,7 +46,44 @@
                         </div>
                         
                     <% } %>
-                  
+
+                    <div class="control-formulario">
+                        <input type="text" name="address" placeholder="Dirección" class="control" value="<%= locals.oldData ? oldData.address : null %>" >
+                    </div>
+                                        
+                    <% if (locals.errors && errors.address) { %>
+
+                        <div class="text-danger">
+                            <%= errors.address.msg  %> 
+                        </div>
+                        
+                    <% } %>
+
+                    <div class="control-formulario">
+                        <div class="control-payment">
+                            <select 
+                                name="payment" 
+                                class="control-form-select <%= locals.errors && errors.payment ? 'is-invalid' : null %>"
+                            >
+                            <option value="">Seleccioná tu medio de pago</option>
+                            <%  
+                                let payments = ['VISA', 'MASTERCARD', 'AMEX', 'NARANJA', 'MERCADO PAGO'];
+                            %>
+                            <% for (const onePayment of payments) { %>
+                            <option 
+                                    value="<%= onePayment %>"
+                                    <%= locals.oldData && (onePayment === oldData.payment) ? 'selected' : null %> 
+                                > <%= onePayment %> 
+                            </option>
+                            <% } %>
+                            </select>
+                            <% if (locals.errors && errors.payment) { %>
+                                <div class="text-danger">
+                                    <%= errors.payment.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>                  
                      <div class="control-formulario">
                         
                         <input type="number" name="celular" placeholder="Ingresá tu número de celular" class="control" value= "<%= locals.oldData ? oldData.celular : null %>" >
@@ -68,18 +105,6 @@
 
                         <div class="text-danger">
                             <%= errors.password.msg  %> 
-                        </div>
-                        
-                    <% } %>
-
-                    <div class="control-formulario">
-                        
-                        <input type="password" name="passwordRe" placeholder="Repetí la contraseña" class="control" >
-                    </div>
-                    <% if (locals.errors && errors.passwordRe) { %>
-
-                        <div class="text-danger">
-                            <%= errors.passwordRe.msg  %> 
                         </div>
                         
                     <% } %>

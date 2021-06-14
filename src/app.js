@@ -7,6 +7,7 @@ const routerMain = require('./routers/mainRoutes'); // importamos routers main
 const routersProducts = require('./routers/productsRoutes');
 const routerUsers = require('./routers/userRoutes');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const userLoggedMiddleware = require ('./middleware/userLoggedMiddleware'); //Middleware para poder mostrar registro y login segun si esta o no logueado
 
 /* Configuraciones */
 app.use(
@@ -27,6 +28,11 @@ app.use (session({
     resave: false,
     saveUninitialized:false
 }));
+
+//middleware de userlogged (proximamente mover a middlewares)
+//Esto activa el userloggedMiddleware requerido en la parte superior
+
+app.use(userLoggedMiddleware);
 
 // Procedemos a setear app para que el view engine (motor de visualizacion) sea ejs (Express JS Layouts) tal como se señala en el repositorio npm
 app.set('view engine', 'ejs');

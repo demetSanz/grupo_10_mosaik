@@ -16,11 +16,7 @@
             <button class="lupa"><i class="fas fa-search"></i></button>
           </form>
           
-          <div class="avatar-inicio">
-            <div class="avatar-centrado">
-              <a href="/user/profile"> <i class="fas fa-user"></i></a>
-            </div>
-          </div>
+         
       </div>
     </div>
 
@@ -34,7 +30,7 @@
         </li>
         <li>
           <div class="dropdown">
-            <button class="dropbtn">Categorías<i class="fas fa-sort-down"></i></button>
+            <button class="dropbtn">Categorías  <i class="fas fa-sort-down"></i></button>
             <div class="dropdown-content">
               <a href="/products?categoria=griferias">Griferias</a>
               <a href="/products?categoria=sanitarios">Sanitarios</a>
@@ -42,26 +38,14 @@
             </div>
           </div>
         </li>
+        <li>
+          |
+        </li>
+       
         </ul>
-        <ul class="main-nav-list">
-        <li>
-          <a href="/user/register">Registrate</a>
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          <a href="/user/login">Ingresá</a>
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-        </li>
 
-
-      </ul>
+        <%- include('./navbar'); %>
+        
     </nav>
   </div>
 </header>
