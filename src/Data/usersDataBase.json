@@ -32,7 +32,7 @@
  {
   "id": 4,
   "name": "nicoClem",
-  "email": "nico@h.com",
+  "email": "nico@dh.com",
   "address": "san luis",
   "payment": "AMEX",
   "celular": "123456",
@@ -49,6 +49,17 @@
   "celular": "11555555",
   "password": "$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m",
   "file": "1623885485858_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 6,
+  "name": "NahuiiGH",
+  "email": "nahuii@dh.com",
+  "address": "CABA",
+  "payment": "AMEX",
+  "celular": "12315245",
+  "password": "$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq",
+  "file": "1623885642557_img.jpg",
   "category": "cliente"
  }
 ]
