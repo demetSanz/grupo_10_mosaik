@@ -39,5 +39,16 @@
   "password": "$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW",
   "file": "1623885037788_img.jpg",
   "category": "admin"
+ },
+ {
+  "id": 5,
+  "name": "luis Crescente",
+  "email": "luis@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "11555555",
+  "password": "$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m",
+  "file": "1623885485858_img.jpg",
+  "category": "cliente"
  }
 ]
