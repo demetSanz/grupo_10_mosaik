@@ -40,7 +40,7 @@ let usersController ={
          let userCreate ={
             ...req.body,
             password:bcrypt.hashSync( req.body.password, 10),
-            
+            file:req.file.filename,
         }
 
         let userCreated = User.create(userCreate);

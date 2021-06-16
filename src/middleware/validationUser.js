@@ -20,7 +20,6 @@ const validations = [
     body('celular')
         .notEmpty().withMessage('El campo no puede estar vacío').bail()
         .isLength({ min: 5, max: 10 }).withMessage('Escribí un número válido'),
-    
 ];
 
 

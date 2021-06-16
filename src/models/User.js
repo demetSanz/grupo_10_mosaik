@@ -43,8 +43,8 @@ const User = {
 		let allUsers = this.findAll();
 		let newUser = {
 			id: this.generateId(),
+			...userData,
 			category: "cliente",
-			...userData
 		}
 		allUsers.push(newUser);
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
