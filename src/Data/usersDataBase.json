@@ -28,5 +28,16 @@
   "payment": "MASTERCARD",
   "celular": "12121212",
   "password": "$2a$10$dyuvqrrowoat/.r3BHgNJezS5x7UJ1.5JiUxMSOGvCzms5kq1A78S"
+ },
+ {
+  "id": 4,
+  "name": "nicoClem",
+  "email": "nico@h.com",
+  "address": "san luis",
+  "payment": "AMEX",
+  "celular": "123456",
+  "password": "$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW",
+  "file": "1623885037788_img.jpg",
+  "category": "admin"
  }
 ]
