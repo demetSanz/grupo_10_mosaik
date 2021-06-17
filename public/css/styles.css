@@ -164,13 +164,15 @@ html, body {
 }
 
 
-/* .avatar-inicio{
-    padding: 20px;
-    display: initial;
-} */
+ .avatar-inicio{
+display: flex;
+justify-content: space-between;
+} 
 
 .avatar-centrado{
     width: 100%;
+    display: flex;
+justify-content: space-between;
 }
 
 .fa-shopping-cart{
