@@ -1,5 +1,6 @@
 const express = require('express'); // Requerimos express
 const session = require ('express-session'); // Requerimos express-session para iniciar sesiones
+const cookies = require ('cookie-parser');// requierimos cookie-parser para trabajar con cookies
 const app = express(); // Llamamos express dentro de la constante app
 const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
@@ -28,6 +29,10 @@ app.use (session({
     resave: false,
     saveUninitialized:false
 }));
+
+//middleware  de aplicacion  --cookies
+app.use(cookies());
+
 
 //middleware de userlogged (proximamente mover a middlewares)
 //Esto activa el userloggedMiddleware requerido en la parte superior

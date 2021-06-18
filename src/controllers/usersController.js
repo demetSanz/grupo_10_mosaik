@@ -11,6 +11,7 @@ const User = require('../models/User');
 let usersController ={
 
     register: function (req, res) {
+        
         return res.render('register');
     },
 
@@ -48,10 +49,12 @@ let usersController ={
     },
     
     login: function (req, res) {
+        
         return res.render('login');
     } , 
 
     processLogin: function (req, res){
+        
         let userToLogin = User.findByField('email',req.body.email);
         if(userToLogin){
             let passwordUser = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -59,6 +62,11 @@ let usersController ={
                 delete userToLogin.password;
                 
                 req.session.userLogged = userToLogin;
+
+                if(req.body.remember){
+                    res.cookie('userEmail',req.body.email,{maxAge:1000*90})
+                }
+
                 return res.redirect('profile');
             }
             return res.render('login',{
@@ -80,13 +88,16 @@ let usersController ={
     },
 
 
+
     profile: function(req,res){
-        return res.render('profile', {
+
+           return res.render('profile', {
             user: req.session.userLogged
         });
     },
 
     logout: function(req,res){
+        res.clearCookie('userEmail')
         req.session.destroy();
         return res.redirect ('/')
     }
