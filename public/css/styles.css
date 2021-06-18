@@ -83,13 +83,20 @@ html, body {
 
 }
 
-.container-header .form_search{
+.search-box{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box .form_search{
     display: flex;
     border: none;
     outline: none;
     color: #666666;
     padding: 8px;
-    width: 70%;
+    width: 90%;
 }
 
 .container-header .lupa {
@@ -111,6 +118,7 @@ html, body {
 .container-logos{
     display: flex;
     align-items: center;
+    display: 40%;
 }
 
 .busqueda{
@@ -127,10 +135,12 @@ html, body {
 .main-nav{
     width: 98%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
 }
+
+
 
 .main-nav-login{
     
@@ -160,19 +170,33 @@ html, body {
 
 .main-nav-list{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.cuadrito-login{
+    display: flex;
+}
+
+.cuadrito-login p{
+    display: none;
+}
+
+.main-nav-list .avatar-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
 }
 
 
- .avatar-inicio{
-display: flex;
-justify-content: space-between;
+.avatar-inicio{
+    display: flex;
+    justify-content: space-between;
 } 
 
 .avatar-centrado{
     width: 100%;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .fa-shopping-cart{
@@ -240,6 +264,9 @@ img {
     display: none;
 }
 
+
+
+
 .main-nav ul {
     margin: 1em 0 .5em;
     text-align: center;
@@ -256,7 +283,7 @@ img {
 /* Dropdown Button */
 .dropbtn {
     border: none;
-    /* font-size: 0.75em; */
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -264,6 +291,7 @@ img {
     text-decoration: none;
     background-color: white;
     display: flex;
+
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -306,6 +334,11 @@ img {
         width: auto;
     }
 
+    .container-logos{
+        width: 100%;
+    }
+
+   
     main{
         padding: 20px;
         
@@ -317,10 +350,29 @@ img {
 
     .main-nav{
         flex-direction: row;
+        align-items: flex-end;
     }
 
-    .container-header .form_search{
-        width: 50%;
+    .cuadrito-login{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .cuadrito-login p{
+        margin: 0;
+        display: flex;
+    }
+
+    .search-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .search-box .form_search{
+        width: 100%;
     }
 }
 
@@ -330,6 +382,8 @@ img {
         width: 80%;
         max-width: auto;
     }
+
+  
 
     .busqueda{
         border-radius: 5px;
@@ -2268,6 +2322,16 @@ div.icon-menu:hover article.modify-profile{ display: block }
     background-color: white;
 }
 
+.control-profile-avatar{
+    width: 80px;
+    height: 80px;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    background-color: white;
+}
+
 .control-foto{
     width: 100%;
     padding: 8px 8px;
@@ -2341,7 +2405,7 @@ div.icon-menu:hover article.modify-profile{ display: block }
     }
 }
 
-@media screen and (min-width:1000px){
+@media screen and (min-width:1200px){
 
     .titular4{
         margin: 0;

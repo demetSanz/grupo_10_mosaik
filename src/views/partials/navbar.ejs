@@ -6,23 +6,32 @@
             <li>
                 <div class="dropdown">
                     <% if (locals.isLogged) { %>
-                    <button class="dropbtn"><img src="/images/imagesPerfil/<%= locals.userLogged.file %>" alt="avatar" width="20%" > <i class="fas fa-sort-down"></i></button>
+                    <button class="dropbtn">
+                        <div class="cuadrito-login">
+                            <p>¡HOLA <%= locals.userLogged.name %>!</p>
+                            <p>&nbsp;</p>
+                            <div class="avatar">
+                                <img src="/images/imagesPerfil/<%= locals.userLogged.file %>" alt="avatar" width="20%" class="avatar-img" > <i class="fas fa-sort-down"></i>
+                            </div>
+                            
+                        </div>
+                    </button>
+
                     <div class="dropdown-content">
                     <a href="/user/profile">Perfil</a>
                     <a href="/user/logout">Salir</a>
                     </div>
                 </div>
-                <% } else { %>
             </li>
+
+            <% } else { %>
             <li> |</li>
-            <li><a href="/user/register">Registrate  </a></li>
+            <li><a href="/user/register"> Registrate  </a></li>
             <li> |</li>
-            <li><a href="/user/login">Ingresá  </a></li>
+            <li><a href="/user/login"> Ingresá  </a></li>
             <li> |</li>
-            <li>
-                <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-            </li>
             <% } %>
-    </ul>
+
+        </ul>
     </div>
   </div>

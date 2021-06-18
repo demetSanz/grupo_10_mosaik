@@ -64,7 +64,7 @@ let usersController ={
             return res.render('login',{
                 errors:{
                     password:{
-                        msg:'la contrasenia no coincide',
+                        msg:'La contraseña no coincide',
                     }
                 }
             })

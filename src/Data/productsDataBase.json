@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Mosaico Sanchez",
-        "price": "100",
+        "name": "Mosaico para pared Sanchez",
+        "price": "10000",
         "marca": "Ilva",
         "size": "35x60",
         "category": "pisos",
@@ -61,7 +61,7 @@
     },
     {
         "id": 7,
-        "name": "Grifería para Cocina con Pico Flexible negro",
+        "name": "Grifería para Cocina Pico Flexible negro",
         "price": "36700",
         "marca": "PIAZZA",
         "size": "35x60",
@@ -81,7 +81,7 @@
     },
     {
         "id": 9,
-        "name": "Mosaico Crescente",
+        "name": "Mosaico para pared Crescente",
         "price": "11399",
         "marca": "Ilva",
         "size": "35x60",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "name": "Mosaico Clementi",
+        "name": "Mosaico para pared Clementi",
         "price": "1200",
         "marca": "Ilva",
         "size": "35x60",

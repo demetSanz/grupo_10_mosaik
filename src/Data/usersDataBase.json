@@ -1,36 +1,6 @@
 [
  {
   "id": 1,
-  "category": "cliente",
-  "name": "Sherlock Holmes",
-  "email": "sherlock@gmail.com",
-  "address": "221 B Baker ST",
-  "payment": "AMEX",
-  "celular": "15151515",
-  "password": "$2a$10$Cl/J3eg40lGtzIdYRQsu3u/wvNN/9oYizqhJ8k0/GBb0e24TM7pu2"
- },
- {
-  "id": 2,
-  "category": "cliente",
-  "name": "John Watson",
-  "email": "watson@gmail.com",
-  "address": "221 B Baker ST",
-  "payment": "VISA",
-  "celular": "16161616",
-  "password": "$2a$10$u.t5UsCXlMHtS7l/dAkV.utPfjlkzNgMYZYJyTrveGTeSbV.2ivQO"
- },
- {
-  "id": 3,
-  "category": "cliente",
-  "name": "James Moriarty",
-  "email": "moriarty@gmail.com",
-  "address": "187 North Gower Street",
-  "payment": "MASTERCARD",
-  "celular": "12121212",
-  "password": "$2a$10$dyuvqrrowoat/.r3BHgNJezS5x7UJ1.5JiUxMSOGvCzms5kq1A78S"
- },
- {
-  "id": 4,
   "name": "nicoClem",
   "email": "nico@dh.com",
   "address": "san luis",
@@ -41,7 +11,7 @@
   "category": "admin"
  },
  {
-  "id": 5,
+  "id": 2,
   "name": "luis Crescente",
   "email": "luis@dh.com",
   "address": "capital federal",
@@ -52,7 +22,7 @@
   "category": "admin"
  },
  {
-  "id": 6,
+  "id": 3,
   "name": "NahuiiGH",
   "email": "nahuii@dh.com",
   "address": "CABA",
