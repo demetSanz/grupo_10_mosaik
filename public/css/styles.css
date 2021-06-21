@@ -87,7 +87,7 @@ html, body {
     width: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 .search-box .form_search{
@@ -170,7 +170,8 @@ html, body {
 
 .main-nav-list{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+
 }
 
 .cuadrito-login{
@@ -366,7 +367,7 @@ img {
     .search-box{
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: baseline;
         margin: 0;
         justify-content: space-between;
     }
