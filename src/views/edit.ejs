@@ -19,17 +19,17 @@
                 
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="name">Nombre de producto</label>
-                        <input type="text" name="name" class="control" placeholder="Ej: parque cerezo">
+                        <input type="text" name="name" class="control" value="<%= productToEdit.name %>" >
                     </div>
     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="marca">Marca del producto</label>
-                        <input type="text" name="marca" class="control" placeholder="Ej: Ilva">
+                        <input type="text" name="marca" class="control" value="<%= productToEdit.marca %>" >
                     </div>
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="description">Descripción del producto</label>
-                        <input type="textarea" name="description" id="description" class="control" placeholder="Ingrese una descripcion">
+                        <input type="textarea" name="description" id="description" class="control" value="<%= productToEdit.description %>">
                     </div>
 
                     <!-- <div class="control-formulario">
@@ -50,7 +50,7 @@
                     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit" for="price">Precio</label>
-                        <label class="label-title-edit"  for="price">$<input type="number" name="price" placeholder="Precio" class="control-edit" value="$"></label>
+                        <label class="label-title-edit"  for="price">$<input type="number" name="price" value="<%= productToEdit.price %>" class="control-edit" value="$"></label>
                     </div>
  
                     <!-- Agregar campo de Oferta -->
