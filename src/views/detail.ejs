@@ -64,7 +64,7 @@
                         <button class="producto-button-add">Agregar al carrito</button>
                         <% }  %>
                         <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
-                        <button class="producto-button-edit"><a href="/products/<%= product.id %>/edit/" class="button-link-style" >Editar producto</a></button>
+                        <a href="/products/<%= product.id %>/edit/" class="button-link-style" ><button class="producto-button-edit">Editar producto</button></a>
 
                    
                         <form action="/products/<%= product.id %>?_method=DELETE"  method="POST"  style="display: inline-flex" class="detail-form-delete">

@@ -1123,7 +1123,7 @@ ul.breadcrumb li a:hover {
     
 }
 
-.producto-descripcion-2{
+/* .producto-descripcion-2{
     font-size: 15px;
     color: #868686;
     margin-bottom: 5px;
@@ -1139,7 +1139,7 @@ ul.breadcrumb li a:hover {
     
     z-index: 2;
     
-}
+} */
 
 .ver-detalle-producto{
     background-color: #fda1a1;;
@@ -1151,12 +1151,56 @@ ul.breadcrumb li a:hover {
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
+    
+    
 }
 
 .ver-detalle-producto:hover{
     opacity: 0.8;
 }
 
+/*--------------*/
+
+.producto-cajita2{
+    position: relative;
+    z-index: 9;
+   
+}
+
+.producto-elias .img-producto{
+    width: 60%;
+    margin-top: 15px;
+
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .producto-descripcion-2 {
+    
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+  
+  .producto-elias:hover .producto-cajita2{
+    opacity: 0.7;
+  }
+  
+  .producto-elias:hover .producto-descripcion-2{
+    opacity: 1;
+  }
+  
+
+/*-----*/
 
 
 @media(min-width: 769px){
@@ -1170,6 +1214,7 @@ ul.breadcrumb li a:hover {
     .producto-elias .img-producto{
         width: 60%;
         margin-top: 15px;
+       
     }
 
     .caja-envolvedora-producto3{
@@ -1310,12 +1355,21 @@ ul.breadcrumb li a:hover {
 
 .producto-button-delete{
     display: inline-flex;
-    width: 90%;
     justify-content: center;
 }
 
+.producto-button-edit{
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
 .producto-button-add,
-.producto-button-edit,
 .producto-button-delete{
     width: 90%;
     border: none;
@@ -1323,7 +1377,8 @@ ul.breadcrumb li a:hover {
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 0;
+    cursor: pointer;
     
 }
 
@@ -1345,6 +1400,8 @@ ul.breadcrumb li a:hover {
 .button-link-style{
     text-decoration: none;
     color: white;
+    width: 90%;
+    
 }
 
 .producto-detail-descripcion-content{
@@ -1564,6 +1621,8 @@ ul.breadcrumb li a:hover {
 }
 .detail-form-delete{
     width: 100%;
+    justify-content: center;
+
 }
 /* ESTILOS DETALLES DE PRODUCTO FIN */
 
