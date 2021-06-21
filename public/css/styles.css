@@ -1142,7 +1142,7 @@ ul.breadcrumb li a:hover {
 } */
 
 .ver-detalle-producto{
-    background-color: #fda1a1;;
+    background-color: #FF6666;
     width: 80%;
     border: none;
     font-size: 17px;
@@ -1155,9 +1155,9 @@ ul.breadcrumb li a:hover {
     
 }
 
-.ver-detalle-producto:hover{
+/* .ver-detalle-producto:hover{
     opacity: 0.8;
-}
+} */
 
 /*--------------*/
 
