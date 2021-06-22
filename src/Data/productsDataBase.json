@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Mosaico para pared Sanchez",
+        "name": "Mosaico Sanchez",
         "price": "10000",
         "marca": "Ilva",
         "size": "35x60",
@@ -81,7 +81,7 @@
     },
     {
         "id": 9,
-        "name": "Mosaico para pared Crescente",
+        "name": "Mosaico Crescente",
         "price": "11399",
         "marca": "Ilva",
         "size": "35x60",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "name": "Mosaico para pared Clementi",
+        "name": "Mosaico Clementi",
         "price": "1200",
         "marca": "Ilva",
         "size": "35x60",
