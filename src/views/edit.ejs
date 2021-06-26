@@ -9,7 +9,7 @@
 
         <!--Formularios-->
             <div class="contenedor-formularios-edit">
-                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST" class="create-form-edit">
+                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST"  enctype="multipart/form-data" class="create-form-edit">
     
                     <div class="titulo-form-edit">
                         <h3>Editar el producto</h3>
@@ -32,10 +32,10 @@
                         <input type="textarea" name="description" id="description" class="control" value="<%= productToEdit.description %>">
                     </div>
 
-                    <!-- <div class="control-formulario">
-                        <label class="foto"><i class="fas fa-camera"></i>Subir una imagen del Producto:
-                        <input type="file" name="avatar" accept=".jpg .png" class="control"></label>   
-                    </div> -->
+                    <div class="control-formulario-edit">
+                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subí una imagen del producto
+                            <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png"  class="control-foto"></label>   
+                    </div> 
     
                     <div class="control-formulario-edit">
                         <label class="label-title-edit">Categoría</label>

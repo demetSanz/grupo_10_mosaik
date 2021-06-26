@@ -23,7 +23,7 @@ router.get('/cart',productsController.cart);
 
     /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit',productsController.edit);
-router.put('/edit/:id', productsController.update); 
+router.put('/edit/:id', uploadProducts.single('image-product'), productsController.update); 
 
     /*** CREATE ONE PRODUCT ***/ 
 router.get('/create',productsController.create);

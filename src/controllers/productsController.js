@@ -39,16 +39,18 @@ let productsController={
 
     update:function(req,res){
         let idProduct = req.params.id;
-		
+      
 		productsBD.forEach(product=>{
-			if(product.id ==  idProduct){
+			 if(product.id ==  idProduct){
 				product.name = req.body.name;
-				product.price = req.body.price;
+			 	product.price = req.body.price;
                 product.marca = req.body.marca,
                 product.size = req.body.size;
 				product.category= req.body.category;
 				product.description= req.body.description;
-			}
+                product.image = req.file.filename
+        
+			 }
 		});
 				 
         
@@ -57,8 +59,8 @@ let productsController={
        
 
 
-		let product =productsBD.find(product => product.id == idProduct)
-		res.render('detail',{product});
+		 let product =productsBD.find(product => product.id == idProduct)
+		 res.render('detail',{product});
     },
 
     create: function(req, res) {
