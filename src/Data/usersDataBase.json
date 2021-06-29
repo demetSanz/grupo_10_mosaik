@@ -42,5 +42,38 @@
   "password": "$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m",
   "file": "1623885485858_img.jpg",
   "category": "admin"
+ },
+ {
+  "id": 5,
+  "name": "Elías Sanchez",
+  "email": "elias@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva",
+  "file": "1624741357437_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 6,
+  "name": "uri",
+  "email": "admin@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi",
+  "file": "1624741768923_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 7,
+  "name": "seba",
+  "email": "cliente@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne",
+  "file": "1624741814078_img.jpg",
+  "category": "cliente"
  }
 ]

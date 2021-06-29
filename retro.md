@@ -76,3 +76,26 @@
 ## Deberiamos dejar de hacer
 * Deberiamos dejar de hacer lo que consideramos sencillo al final.
 * .
+
+# Retrospectiva Sprint 4
+
+## Que hicimos bien
+* Distribuyendo de forma adecuada el trabajo a realizar.
+* El diseño del sitio.
+* Trabajos en encuentros grupales para mejorar el proyecto.
+* Mejoramos mucha la comunicación del grupo.
+* Mejoramos la frencuencia de las reuniones.
+* Agregamos valor adicional por fuera de lo establecido en la cursada.
+
+## Que podemos mejorar
+* Hacer mas actualizaciónes en Trello.
+* 
+
+## Deberiamos empezar a 
+* Cuando editamos un producto deberia traer el mismo.
+* Al editar el producto deberia cargar la imagen.
+* Tener cuidado con el area de los botones.
+
+## Deberiamos dejar de hacer
+* Tener cuidado con los nombres de las carpetas.
+* 
