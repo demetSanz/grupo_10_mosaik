@@ -1,6 +1,6 @@
 <div class="avatar-inicio">
     <div class="avatar-centrado">
-      
+
         <ul class="main-nav-list">
 
             <li>
@@ -11,15 +11,35 @@
                             <p>¡HOLA <%= locals.userLogged.name %>!</p>
                             <p>&nbsp;</p>
                             <div class="avatar">
-                                <img src="/images/imagesPerfil/<%= locals.userLogged.file %>" alt="avatar" width="20%" class="avatar-img" > <i class="fas fa-sort-down"></i>
+                                <img src="/images/imagesPerfil/<%= locals.userLogged.file %>" alt="avatar" width="20%"
+                                    class="avatar-img"> <i class="fas fa-sort-down"></i>
                             </div>
-                            
+
                         </div>
                     </button>
 
                     <div class="dropdown-content">
-                    <a href="/user/profile">Perfil</a>
-                    <a href="/user/logout">Salir</a>
+                        <a href="/user/profile">Perfil</a>
+                        <a href="/user/logout">Salir</a>
+                        <a href="#" onclick="signOut();">Sign out</a>
+                        <script>
+                            function signOut() {
+                                var auth2 = gapi.auth2.getAuthInstance();
+                                auth2.signOut().then(function () {
+                                    console.log('User signed out.');
+                                });
+                            }
+                        </script>
+                        
+                        <script>
+                            function init() {
+                                gapi.load('auth2', function () {
+                                    client_id: '308419063154-g22rivjq0t02pm7ktk2hfae66947pvkn.apps.googleusercontent.com'
+                                });
+                                console.log('Corrio');
+                            }
+                        </script>
+
                     </div>
                 </div>
             </li>
@@ -34,4 +54,4 @@
 
         </ul>
     </div>
-  </div>
+</div>

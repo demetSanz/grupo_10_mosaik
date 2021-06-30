@@ -1,69 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head'); %>
 </head>
+
 <body>
     <%- include('./partials/header-login'); %>
 
     <main>
 
-            <!--Formularios-->
-            <div class="contenedor-formularios">
+        <!--Formularios-->
+        <div class="contenedor-formularios">
 
-                <div class="titulo-form">
-                    
-                    <h3><a href="./register" class="reg-pop">Registrate</a></h3>
-                    <h3 class="title-bar">|</h3>
-                    
-                    <h3>Ingresá</h3>
-                    
+            <div class="titulo-form">
+
+                <h3><a href="./register" class="reg-pop">Registrate</a></h3>
+                <h3 class="title-bar">|</h3>
+
+                <h3>Ingresá</h3>
+
+            </div>
+
+            <form action="/user/login" method="POST" class="create-form">
+
+
+                <div class="control-formulario">
+                    <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control"
+                        value="<%= locals.oldData ? oldData.email : null %> ">
+                </div>
+                <% if (locals.errors && errors.email) { %>
+
+                <div class="text-danger">
+                    <%= errors.email.msg  %>
                 </div>
 
-                <form action="/user/login" method="POST" class="create-form">
-                    
-                
-                    <div class="control-formulario">
-                        <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control" value= "<%= locals.oldData ? oldData.email : null %> ">
-                    </div>
-                    <% if (locals.errors && errors.email) { %>
+                <% } %>
 
-                        <div class="text-danger">
-                            <%= errors.email.msg  %> 
-                        </div>
-                        
-                    <% } %>
+                <div class="control-formulario">
+                    <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control">
+                </div>
+                <% if (locals.errors && errors.password) { %>
 
-                    <div class="control-formulario">
-                        <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control">
-                    </div>
-                    <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg  %>
+                </div>
 
-                        <div class="text-danger">
-                            <%= errors.password.msg  %> 
-                        </div>
-                        
-                    <% } %>
+                <% } %>
 
-                    <div class="form-remember">
-                        <label class="remember">Recordame </label>
-                        <input type="checkbox" name="remember" class="rem-check" >
-                    </div>
-                    
-                    <div class="boton-centrado">
+                <div class="form-remember">
+                    <label class="remember">Recordame </label>
+                    <input type="checkbox" name="remember" class="rem-check">
+                </div>
+
+                <div class="boton-centrado">
                     <button type="submit" class="boton-formulario">Ingresá a tu cuenta</button>
-                    </div>
+                    <div class="g-signin2" data-onsuccess="onSignIn" style="text-align: -webkit-center;"></div>
 
-                    <div class="no-user">
-                        <p>¿No tenés una cuenta? Creala <a href="./register">aquí</a></p>
-                    </div>
+                </div>
+
+                <div class="no-user">
+                    <p>¿No tenés una cuenta? Creala <a href="./register">aquí</a></p>
+                </div>
 
             </form>
 
-            </div>
+
+            <script>
+                function init() {
+                    gapi.load('auth2', function () {
+                        client_id: '308419063154-g22rivjq0t02pm7ktk2hfae66947pvkn.apps.googleusercontent.com'
+                    });
+                    console.log('Corrio');
+                    console.log(gapi);
+                }
+
+                function onSignIn(googleUser) {
+                    var GoogleProfile = googleUser.getBasicProfile();
+                    console.log('Todo: ' + GoogleProfile);
+                    console.log('ID: ' + GoogleProfile
+                .getId()); // Do not send to your backend! Use an ID token instead.
+                    console.log('Name: ' + GoogleProfile.getName());
+                    console.log('Image URL: ' + GoogleProfile.getImageUrl());
+                    console.log('Email: ' + GoogleProfile
+                .getEmail()); // This is null if the 'email' scope is not present.
+                }
+            </script>
 
     </main>
 
     <%- include('./partials/footer'); %>
 </body>
+
 </html>
