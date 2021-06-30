@@ -1,237 +1,210 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
---
--- Host: localhost    Database: mosaik
--- ------------------------------------------------------
--- Server version	5.5.5-10.4.19-MariaDB
+-- MySQL Workbench Forward Engineering
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
---
--- Table structure for table `brand_products`
---
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema mosaik
+-- -----------------------------------------------------
 
-DROP TABLE IF EXISTS `brand_products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `brand_products` (
-  `id_brand_products` int(11) NOT NULL AUTO_INCREMENT,
-  `brand` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_brand_products`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- -----------------------------------------------------
+-- Schema mosaik
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mosaik` DEFAULT CHARACTER SET utf8 ;
+USE `mosaik` ;
 
---
--- Dumping data for table `brand_products`
---
+-- -----------------------------------------------------
+-- Table `mosaik`.`brand_products`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`brand_products` (
+  `id_brand_products` INT(11) NOT NULL AUTO_INCREMENT,
+  `brand` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  PRIMARY KEY (`id_brand_products`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 9
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
-LOCK TABLES `brand_products` WRITE;
-/*!40000 ALTER TABLE `brand_products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `brand_products` ENABLE KEYS */;
-UNLOCK TABLES;
 
---
--- Table structure for table `category_products`
---
+-- -----------------------------------------------------
+-- Table `mosaik`.`category_products`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`category_products` (
+  `id_category_products` INT(11) NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  PRIMARY KEY (`id_category_products`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
-DROP TABLE IF EXISTS `category_products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `category_products` (
-  `id_category_products` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_category_products`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `category_products`
---
-
-LOCK TABLES `category_products` WRITE;
-/*!40000 ALTER TABLE `category_products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `category_products` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `products`
---
-
-DROP TABLE IF EXISTS `products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `products` (
-  `idproducts` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `price` int(11) NOT NULL,
-  `id_brand` int(11) NOT NULL,
-  `id_size` int(11) DEFAULT NULL,
-  `id_products_category` int(11) NOT NULL,
-  `description` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `image` tinyint(4) DEFAULT NULL,
+-- -----------------------------------------------------
+-- Table `mosaik`.`products`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`products` (
+  `idproducts` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  `price` INT(11) NOT NULL,
+  `width` INT(11) NULL DEFAULT NULL,
+  `height` INT(20) NULL DEFAULT NULL,
+  `weight` DOUBLE NULL DEFAULT NULL,
+  `depth` INT(11) NULL DEFAULT NULL,
+  `description` VARCHAR(150) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  `image` VARCHAR(255) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  `id_brand` INT(11) NOT NULL,
+  `id_products_category` INT(11) NOT NULL,
   PRIMARY KEY (`idproducts`),
-  KEY `id_products_category_idx` (`id_products_category`),
-  KEY `id_brand_idx` (`id_brand`),
-  KEY `id_size_idx` (`id_size`),
-  CONSTRAINT `id_brand` FOREIGN KEY (`id_brand`) REFERENCES `brand_products` (`id_brand_products`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `id_products_category` FOREIGN KEY (`id_products_category`) REFERENCES `category_products` (`id_category_products`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `id_size` FOREIGN KEY (`id_size`) REFERENCES `size_products` (`idsize_products`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  INDEX `id_products_category_idx` (`id_products_category` ASC) ,
+  INDEX `id_brand_idx` (`id_brand` ASC) ,
+  CONSTRAINT `id_brand`
+    FOREIGN KEY (`id_brand`)
+    REFERENCES `mosaik`.`brand_products` (`id_brand_products`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_products_category`
+    FOREIGN KEY (`id_products_category`)
+    REFERENCES `mosaik`.`category_products` (`id_category_products`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 11
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
---
--- Dumping data for table `products`
---
 
-LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
+-- -----------------------------------------------------
+-- Table `mosaik`.`user_category`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`user_category` (
+  `iduser_category` INT(11) NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  PRIMARY KEY (`iduser_category`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
---
--- Table structure for table `size_products`
---
 
-DROP TABLE IF EXISTS `size_products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `size_products` (
-  `idsize_products` int(11) NOT NULL AUTO_INCREMENT,
-  `size_products` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`idsize_products`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- -----------------------------------------------------
+-- Table `mosaik`.`user_payment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`user_payment` (
+  `iduser_payment` INT(11) NOT NULL AUTO_INCREMENT,
+  `payment` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  PRIMARY KEY (`iduser_payment`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
---
--- Dumping data for table `size_products`
---
 
-LOCK TABLES `size_products` WRITE;
-/*!40000 ALTER TABLE `size_products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `size_products` ENABLE KEYS */;
-UNLOCK TABLES;
+-- -----------------------------------------------------
+-- Table `mosaik`.`user_province`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`user_province` (
+  `iduser_province` INT(11) NOT NULL AUTO_INCREMENT,
+  `user_province` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  PRIMARY KEY (`iduser_province`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 26
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
---
--- Table structure for table `user_category`
---
 
-DROP TABLE IF EXISTS `user_category`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_category` (
-  `iduser_category` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`iduser_category`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_category`
---
-
-LOCK TABLES `user_category` WRITE;
-/*!40000 ALTER TABLE `user_category` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_category` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user_payment`
---
-
-DROP TABLE IF EXISTS `user_payment`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_payment` (
-  `iduser_payment` int(11) NOT NULL AUTO_INCREMENT,
-  `payment` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`iduser_payment`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_payment`
---
-
-LOCK TABLES `user_payment` WRITE;
-/*!40000 ALTER TABLE `user_payment` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_payment` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user_province`
---
-
-DROP TABLE IF EXISTS `user_province`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_province` (
-  `iduser_province` int(11) NOT NULL AUTO_INCREMENT,
-  `user_province` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`iduser_province`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_province`
---
-
-LOCK TABLES `user_province` WRITE;
-/*!40000 ALTER TABLE `user_province` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_province` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `idusuarios` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `address` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `id_payment` int(11) DEFAULT NULL,
-  `celular` int(11) DEFAULT NULL,
-  `password` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `file` tinyint(4) DEFAULT NULL,
-  `id_category` int(11) DEFAULT NULL,
-  `id_province` int(11) DEFAULT NULL,
+-- -----------------------------------------------------
+-- Table `mosaik`.`users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`users` (
+  `idusuarios` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  `address` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  `id_payment` INT(11) NULL DEFAULT NULL,
+  `celular` INT(11) NULL DEFAULT NULL,
+  `password` VARCHAR(255) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
+  `file` VARCHAR(255) NULL DEFAULT NULL,
+  `id_category` INT(11) NULL DEFAULT NULL,
+  `id_province` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`idusuarios`),
-  KEY `id_category_idx` (`id_category`),
-  KEY `id_payment_idx` (`id_payment`),
-  KEY `id_province_idx` (`id_province`),
-  CONSTRAINT `id_category` FOREIGN KEY (`id_category`) REFERENCES `user_category` (`iduser_category`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment` (`iduser_payment`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `id_province` FOREIGN KEY (`id_province`) REFERENCES `user_province` (`iduser_province`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  INDEX `id_category_idx` (`id_category` ASC) ,
+  INDEX `id_payment_idx` (`id_payment` ASC) ,
+  INDEX `id_province_idx` (`id_province` ASC) ,
+  CONSTRAINT `id_category`
+    FOREIGN KEY (`id_category`)
+    REFERENCES `mosaik`.`user_category` (`iduser_category`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_payment`
+    FOREIGN KEY (`id_payment`)
+    REFERENCES `mosaik`.`user_payment` (`iduser_payment`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_province`
+    FOREIGN KEY (`id_province`)
+    REFERENCES `mosaik`.`user_province` (`iduser_province`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
 
---
--- Dumping data for table `users`
---
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+-- -----------------------------------------------------
+-- Table `mosaik`.`order`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`order` (
+  `idorder` INT NOT NULL AUTO_INCREMENT,
+  `fecha_order` DATE NULL,
+  `total_amount` INT NOT NULL,
+  `delivery_types` VARCHAR(45) NOT NULL,
+  `delivery_address` VARCHAR(45) NOT NULL,
+  `province_id` INT NOT NULL,
+  `delivery_notes` VARCHAR(45) NULL,
+  `user_id` INT NOT NULL,
+  PRIMARY KEY (`idorder`),
+  INDEX `users_id_idx` (`user_id` ASC) ,
+  INDEX `pronvice_id_idx` (`province_id` ASC) ,
+  CONSTRAINT `users_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `mosaik`.`users` (`idusuarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `province_id`
+    FOREIGN KEY (`province_id`)
+    REFERENCES `mosaik`.`user_province` (`iduser_province`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-28 19:29:24
+-- -----------------------------------------------------
+-- Table `mosaik`.`order_details`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mosaik`.`order_details` (
+  `idorder_details` INT NOT NULL AUTO_INCREMENT,
+  `idorder` INT NOT NULL,
+  `idproducts` INT NOT NULL,
+  PRIMARY KEY (`idorder_details`),
+  INDEX `idorder_idx` (`idorder` ASC) ,
+  INDEX `idproducts_idx` (`idproducts` ASC) ,
+  CONSTRAINT `idorder`
+    FOREIGN KEY (`idorder`)
+    REFERENCES `mosaik`.`order` (`idorder`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `idproducts`
+    FOREIGN KEY (`idproducts`)
+    REFERENCES `mosaik`.`products` (`idproducts`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
