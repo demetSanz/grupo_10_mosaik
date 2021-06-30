@@ -19,3 +19,17 @@
 	3a. [Familia Bercomat] (https://www.familiabercomat.com/)
 	4a. [Mosaicos San Luis] (https://www.mosaicossanluis.com.ar/)
 	5a. [Griferias FV S.A.] (https://fvsa.com/)
+
+
+# UPDATE SPRINT 5
+## Instrucciones de ingreso:
+
+Para poder visualizar el sitio tanto como Usuario o Admin, ingresar al mismo con las siguientes credenciales:
+
+* CLIENTE:
+email: cliente@dh.com
+password:123456
+
+* ADMIN
+email: admin@dh.com
+password:123456

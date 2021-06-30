@@ -28,7 +28,7 @@
                     <li class="selection-list"><i class="fas fa-history"></i>Historial de compras</li>
 
                     <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
-                    <li class="selection-list"><a href="../products/create" class="selection-list-a"><i class="fas fa-plus"></i>Crear producto</a></li>
+                    <a href="../products/create" class="selection-list-a"><li class="selection-list"><i class="fas fa-plus"></i>Crear producto</li></a>
                     <% } %>
                 </ul>
             </article>

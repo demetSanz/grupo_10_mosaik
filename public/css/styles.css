@@ -2283,6 +2283,7 @@ article.modify-profile{
     padding: 2px;
     margin-bottom: 2px;
     text-decoration: none;
+    width: 100%;
 }
 
 .selection-list-a{
