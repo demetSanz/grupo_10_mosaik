@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `mosaik`.`order` (
     ON UPDATE NO ACTION,
   CONSTRAINT `status_id`
     FOREIGN KEY (`status_id`)
-    REFERENCES `mosaik`.`status` (`id_status`)
+    REFERENCES `mosaik`.`order_status` (`id_status`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `delivery_tipes_id`
