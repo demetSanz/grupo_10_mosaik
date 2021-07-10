@@ -18,12 +18,12 @@ CREATE SCHEMA IF NOT EXISTS `mosaik` DEFAULT CHARACTER SET utf8 ;
 USE `mosaik` ;
 
 -- -----------------------------------------------------
--- Table `mosaik`.`brand_products`
+-- Table `mosaik`.`brands`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`brand_products` (
-  `id_brand_products` INT(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`brands` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `brand` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
-  PRIMARY KEY (`id_brand_products`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = utf8
@@ -31,12 +31,12 @@ COLLATE = utf8_unicode_ci;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`category_products`
+-- Table `mosaik`.`category`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`category_products` (
-  `id_category_products` INT(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`category` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `category` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
-  PRIMARY KEY (`id_category_products`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8
@@ -47,7 +47,7 @@ COLLATE = utf8_unicode_ci;
 -- Table `mosaik`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mosaik`.`products` (
-  `id_products` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL,
   `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
   `price` INT(11) NOT NULL,
   `width` INT(11) NULL DEFAULT NULL,
@@ -57,19 +57,19 @@ CREATE TABLE IF NOT EXISTS `mosaik`.`products` (
   `description` VARCHAR(150) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
   `image` VARCHAR(255) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
   `stock` INT NULL,
-  `id_brand` INT(11) NOT NULL,
-  `id_products_category` INT(11) NOT NULL,
-  PRIMARY KEY (`id_products`),
-  INDEX `id_products_category_idx` (`id_products_category` ASC),
-  INDEX `id_brand_idx` (`id_brand` ASC),
+  `brand_id` INT(11) NOT NULL,
+  `category_id` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `id_products_category_idx` (`category_id` ASC) ,
+  INDEX `id_brand_idx` (`brand_id` ASC),
   CONSTRAINT `id_brand`
-    FOREIGN KEY (`id_brand`)
-    REFERENCES `mosaik`.`brand_products` (`id_brand_products`)
+    FOREIGN KEY (`brand_id`)
+    REFERENCES `mosaik`.`brands` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `id_products_category`
-    FOREIGN KEY (`id_products_category`)
-    REFERENCES `mosaik`.`category_products` (`id_category_products`)
+    FOREIGN KEY (`category_id`)
+    REFERENCES `mosaik`.`category` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -79,12 +79,12 @@ COLLATE = utf8_unicode_ci;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`user_category`
+-- Table `mosaik`.`roles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`user_category` (
-  `id_user_category` INT(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `mosaik`.`roles` (
+  `id` INT(11) NOT NULL,
   `category` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
-  PRIMARY KEY (`id_user_category`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8
@@ -92,12 +92,12 @@ COLLATE = utf8_unicode_ci;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`user_payment`
+-- Table `mosaik`.`payment`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`user_payment` (
-  `id_user_payment` INT(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `mosaik`.`payment` (
+  `id` INT(11) NOT NULL,
   `payment` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
-  PRIMARY KEY (`id_user_payment`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8
@@ -105,12 +105,12 @@ COLLATE = utf8_unicode_ci;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`user_province`
+-- Table `mosaik`.`province`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`user_province` (
-  `id_user_province` INT(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `mosaik`.`province` (
+  `id` INT(11) NOT NULL,
   `user_province` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
-  PRIMARY KEY (`id_user_province`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 26
 DEFAULT CHARACTER SET = utf8
@@ -121,34 +121,34 @@ COLLATE = utf8_unicode_ci;
 -- Table `mosaik`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mosaik`.`users` (
-  `id_users` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL,
   `name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
   `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
   `address` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
   `phone` VARCHAR(100) NULL DEFAULT NULL,
   `password` VARCHAR(255) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL,
   `file` VARCHAR(255) NULL DEFAULT NULL,
-  `id_category` INT(11) NULL DEFAULT NULL,
-  `id_province` INT(11) NULL DEFAULT NULL,
-  `id_payment` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`id_users`),
-  INDEX `id_category_idx` (`id_category` ASC),
-  INDEX `id_payment_idx` (`id_payment` ASC),
-  INDEX `id_province_idx` (`id_province` ASC),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+  `roles_id` INT(11) NULL DEFAULT NULL,
+  `province_id` INT(11) NULL DEFAULT NULL,
+  `payment_id` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `id_category_idx` (`roles_id` ASC) ,
+  INDEX `id_payment_idx` (`payment_id` ASC) ,
+  INDEX `id_province_idx` (`province_id` ASC) ,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
   CONSTRAINT `id_category`
-    FOREIGN KEY (`id_category`)
-    REFERENCES `mosaik`.`user_category` (`id_user_category`)
+    FOREIGN KEY (`roles_id`)
+    REFERENCES `mosaik`.`roles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `id_payment`
-    FOREIGN KEY (`id_payment`)
-    REFERENCES `mosaik`.`user_payment` (`id_user_payment`)
+    FOREIGN KEY (`payment_id`)
+    REFERENCES `mosaik`.`payment` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `id_province`
-    FOREIGN KEY (`id_province`)
-    REFERENCES `mosaik`.`user_province` (`id_user_province`)
+    FOREIGN KEY (`province_id`)
+    REFERENCES `mosaik`.`province` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -157,31 +157,31 @@ COLLATE = utf8_unicode_ci;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`order_status`
+-- Table `mosaik`.`status`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`order_status` (
-  `id_status` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`status` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(25) NULL,
   `description` LONGTEXT NULL,
-  PRIMARY KEY (`id_status`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`delivery_type`
+-- Table `mosaik`.`delivery`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`delivery_type` (
-  `id_delivery_type` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`delivery` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(100) NULL,
-  PRIMARY KEY (`id_delivery_type`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`order`
+-- Table `mosaik`.`orders`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`order` (
-  `id_order` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`orders` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `date_order` DATE NULL,
   `total_amount` INT NOT NULL,
   `delivery_address` VARCHAR(45) NOT NULL,
@@ -190,53 +190,53 @@ CREATE TABLE IF NOT EXISTS `mosaik`.`order` (
   `province_id` INT NOT NULL,
   `status_id` INT NOT NULL,
   `delivery_types_id` INT NOT NULL,
-  PRIMARY KEY (`id_order`),
-  INDEX `users_id_idx` (`user_id` ASC),
-  INDEX `pronvice_id_idx` (`province_id` ASC),
-  INDEX `delivery_tipes_id_idx` (`delivery_types_id` ASC),
-  INDEX `status_id_idx` (`status_id` ASC),
+  PRIMARY KEY (`id`),
+  INDEX `users_id_idx` (`user_id` ASC) ,
+  INDEX `pronvice_id_idx` (`province_id` ASC) ,
+  INDEX `delivery_tipes_id_idx` (`delivery_types_id` ASC) ,
+  INDEX `status_id_idx` (`status_id` ASC) ,
   CONSTRAINT `users_id`
     FOREIGN KEY (`user_id`)
-    REFERENCES `mosaik`.`users` (`id_users`)
+    REFERENCES `mosaik`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `province_id`
     FOREIGN KEY (`province_id`)
-    REFERENCES `mosaik`.`user_province` (`id_user_province`)
+    REFERENCES `mosaik`.`province` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `status_id`
     FOREIGN KEY (`status_id`)
-    REFERENCES `mosaik`.`order_status` (`id_status`)
+    REFERENCES `mosaik`.`status` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `delivery_tipes_id`
     FOREIGN KEY (`delivery_types_id`)
-    REFERENCES `mosaik`.`delivery_type` (`id_delivery_type`)
+    REFERENCES `mosaik`.`delivery` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mosaik`.`order_details`
+-- Table `mosaik`.`detail`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mosaik`.`order_details` (
-  `id_order_details` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mosaik`.`detail` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NULL,
-  `idorder` INT NOT NULL,
-  `idproducts` INT NOT NULL,
-  PRIMARY KEY (`id_order_details`),
-  INDEX `idorder_idx` (`idorder` ASC),
-  INDEX `idproducts_idx` (`idproducts` ASC),
+  `order_id` INT NOT NULL,
+  `products_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `idorder_idx` (`order_id` ASC) ,
+  INDEX `idproducts_idx` (`products_id` ASC) ,
   CONSTRAINT `idorder`
-    FOREIGN KEY (`idorder`)
-    REFERENCES `mosaik`.`order` (`id_order`)
+    FOREIGN KEY (`order_id`)
+    REFERENCES `mosaik`.`orders` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idproducts`
-    FOREIGN KEY (`idproducts`)
-    REFERENCES `mosaik`.`products` (`id_products`)
+    FOREIGN KEY (`products_id`)
+    REFERENCES `mosaik`.`products` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

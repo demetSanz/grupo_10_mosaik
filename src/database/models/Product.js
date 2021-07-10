@@ -9,39 +9,53 @@ module.exports = (sequelize, dataTypes) =>{
         },
         name: {
             type: dataTypes.STRING(45),
-            
+            allowNull:false
         },
-        email: {
-            type: dataTypes.STRING(45),
+        price: {
+            type: dataTypes.INTEGER(11),
             allowNull:false,
-            unique: true
+           
         },
-        address: {
-            type: dataTypes.STRING(45),
+        width: {
+            type: dataTypes.INTEGER(45),
+            allowNull:false,
 
         },
-        phone:{
-            type: dataTypes.STRING(100),
+        heigth: {
+            type: dataTypes.INTEGER(45),
+            allowNull:false,
 
         },
-        password: {
+        weigth: {
+            type: dataTypes.INTEGER(45),
+            allowNull:false,
+
+        },
+        depth: {
+            type: dataTypes.INTEGER(45),
+            allowNull:false,
+
+        },
+        description:{
+            type: dataTypes.STRING(150),
+        },
+        image:{
             type: dataTypes.STRING(255),
-            
         },
-        file: {
-            type: dataTypes.STRING(255),
-
+        stock:{
+            type: dataTypes.INTEGER(11),
+            allowNull:false,
         },
+        brand_id:{
+            type: dataTypes.INTEGER(11),
+            allowNull:false,
+        },
+        category_id:{
+            type: dataTypes.INTEGER(11),
+            allowNull:false,
+        }
 
-        // remeber_token: {
-        //     type: dataTypes.STRING(100),
-        // },
-        // createdAt: {
-        //     type: dataTypes.DATE
-        // },
-        // updatedAt: {
-        //     type: dataTypes.DATE
-        // }
+       
 
     };
     let config = {
@@ -52,9 +66,29 @@ module.exports = (sequelize, dataTypes) =>{
     
     const Product = sequelize.define (alias,cols,config);
 
-    P
+    Product.associate = function(models){
+        
+        Product.belongsTo(models.Brand, {
+            as: "brands",
+
+            foreignKey: "brand_id"
+        }),
+
+        Product.belongsTo(models.Category, {
+            as: "category",
+
+            foreignKey: "category_id"
+
+        })
+
+       
+    }
 
     return Product;
 
 
+   
+
+
 }
+/* considerar cambiar  price a double y description a text*/
