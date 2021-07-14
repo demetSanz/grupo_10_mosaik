@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "status";
+    let alias = "Status";
     let cols = {
 
         id: {
@@ -25,17 +25,16 @@ module.exports = (sequelize, dataTypes) =>{
         timestamps : true // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
-    const Statu = sequelize.define (alias,cols,config);
+    const Status = sequelize.define (alias,cols,config);
 
-    Statu.associate = function(models){
+    Status.associate = function(models){
         
-        Statu.hasMany(models.User, {
-            as: "order",
-
-            foreignKey: "id"
+        Status.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "status_id"
         })
        
     }
 
-    return Statu;
+    return Status;
 }

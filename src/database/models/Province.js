@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "province";
+    let alias = "Province";
     let cols = {
 
         id: {
@@ -27,14 +27,12 @@ module.exports = (sequelize, dataTypes) =>{
         
         Province.hasMany(models.User, {
             as: "users",
-
-            foreignKey: "id"
+            foreignKey: "province_id"
         }),
         
         Province.hasMany(models.Order, {
             as: "orders",
-
-            foreignKey: "id"
+            foreignKey: "province_id"
         })
     }
 

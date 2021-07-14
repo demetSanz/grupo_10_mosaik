@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Orders";
+    let alias = "Order";
     let cols = {
 
         id: {
@@ -59,38 +59,38 @@ module.exports = (sequelize, dataTypes) =>{
         timestamps : true // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
-    const Orders = sequelize.define (alias,cols,config);
+    const Order = sequelize.define (alias,cols,config);
 
-    Orders.associate = function(models){
+    Order.associate = function(models){
         
-        Orders.belongsTo(models.Brand, {
+        Order.belongsTo(models.Delivery, {
             as: "delivery",
             foreignKey: "delivery_types_id"
         }),
 
-        Orders.belongsTo(models.Category, {
+        Order.belongsTo(models.Province, {
             as: "province",
             foreignKey: "province_id"
         }),
 
-        Orders.belongsTo(models.Brand, {
+        Order.belongsTo(models.Status, {
             as: "status",
             foreignKey: "status_id"
         }),
-
-        Orders.belongsTo(models.Brand, {
-            as: "users",
-            foreignKey: "user_id"
-        }),
-
-        Orders.belongsToMany(models.Product, {
-            as: "products",
-            through:"detail",
-            foreignKey:"products_id",
-            otherKey:"order_id"
+        
+        Order.belongsTo(models.User,{
+            as:"users",
+            foreignKey:"user_id"
         })
-       
+
+       // Order.belongsToMany(models.Product, {
+         //   as: "products",
+           // through:"detail",
+           // foreignKey:"products_id",
+            //otherKey:"order_id"
+        //})
+
     }
-    return Orders;
+    return Order;
 }
 /*Falta hacer relaciones de Products(brands, category)*/

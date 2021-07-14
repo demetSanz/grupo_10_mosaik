@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "deliverys";
+    let alias = "Delivery";
     let cols = {
 
         id: {
@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) =>{
     };
 
     let config = {
-        tableName : "deliverys",
+        tableName : "delivery",
         timestamps : true // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
@@ -25,12 +25,10 @@ module.exports = (sequelize, dataTypes) =>{
 
     Delivery.associate = function(models){
         
-        Delivery.hasMany(models.User, {
+        Delivery.hasMany(models.Order, {
             as: "orders",
-
-            foreignKey: "id"
+            foreignKey: "delivery_types_id"
         })
-       
     }
 
     return Delivery;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "payment";
+    let alias = "Payment";
     let cols = {
 
         id: {
@@ -26,8 +26,7 @@ module.exports = (sequelize, dataTypes) =>{
         
         Payment.hasMany(models.User, {
             as: "users",
-
-            foreignKey: "id"
+            foreignKey: "payment_id"
         })
     }
     return Payment;

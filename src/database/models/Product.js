@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Products";
+    let alias = "Product";
     let cols = {
 
         id: {
@@ -78,26 +78,23 @@ module.exports = (sequelize, dataTypes) =>{
 
     Product.associate = function(models){
         
-        Product.belongsTo(models.Brand, {
+        Product.belongsTo(models.brands, {
             as: "brands",
-
             foreignKey: "brand_id"
         }),
 
         Product.belongsTo(models.Category, {
             as: "category",
-
             foreignKey: "category_id"
-
-        }),
-
-        Product.belongsToMany(models.Order, {
-            as: "orders",
-            through:"detail",
-            foreignKey: "order_id",
-            otherKey:"products_id"
-
         })
+
+        
+      //  Product.belongsToMany(models.Order, {
+        //    as: "orders",
+          //  through:"detail",
+            //foreignKey: "order_id",
+            //otherKey:"products_id"
+        //})
 
     }
     return Product;

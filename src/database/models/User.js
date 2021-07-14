@@ -1,7 +1,7 @@
 const Product = require("./Product");
 
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Users";
+    let alias = "User";
     let cols = {
 
         id: {
@@ -69,22 +69,22 @@ module.exports = (sequelize, dataTypes) =>{
         
         User.belongsTo(models.Roles, {
             as: "roles",
-
             foreignKey: "roles_id"
         }),
 
         User.belongsTo(models.Province, {
             as: "province",
-
             foreignKey: "province_id"
-
         }),
 
         User.belongsTo(models.Payment, {
             as: "payment",
-
             foreignKey: "payment_id"
+        }),
 
+        User.hasMany(models.Order,{
+            as:"orders",
+            foreignKey:"user_id"
         })
     }
 
