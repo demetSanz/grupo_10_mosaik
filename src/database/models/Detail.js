@@ -32,13 +32,15 @@
 
 //     Detail.associate = function(models){
         
-//         Detail.belongsToMany(models.Order, {
+//          Detail.belongsToMany(models.Order, {
 //             as: "orders",
+           
 //             foreignKey: "order_id"
 //         }),
 
 //         Detail.belongsToMany(models.Product, {
 //             as: "products",
+            
 //             foreignKey: "products_id"
 //         })
        

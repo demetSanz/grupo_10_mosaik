@@ -4,7 +4,7 @@ const fs = require('fs');
 const {readJson,writeJson ,lastId} =require('./helpers');
 const productsBD = readJson('productsDataBase.json');
 
-const db = require('../database/models');
+
 
 let productsController={
     index: function (req, res){
