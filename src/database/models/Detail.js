@@ -30,21 +30,19 @@ module.exports = (sequelize, dataTypes) =>{
     
     const Detail = sequelize.define (alias,cols,config);
 
-    // Detail.associate = function(models){
+    Detail.associate = function(models){
         
-    //      Detail.belongsToMany(models.Order, {
-    //         as: "orders",
-           
-    //         foreignKey: "order_id"
-    //     }),
+         Detail.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "order_id"
+        }),
 
-    //     Detail.belongsToMany(models.Product, {
-    //         as: "products",
-            
-    //         foreignKey: "products_id"
-    //     })
+        Detail.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "products_id"
+        })
        
-    // }
+    }
 
     return Detail;
 }
