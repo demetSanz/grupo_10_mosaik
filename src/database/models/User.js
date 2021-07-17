@@ -65,28 +65,28 @@ module.exports = (sequelize, dataTypes) =>{
     
     const User = sequelize.define (alias,cols,config);
 
-    User.associate = function(models){
+    // User.associate = function(models){
         
-        User.belongsTo(models.Roles, {
-            as: "roles",
-            foreignKey: "roles_id"
-        }),
+    //     User.belongsTo(models.Roles, {
+    //         as: "roles",
+    //         foreignKey: "roles_id"
+    //     }),
 
-      User.belongsTo(models.Province, {
-            as: "province",
-            foreignKey: "province_id"
-        }),  
+    //   User.belongsTo(models.Province, {
+    //         as: "province",
+    //         foreignKey: "province_id"
+    //     }),  
 
-        User.belongsTo(models.Payment, {
-            as: "payment",
-            foreignKey: "payment_id"
-        }),
+    //     User.belongsTo(models.Payment, {
+    //         as: "payment",
+    //         foreignKey: "payment_id"
+    //     }),
         
-        User.hasMany(models.Order,{
-            as:"orders",
-            foreignKey:"user_id"
-        })
-    }
+    //     User.hasMany(models.Order,{
+    //         as:"orders",
+    //         foreignKey:"user_id"
+    //     })
+    // }
 
     return User;
 }

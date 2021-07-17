@@ -76,17 +76,17 @@ module.exports = (sequelize, dataTypes) =>{
     
     const Product = sequelize.define (alias,cols,config);
 
-    Product.associate = function(models){
+    // Product.associate = function(models){
         
-        Product.belongsTo(models.brands, {
-            as: "brands",
-            foreignKey: "brand_id"
-        }),
+    //     Product.belongsTo(models.brands, {
+    //         as: "brands",
+    //         foreignKey: "brand_id"
+    //     }),
 
-        Product.belongsTo(models.Category, {
-            as: "category",
-            foreignKey: "category_id"
-        })
+    //     Product.belongsTo(models.Category, {
+    //         as: "category",
+    //         foreignKey: "category_id"
+    //     })
 
         
     //    Product.belongsToMany(models.Order, {
@@ -96,7 +96,7 @@ module.exports = (sequelize, dataTypes) =>{
     //         otherKey:"products_id"
     //     })
 
-    }
+    // }
     return Product;
 }
 /* considerar cambiar  price a double y description a text*/
