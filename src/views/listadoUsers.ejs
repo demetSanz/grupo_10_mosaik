@@ -1,0 +1,20 @@
+<%- include('header'); -%> 
+
+  <h1>Listado de Ordenes</h1>
+  <ul>
+      <% for (let i = 0; i< orders.length; i++) { %> 
+      
+        <li>
+            <a href="/orders/<%= orders[i].id %> ">
+            
+                <%= orders[i].date_order %> </li>
+            
+            </a>
+
+      <% } %> 
+  </ul>
+
+
+<%- include('footer'); %> 
+    
+

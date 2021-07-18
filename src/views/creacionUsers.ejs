@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+    <%- include('./partials/header'); %>
+
+
+    <h1>Crear Usuario</h1>
+    <form action="/user/crear" method="POST">
+        
+        <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="brand">
+        </div>
+        <!-- <div>
+            <label for="">email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Dirección</label>
+            <input type="text" name="direccion">
+        </div>
+        <div>
+            <label for="">telefono</label>
+            <input type="number" name="telefono">
+        </div> -->
+        
+        
+      
+
+        <button type="submit">Crear!</button>
+    
+    </form>
+
+    <%- include('./partials/footer'); %>
+</body>
+</html>
+

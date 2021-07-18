@@ -56,7 +56,7 @@ module.exports = (sequelize, dataTypes) =>{
 
     let config = {
         tableName : "orders",
-        timestamps : true // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
+        timestamps : false // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
     const Order = sequelize.define (alias,cols,config);

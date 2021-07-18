@@ -7,8 +7,7 @@ module.exports = (sequelize, dataTypes) =>{
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
-            allowNull:false
+            autoIncrement: true
         },
 
         name: {
@@ -60,7 +59,7 @@ module.exports = (sequelize, dataTypes) =>{
 
     let config = {
         tableName : "users",
-        timestamps : true // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
+        timestamps :false// añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
     const User = sequelize.define (alias,cols,config);
