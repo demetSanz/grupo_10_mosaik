@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Detail";
+    let alias = "Order_Products";
     let cols = {
         
         id: {
@@ -9,9 +9,7 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull:false
         },
 
-        quantity: {
-            type: dataTypes.INTEGER,
-        },
+       
 
         order_id: {
             type: dataTypes.INTEGER,
@@ -24,25 +22,25 @@ module.exports = (sequelize, dataTypes) =>{
     };
 
     let config = {
-        tableName : "detail",
+        tableName : "orders_Products",
         timestamps : false // añade las filas "created at" y "updated at". Si la tabla no tiene estas lineas, va a fallar sequelize
     }
     
-    const Detail = sequelize.define (alias,cols,config);
+    const Order_Products = sequelize.define (alias,cols,config);
 
-    Detail.associate = function(models){
+    Order_Products.associate = function(models){
         
-         Detail.hasMany(models.Order, {
+        Order_Products.hasMany(models.Order, {
             as: "orders",
             foreignKey: "order_id"
         }),
 
-        Detail.hasMany(models.Product, {
+        Order_Products.hasMany(models.Product, {
             as: "products",
             foreignKey: "products_id"
         })
        
     }
 
-    return Detail;
+    return Order_Products;
 }

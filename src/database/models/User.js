@@ -39,22 +39,9 @@ module.exports = (sequelize, dataTypes) =>{
 
         roles_id: {
             type: dataTypes.INTEGER,
-        },
-
-        payment_id: {
-            type: dataTypes.INTEGER,
-        },
-
-        province_id: {
-            type: dataTypes.INTEGER,
         }
-          // createdAt: {
-        //     type: dataTypes.DATE
-        // },
-        // updatedAt: {
-        //     type: dataTypes.DATE
-        // }
 
+    
     };
 
     let config = {
@@ -71,15 +58,7 @@ module.exports = (sequelize, dataTypes) =>{
             foreignKey: "roles_id"
         }),
 
-      User.belongsTo(models.Province, {
-            as: "province",
-            foreignKey: "province_id"
-        }),  
-
-        User.belongsTo(models.Payment, {
-            as: "payment",
-            foreignKey: "payment_id"
-        }),
+     
         
         User.hasMany(models.Order,{
             as:"orders",

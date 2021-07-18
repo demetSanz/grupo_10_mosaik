@@ -37,20 +37,14 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull:false,
         },
         
-        province_id: {
-            type: dataTypes.INTEGER(11),
-            allowNull:false,
-        },
+      
 
         status_id: {
             type: dataTypes.INTEGER(11),
             allowNull:false,
         },
 
-        delivery_types_id: {
-            type: dataTypes.INTEGER(11),
-            allowNull:true,
-        }
+       
 
     };
 
@@ -63,15 +57,7 @@ module.exports = (sequelize, dataTypes) =>{
 
     Order.associate = function(models){
         
-        Order.belongsTo(models.Delivery, {
-            as: "delivery",
-            foreignKey: "delivery_types_id"
-        }),
-
-        Order.belongsTo(models.Province, {
-            as: "province",
-            foreignKey: "province_id"
-        }),
+             
 
         Order.belongsTo(models.Status, {
             as: "status",
@@ -85,7 +71,7 @@ module.exports = (sequelize, dataTypes) =>{
 
        Order.belongsToMany(models.Product, {
            as: "products",
-           through:"detail",
+           through:"orders_Products",
            foreignKey:"order_id",
             otherKey:"products_id"
         })

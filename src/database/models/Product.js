@@ -19,30 +19,7 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull:false,
            
         },
-
-        width: {
-            type: dataTypes.INTEGER(45),
-            allowNull:false,
-
-        },
-
-        heigth: {
-            type: dataTypes.INTEGER(45),
-            allowNull:false,
-
-        },
-
-        weigth: {
-            type: dataTypes.INTEGER(45),
-            allowNull:false,
-
-        },
-
-        depth: {
-            type: dataTypes.INTEGER(45),
-            allowNull:false,
-
-        },
+       
 
         description:{
             type: dataTypes.STRING(150),
@@ -65,6 +42,11 @@ module.exports = (sequelize, dataTypes) =>{
         category_id:{
             type: dataTypes.INTEGER(11),
             allowNull:false,
+        },
+
+        size_id:{
+            type: dataTypes.INTEGER(11),
+            allowNull:false,
         }
 
     };
@@ -78,11 +60,6 @@ module.exports = (sequelize, dataTypes) =>{
 
     Product.associate = function(models){
         
-        Product.belongsTo(models.Brand, {
-            as: "brands",
-            foreignKey: "brand_id"
-        }),
-
         Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "category_id"
@@ -91,7 +68,7 @@ module.exports = (sequelize, dataTypes) =>{
         
         Product.belongsToMany(models.Order, {
             as: "orders",
-            through:"detail",
+            through:"orders_Products",
              foreignKey: "products_id",
              otherKey:"order_id"
           })
