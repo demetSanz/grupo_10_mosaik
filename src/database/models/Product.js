@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) =>{
 
         price: {
             type: dataTypes.INTEGER(11),
-            allowNull:false,
+            
            
         },
        
@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) =>{
 
         stock:{
             type: dataTypes.INTEGER(11),
-            allowNull:false,
+            
         },
 
         brand_id:{

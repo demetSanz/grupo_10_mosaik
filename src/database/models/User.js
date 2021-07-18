@@ -1,47 +1,45 @@
-const Product = require("./Product");
-
 module.exports = (sequelize, dataTypes) =>{
     let alias = "User";
     let cols = {
 
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+
         },
 
         name: {
             type: dataTypes.STRING(45),
             
-        }
+        },
 
-        // email: {
-        //     type: dataTypes.STRING(45),
-        //     allowNull:false,
-        //     unique: true
-        // },
+        email: {
+            type: dataTypes.STRING(45),
+            unique: true
+        },
 
-        // address: {
-        //     type: dataTypes.STRING(45),
-        // },
+        address: {
+            type: dataTypes.STRING(45),
+        },
 
-        // phone:{
-        //     type: dataTypes.STRING(100),
-        // },
+        phone:{
+            type: dataTypes.STRING(100),
+        },
 
-        // password: {
-        //     type: dataTypes.STRING(255), 
-        // },
+        password: {
+            type: dataTypes.STRING(255), 
+        },
 
-        // file: {
-        //     type: dataTypes.STRING(255),
-        // },
-        ,
+        file: {
+            type: dataTypes.STRING(255),
+        },
+        
         roles_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
+            
         }
 
-    
     };
 
     let config = {

@@ -11,14 +11,19 @@ let testController={
         
        
      storage: function (req,res){
-             db.User.create({
-                
+        var nicolas =      
+        db.User.create({                                    
                 name: req.body.name,
-                
-
-                
+                email: req.body.email,
+                address: req.body.address,
+                phone: req.body.phone,
+                password: req.body.password,
+                file: req.body.file,
+                roles_id: req.body.roles_id,                
      
              });
+             console.log(nicolas);
+             
              res.redirect ("/test")
    
      }

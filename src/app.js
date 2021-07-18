@@ -11,7 +11,7 @@ const routertest = require('./routers/testRoutes')
 
 /******TEST */
 
-
+const userRoutesSQL = require('./routers/userRoutesSQL');
 const routerMain = require('./routers/mainRoutes'); // importamos routers main
 const routersProducts = require('./routers/productsRoutes');
 const routerUsers = require('./routers/userRoutes');
@@ -57,7 +57,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use('/', routerMain);
 app.use('/products',routersProducts);
-app.use ('/user', routerUsers)
+app.use ('/user', routerUsers);
+app.use ('/user', userRoutesSQL)
 
 /**************test*/
 app.use('/test',routertest)
