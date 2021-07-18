@@ -13,30 +13,30 @@ module.exports = (sequelize, dataTypes) =>{
         name: {
             type: dataTypes.STRING(45),
             
-        },
+        }
 
-        email: {
-            type: dataTypes.STRING(45),
-            allowNull:false,
-            unique: true
-        },
+        // email: {
+        //     type: dataTypes.STRING(45),
+        //     allowNull:false,
+        //     unique: true
+        // },
 
-        address: {
-            type: dataTypes.STRING(45),
-        },
+        // address: {
+        //     type: dataTypes.STRING(45),
+        // },
 
-        phone:{
-            type: dataTypes.STRING(100),
-        },
+        // phone:{
+        //     type: dataTypes.STRING(100),
+        // },
 
-        password: {
-            type: dataTypes.STRING(255), 
-        },
+        // password: {
+        //     type: dataTypes.STRING(255), 
+        // },
 
-        file: {
-            type: dataTypes.STRING(255),
-        },
-
+        // file: {
+        //     type: dataTypes.STRING(255),
+        // },
+        ,
         roles_id: {
             type: dataTypes.INTEGER,
         }
@@ -56,14 +56,14 @@ module.exports = (sequelize, dataTypes) =>{
         User.belongsTo(models.Role, {
             as: "roles",
             foreignKey: "roles_id"
-        }),
+        })
 
      
         
-        User.hasMany(models.Order,{
-            as:"orders",
-            foreignKey:"user_id"
-        })
+        // User.hasMany(models.Order,{
+        //     as:"orders",
+        //     foreignKey:"user_id"
+        // })
     }
 
     return User;

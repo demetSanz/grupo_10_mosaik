@@ -1,0 +1,79 @@
+[
+ {
+  "id": 1,
+  "name": "nicoClem",
+  "email": "nico@dh.com",
+  "address": "san luis",
+  "payment": "AMEX",
+  "celular": "123456",
+  "password": "$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW",
+  "file": "1623885037788_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 2,
+  "name": "luis Crescente",
+  "email": "luis@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "11555555",
+  "password": "$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m",
+  "file": "1623885485858_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 3,
+  "name": "NahuiiGH",
+  "email": "nahuii@dh.com",
+  "address": "CABA",
+  "payment": "AMEX",
+  "celular": "12315245",
+  "password": "$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq",
+  "file": "1623885642557_img.jpg",
+  "category": "cliente"
+ },
+ {
+  "id": 4,
+  "name": "Carlos Salvucci",
+  "email": "carlos@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "11555555",
+  "password": "$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m",
+  "file": "1623885485858_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 5,
+  "name": "Elías Sanchez",
+  "email": "elias@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva",
+  "file": "1624741357437_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 6,
+  "name": "uri",
+  "email": "admin@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi",
+  "file": "1624741768923_img.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 7,
+  "name": "seba",
+  "email": "cliente@dh.com",
+  "address": "capital federal",
+  "payment": "VISA",
+  "celular": "1155555555",
+  "password": "$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne",
+  "file": "1624741814078_img.jpg",
+  "category": "cliente"
+ }
+]

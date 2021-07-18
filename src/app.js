@@ -4,12 +4,19 @@ const cookies = require ('cookie-parser');// requierimos cookie-parser para trab
 const app = express(); // Llamamos express dentro de la constante app
 const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
+/******TEST */
 
 
-const routerOrders= require('./routers/ordersRoutes')
+const routertest = require('./routers/testRoutes')
+
+/******TEST */
+
+
 const routerMain = require('./routers/mainRoutes'); // importamos routers main
 const routersProducts = require('./routers/productsRoutes');
 const routerUsers = require('./routers/userRoutes');
+
+
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const userLoggedMiddleware = require ('./middleware/userLoggedMiddleware'); //Middleware para poder mostrar registro y login segun si esta o no logueado
 
@@ -52,7 +59,10 @@ app.use('/', routerMain);
 app.use('/products',routersProducts);
 app.use ('/user', routerUsers)
 
-app.use('/orders',routerOrders)
+/**************test*/
+app.use('/test',routertest)
+
+/**********test****** */
 
 app.use((req, res, next)=>{
     res.status(404).render('error404');
