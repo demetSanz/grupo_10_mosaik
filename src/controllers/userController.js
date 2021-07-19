@@ -1,16 +1,20 @@
-const db = require('../database/models/index');
+const db = require('../database/models');
 
 
 
 let userController={
-    register: function(req,res){
+    show: function(req,res){
+
+        db.Role.findAll()
+            .then (function (roles){
+                return res.render ("creacionUsers", {roles:roles})
+            })
       
-        res.render ("creacionUsers")
-           
+          
          },
         
        
-     processRegister: function (req,res){
+     showRegister: function (req,res){
 
         db.User.create({                                    
                 name: req.body.name,
@@ -24,11 +28,27 @@ let userController={
              });
 
              
-             res.redirect ("/test")
+             res.redirect ("/users/login")
    
-     }
-       
- };
+     },
+
+     entrar: function (req,res){
+         return res.render ("login")
+     },
+
+     entrarLogin: function (req, res) {
+
+        let userToLogin = db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        }).then ((userToLogin) => {
+
+                return res.send ('exitoso')
+        })
+    }
+}
+
 
 
 module.exports = userController;

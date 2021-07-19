@@ -58,7 +58,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.use('/', routerMain);
 app.use('/products',routersProducts);
 app.use ('/user', routerUsers);
-app.use ('/user', userRoutesSQL)
+app.use ('/users', userRoutesSQL)
 
 /**************test*/
 app.use('/test',routertest)

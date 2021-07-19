@@ -1,13 +1,21 @@
-<%- include('header'); -%> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+    <%- include('./partials/header'); %>
 
-  <h1>Listado de Ordenes</h1>
+
+
+  <h1>Listado de Usuarios</h1>
   <ul>
-      <% for (let i = 0; i< orders.length; i++) { %> 
+      <% for (let i = 0; i< users.length; i++) { %> 
       
         <li>
-            <a href="/orders/<%= orders[i].id %> ">
+            <a href="/user/<%= users[i].id %> ">
             
-                <%= orders[i].date_order %> </li>
+                <%= users[i].name %> </li>
             
             </a>
 
@@ -15,6 +23,6 @@
   </ul>
 
 
-<%- include('footer'); %> 
-    
-
+  <%- include('./partials/footer'); %>
+</body>
+</html>

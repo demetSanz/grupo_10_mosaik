@@ -2088,12 +2088,11 @@ color: #999;
 
 .control-foto{
     width: 100%;
-    padding: 8px 8px;
+    padding: 8px 5px;
     border: 1px solid #bebebe;
     border-radius: 5px;
 
 }
-
 
 
 .boton-centrado{
@@ -2425,7 +2424,7 @@ div.icon-menu:hover article.modify-profile{ display: block }
 
 .control-foto{
     width: 100%;
-    padding: 8px 8px;
+    padding: 8px 5px;
     border: 1px solid #bebebe;
     border-radius: 5px;
 
