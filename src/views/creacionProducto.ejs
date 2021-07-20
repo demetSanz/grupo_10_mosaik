@@ -40,7 +40,7 @@
                 <input type="text" name="brand" placeholder="marca del producto" class="control" value="">
             </div>
 
-             <div class="control-formulario">
+            <div class="control-formulario">
                 <div class="control-payment">
                 <select 
                     name="category_id" 
@@ -54,21 +54,21 @@
                 </select>
             </div>
             </div>  
-<!-- 
+
            <div class="control-formulario">
                 <div class="control-payment">
                 <select 
                     name="size_id" 
                     class="control-form-select">
                     <option value="">Seleccioná tu tamaño</option>
-                    <%# for (let i = 0; i<sizes.length; i++) { %> 
-                    <option value="<%#= sizes[i].id %> ">
-                        <%#=# sizes [i].name %> 
+                    <% for (let i = 0; i < sizes.length; i++) { %> 
+                    <option value="<%= sizes[i].id %> ">
+                        <%= sizes[i].name %> 
                     </option>
-                    <%# } %> 
+                    <% } %> 
                 </select>
             </div>
-            </div>  -->
+            </div> 
 
 
 
