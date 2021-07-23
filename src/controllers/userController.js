@@ -28,7 +28,7 @@ let userController={
              });
 
              
-             res.redirect ("/users/login")
+             res.redirect ("/user/login")
    
      },
 
@@ -48,7 +48,7 @@ let userController={
         })
     },
     
-    carlos: (req,res)=>{
+    enumerar: (req,res)=>{
 
         db.User.findAll()
           .then(users=>
@@ -59,17 +59,17 @@ let userController={
       },
 
 
-    nahuel:(req,res)=>{
+    perfil:(req,res)=>{
 
-  
+        
 
         let id= req.params.id;
 
         db.User.findByPk(id, {
-            include:[{association:"roles"},{association:"orders"}]
-        })
-         .then(user=>
-              res.render('profileSQL',{user:user}))
+            include:[{association:"roles"}]
+         })
+          .then(user=>
+               res.render('profile',{user:user}))
         .catch(error=>console.log(error))
         
     

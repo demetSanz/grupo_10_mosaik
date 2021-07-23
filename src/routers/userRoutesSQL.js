@@ -16,12 +16,12 @@ router.get('/entrar',userController.entrar);
 router.post('/entrar',userController.entrarLogin);
 
 //listar user
-router.get('/carlos',userController.carlos);
+router.get('/detalle',userController.enumerar);
 
 
 //profile
 
-router.get('/:id',userController.nahuel)
+router.get('/detalle/:id',userController.perfil)
 
 
 module.exports = router; 
