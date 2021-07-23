@@ -46,6 +46,33 @@ let userController={
 
                 return res.send ('exitoso')
         })
+    },
+    
+    carlos: (req,res)=>{
+
+        db.User.findAll()
+          .then(users=>
+                 res.render('listadoUsers',{users})
+         )        
+ 
+ 
+      },
+
+
+    nahuel:(req,res)=>{
+
+  
+
+        let id= req.params.id;
+
+        db.User.findByPk(id, {
+            include:[{association:"roles"},{association:"orders"}]
+        })
+         .then(user=>
+              res.render('profileSQL',{user:user}))
+        .catch(error=>console.log(error))
+        
+    
     }
 }
 

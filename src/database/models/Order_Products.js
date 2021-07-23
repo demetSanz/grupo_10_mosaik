@@ -9,8 +9,6 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull:false
         },
 
-       
-
         order_id: {
             type: dataTypes.INTEGER,
         },

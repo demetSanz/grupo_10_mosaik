@@ -54,14 +54,12 @@ module.exports = (sequelize, dataTypes) =>{
         User.belongsTo(models.Role, {
             as: "roles",
             foreignKey: "roles_id"
-        })
-
-     
+        }),
         
-        // User.hasMany(models.Order,{
-        //     as:"orders",
-        //     foreignKey:"user_id"
-        // })
+        User.hasMany(models.Order,{
+            as:"orders",
+            foreignKey:"user_id"
+        })
     }
 
     return User;

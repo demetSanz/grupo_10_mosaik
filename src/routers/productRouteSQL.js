@@ -12,10 +12,13 @@ const productController = require('../controllers/productController');
 
  /*** CREATE ONE PRODUCT ***/ 
     router.get('/pedro',productController.pedro);
-    //router.post('/',productController.store);
+    router.post('/',productController.nicolas);
 
 /*** DELETE ONE PRODUCT***/ 
-  //router.delete('/:id', productsController.destroy);
+    router.post('/borrar/:id', productController.luis);
 
 
+/*** VISTA DE PRODUCTOS */
+ 
+    
 module.exports = router;

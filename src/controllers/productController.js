@@ -18,7 +18,52 @@ const productController ={
 
             }
         )
-    }
+    },
+       
+   nicolas: function (req,res){
+      
+        db.Product.create({                                    
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: req.body.image,
+                stock: req.body.stock,
+                brand: req.body.brand,
+                category_id: req.body.category_id, 
+                size_id:req.body.size_id               
+     
+             });
+            
+            res.redirect ("/product/pedro")
+   
+     },
+
+     luis:function(req,res){
+
+        db.Product.destroy({   
+            where:{
+                id:req.params.id            
+            }
+            
+        })
+
+        res.send("borrado")
+
+     },
+
+    //  carlos: (req,res)=>{
+
+    //    db.Product.findAll()
+    //      .then(products=>
+    //             res.render('listadoProductosSQL',{products:products})
+    //     )        
+    //     .catch(error=>console.log(error));
+              
+    // }
+
+        
+
+     
 }
 
 module.exports =productController ;

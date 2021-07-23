@@ -18,8 +18,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER(11),
             
            
-        },
-       
+        },       
 
         description:{
             type: dataTypes.STRING(150),
@@ -33,10 +32,8 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER(11),
             
         },
-
-        brand_id:{
-            type: dataTypes.INTEGER(11),
-            allowNull:false,
+        brand:{
+            type: dataTypes.STRING(45)
         },
 
         category_id:{
@@ -68,17 +65,17 @@ module.exports = (sequelize, dataTypes) =>{
         Product.belongsTo(models.Size, {
             as: "sizes",
             foreignKey: "size_id"
-        })
+        }),
 
         
-        // Product.belongsToMany(models.Order, {
-        //     as: "orders",
-        //     through:"orders_Products",
-        //      foreignKey: "order_id",
-        //      otherKey:"products_id",
+        Product.belongsToMany(models.Order, {
+            as: "orders",
+            through:"orders_Products",
+             foreignKey: "order_id",
+             otherKey:"products_id",
 
           
-        //   })
+          })
 
     }
     return Product;
