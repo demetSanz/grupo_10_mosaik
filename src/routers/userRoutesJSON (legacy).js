@@ -2,7 +2,7 @@ const express = require('express'); //requerimos express
 const router = express.Router();
 const path  = require ('path');
 const { body } = require ('express-validator');// Requerimos Express Validator para realizar las validaciones de registro
-const usersController = require('../controllers/usersController.js');
+const usersController = require('../controllers/usersControllerJSON (legacy).js');
 const validations = require('../middleware/validationUser');
 const guestMiddleware = require ('../middleware/guestMiddleware');
 const authMiddleware = require ('../middleware/authMiddleware');
@@ -36,4 +36,3 @@ router.get('/logout/', usersController.logout);
 //Eliminar perfil
 //router.post('/delete',userController.destroy);
 
-module.exports = router; 

@@ -3,18 +3,18 @@ const db = require('../database/models');
 
 
 let userController={
-    show: function(req,res){
+    register: function(req,res){
 
         db.Role.findAll()
             .then (function (roles){
-                return res.render ("creacionUsers", {roles:roles})
+                return res.render ("register", {roles:roles})
             })
       
           
          },
         
        
-     showRegister: function (req,res){
+     processRegister: function (req,res){
 
         db.User.create({                                    
                 name: req.body.name,
@@ -28,15 +28,15 @@ let userController={
              });
 
              
-             res.redirect ("/user/login")
+             res.redirect ("/users/login")
    
      },
 
-     entrar: function (req,res){
+     login: function (req,res){
          return res.render ("login")
      },
 
-     entrarLogin: function (req, res) {
+     processLogin: function (req, res) {
 
         let userToLogin = db.User.findOne({
             where: {
@@ -48,7 +48,7 @@ let userController={
         })
     },
     
-    enumerar: (req,res)=>{
+    detail: (req,res)=>{
 
         db.User.findAll()
           .then(users=>
@@ -59,9 +59,7 @@ let userController={
       },
 
 
-    perfil:(req,res)=>{
-
-        
+    profile:(req,res)=>{
 
         let id= req.params.id;
 

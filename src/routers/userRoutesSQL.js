@@ -3,25 +3,25 @@ const router = express.Router();
 const userController = require ('../controllers/userController');
 
 //Formulario de Registro
-router.get('/show',userController.show);
+router.get('/register',userController.register);
 
 //Procesar el registro
-router.post('/show',userController.showRegister);
+router.post('/register',userController.processRegister);
 
 
 //Formulario de login
-router.get('/entrar',userController.entrar);
+router.get('/login',userController.login);
 
 //Procesar el login
-router.post('/entrar',userController.entrarLogin);
+router.post('/login',userController.processLogin);
 
 //listar user
-router.get('/detalle',userController.enumerar);
+router.get('/detail',userController.detail);
 
 
 //profile
 
-router.get('/detalle/:id',userController.perfil)
+router.get('/detail/:id',userController.profile)
 
 
 module.exports = router; 
