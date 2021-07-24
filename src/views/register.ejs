@@ -18,7 +18,7 @@
             
         </div>
 
-        <form action="/users/register" method="POST" class="create-form">
+        <form action="/users/register" method="POST" class="create-form"enctype="multipart/form-data">
             
             <div class="control-formulario" >
                 <input type="text" name="name" placeholder="Nombre completo" class="control" value="<%= locals.oldData ? oldData.name : null %>">

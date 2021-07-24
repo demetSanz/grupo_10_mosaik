@@ -56,12 +56,12 @@
 
                     <div class="profile-form-control">
                         <label class="label-title-profile">Celular: </label>
-                        <label type="number" name="celular" id="celular"  class="control-profile"> <%= user.celular %></label>
+                        <label type="number" name="celular" id="celular"  class="control-profile"> <%= user.phone %></label>
                     </div>
 
                     <div class="profile-form-control">
-                        <label class="label-title-profile">Datos de pago: </label>
-                        <label type="text" name="payment" class="control-profile"><%= user.payment %> </label>
+                        <label class="label-title-profile">Acceso: </label>
+                        <label type="text" name="payment" class="control-profile"><%= user.roles.name %> </label>
                     </div>
 
                     <div class="profile-form-control">
