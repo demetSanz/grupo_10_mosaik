@@ -27,7 +27,7 @@
                     <li class="selection-list"><i class="fas fa-map-marked-alt"></i>Cambiá tus dirección</li>
                     <li class="selection-list"><i class="fas fa-history"></i>Historial de compras</li>
 
-                    <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>
+                    <% if (locals.isLogged && locals.userLogged.roles_id == 1) { %>
                     <a href="../products/create" class="selection-list-a"><li class="selection-list"><i class="fas fa-plus"></i>Crear producto</li></a>
                     <% } %>
                 </ul>
@@ -72,7 +72,7 @@
                     <div class="profile-form-control">
                         <label for="imagen">Avatar: </label>
                         <label type="file" name="imagePerfil" class="control-profile-avatar">
-                            <img src="../images/imagesPerfil/<%= user.file %> " alt="avatar">
+                            <img src="/images/imagesPerfil/<%= user.file %> " alt="avatar">
                         </label>
                     </div>
 
