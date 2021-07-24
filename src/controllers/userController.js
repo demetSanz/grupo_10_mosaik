@@ -12,9 +12,7 @@ let userController={
                 return res.render ("register", {roles:roles})
             })
       
-          
-         },
-        
+         },  
        
      processRegister: function (req,res){
 
@@ -27,10 +25,10 @@ let userController={
                 file: req.body.file,
                 roles_id: req.body.roles_id,                
      
-             });
+            });
 
              
-             res.redirect ("/users/login")
+        res.redirect ("/users/login")
    
      },
 
