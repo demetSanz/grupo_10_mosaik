@@ -30,7 +30,7 @@ router.post('/login',usersController.processLogin);
 router.get('/profile/', authMiddleware, usersController.profile);
 
 // Logout
-router.get('/logout/', usersController.logout);
+router.get('/logout/', usersController.logout1);
 
 
 //Eliminar perfil

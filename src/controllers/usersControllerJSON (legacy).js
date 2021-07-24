@@ -69,7 +69,7 @@ let usersController = {
                     res.cookie('userEmail',req.body.email,{maxAge:1000*300})
                 }
 
-                return res.redirect('profile');
+                return res.redirect('/users/detail',userTologin.id);
             }
             return res.render('login', {
                 errors: {
