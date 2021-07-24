@@ -3,13 +3,13 @@ const db = require('../database/models');
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
-	let emailInCookie=req.cookies.userEmail;
+	let loggedUser = req.session.userLogged;
 	
-	console.log(emailInCookie + " estoy aca");
+	console.log(loggedUser + " estoy aca");
 	
 	db.User.findOne({
 			where:{
-				email:emailInCookie
+				email: loggedUser
 			}
 		})
 		.then(function(response){

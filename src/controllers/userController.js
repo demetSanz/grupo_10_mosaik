@@ -49,7 +49,7 @@ let userController={
                 if (passwordUser) {
                     delete userToLogin.password;
     
-                    req.session.userLogged = userToLogin;
+                    req.session.userLogged = userToLogin.email;
     
                     if(req.body.remember){
                         res.cookie('userEmail',req.body.email,{maxAge:1000*300})
