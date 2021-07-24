@@ -29,7 +29,7 @@ router.get('/detail',userController.detail);
 router.get('/detail/:id',authMiddleware,userController.profile)
 
 //Logout
-router.get('/logout/', usersController.logout);
+router.get('/logout', userController.logout);
 
 
 module.exports = router; 
