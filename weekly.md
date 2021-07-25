@@ -13,10 +13,8 @@
 
     * Realizamos 4 encuentros semanales para realizar el sprint 
     * BACKLOG - SPRINT 7
-    * Buscador con SQl --> (desde la barra de search y que se muestre el producto o ninguno)
     * Filtrado de categorias con SQL - > Poder listar los productos agrupados por categoria
     * UserLoggedMiddleware con SQL -> 
     * Almacenar un session de User tomado desde SQL
-    * Editar producto sin tener que editar imagen y que ésta se vea en el formulario
     * Relación con tabla pivot
     * Mejora de diseño y logica del carrito de compras
