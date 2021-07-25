@@ -8,7 +8,13 @@ const uploadProducts =require("../middleware/multerProducts");
 
 
 //Formulario de Registro
-//router.get('/',productController.index);
+
+/*** Buscar por categoria ***/
+//router.get('/', productController.index);
+
+/*** Acceso a carrito***/
+router.get('/carts',productController.cart);
+
 
  /*** CREATE ONE PRODUCT ***/ 
     router.get('/create',productController.create);

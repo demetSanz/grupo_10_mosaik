@@ -3,6 +3,9 @@ const db = require("../database/models");
 
 const productController ={
 
+    cart: function(req,res){
+        res.render('cart');
+    },
     create:function (req,res){
 
         let categories = db.Category.findAll()

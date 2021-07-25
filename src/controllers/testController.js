@@ -1,35 +1,35 @@
-const db = require('../database/models/index');
+// const db = require('../database/models/index');
 
 
 
-let testController={
-    crear: function(req,res){
+// let testController={
+//     crear: function(req,res){
       
-        res.render ("creacionUsers")
+//         res.render ("creacionUsers")
            
-         },
+//          },
         
        
-     storage: function (req,res){
-        var nicolas =      
-        db.User.create({                                    
-                name: req.body.name,
-                email: req.body.email,
-                address: req.body.address,
-                phone: req.body.phone,
-                password: req.body.password,
-                file: req.body.file,
-                roles_id: req.body.roles_id,                
+//      storage: function (req,res){
+//         var nicolas =      
+//         db.User.create({                                    
+//                 name: req.body.name,
+//                 email: req.body.email,
+//                 address: req.body.address,
+//                 phone: req.body.phone,
+//                 password: req.body.password,
+//                 file: req.body.file,
+//                 roles_id: req.body.roles_id,                
      
-             });
-             console.log(nicolas);
+//              });
+//              console.log(nicolas);
              
-             res.redirect ("/test")
+//              res.redirect ("/test")
    
-     }
+//      }
        
- };
+//  };
 
 
-module.exports = testController;
+// module.exports = testController;
 
