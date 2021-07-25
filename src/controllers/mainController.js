@@ -1,5 +1,6 @@
-const path = require('path');
-const fs = require('fs');
+const db = require("../database/models");
+const { Op } = require("sequelize");
+
 
 // requerir base de datos desde fs
 // const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -9,17 +10,23 @@ const fs = require('fs');
 let mainController = {
     index:  function(req, res) {
         res.render('index')
+    },
+    
+    search: (req,res) => {
+
+        db.Product.findAll(
+            {include:[
+                {association: 'category'}, 
+                {association: 'sizes'}
+            ],
+            where:{name : {[Op.like]: '%' + req.query.search + '%'}} , 
+        })
+ 
+         .then(products=>{
+           res.render('search',{products:products})
+         } )      
+        .catch(error=>console.log(error));
     }
-    // search: (req,res) => {
-    //     let querySearch = req.query.search;
-    //     let productSearch =[];
-    //     for(let i =0; i < productsBD.length; i++){
-    //         if(productsBD[i].name.includes(querySearch)){
-    //             productSearch.push(productsBD[i]);
-    //         }
-    //     }
-    //     res.render("search",{"products":productSearch});
-    // }
 
 }
 

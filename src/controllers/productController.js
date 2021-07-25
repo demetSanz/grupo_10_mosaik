@@ -21,12 +21,19 @@ const productController ={
     },
        
    storage: function (req,res){
+        
+        let imageUpload
+
+        if(!req.file){
+            imageUpload = 'noImage.jpg'
+        } else {
+            imageUpload = req.file.filename
+        }
       
         db.Product.create({                                    
                 name: req.body.name,
                 price: req.body.price,
-                description: req.body.description,
-                image: req.file.filename,
+                image: imageUpload,
                 stock: req.body.stock,
                 brand: req.body.brand,
                 category_id: req.body.category_id, 
@@ -66,7 +73,6 @@ const productController ={
        db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
         
           .then(product=>{
-             console.log(product);
                  res.render('detalleSQL',{product:product})
           } )      
          .catch(error=>console.log(error));
@@ -99,23 +105,45 @@ const productController ={
     },
 
     editPost: function (req,res){
-      
-        db.Product.update(
-            {                                    
-                name: req.body.name,
-                price: req.body.price,
-                description: req.body.description,
-                image: req.file.filename,
-                stock: req.body.stock,
-                brand: req.body.brand,
-                category_id: req.body.category_id, 
-                size_id:req.body.size_id               
-            },
-            {
-                where: {id : req.params.id}
+
+        db.Product.findByPk(
+            req.params.id,
+            {include:
+                [
+                    {association: 'category'}, 
+                    {association: 'sizes'}
+                ]
             })
-             
-            res.redirect("/product/detail/"+req.params.id)
+
+        .then(product =>
+            {
+                let imageUpload
+
+                if(!req.file || !product.image){
+                    imageUpload = 'noImage.jpg'
+                } else {
+                    imageUpload = req.file.filename
+                }
+                
+                db.Product.update(
+                {                                    
+                    name: req.body.name,
+                    price: req.body.price,
+                    description: req.body.description,
+                    image: imageUpload,
+                    stock: req.body.stock,
+                    brand: req.body.brand,
+                    category_id: req.body.category_id, 
+                    size_id:req.body.size_id               
+                },
+                {
+                    where: {id : req.params.id}
+                })
+                 
+                res.redirect("/product/detail/"+req.params.id)
+        })
+      
+        
    
      }
 }

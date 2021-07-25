@@ -9,7 +9,7 @@ const mainController = require('../controllers/mainController.js');
 router.get('/',mainController.index);
 
 //buscar los productos en el search
-// router.get("/search", mainController.search);
+router.get("/search", mainController.search);
 
 
 module.exports = router; 
