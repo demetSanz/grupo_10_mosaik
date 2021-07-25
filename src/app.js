@@ -7,7 +7,7 @@ const port = 3003; // Colocamos el puerto en una constante para que pueda modifi
 /******TEST */
 
 
-const routertest = require('./routers/testRoutes')
+//const routertest = require('./routers/testRoutes')
 
 /******TEST */
 
@@ -61,7 +61,7 @@ app.use('/product',productRoutes);
 app.use ('/users', userRoutesSQL)
 
 /**************test*/
-app.use('/test',routertest)
+//app.use('/test',routertest)
 
 /**********test****** */
 
