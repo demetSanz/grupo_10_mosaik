@@ -5,3 +5,4 @@ app(ExpressLayouts).js
 tempData.zip
 src/database/config
 src/JSONviews
+src/database/config/config.js
