@@ -1,21 +1,21 @@
 const path = require('path');
-const fs = require('fs');
-
-// requerir base de datos desde fs
-// const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-// const productsBD = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../database/models")
 
 
 let mainController = {
     index:  function(req, res) {
         res.render('index')
-    }
+    },
     // search: (req,res) => {
+
+    //     db.product.findAll()
+
+    //     let product = db.Product;
     //     let querySearch = req.query.search;
     //     let productSearch =[];
-    //     for(let i =0; i < productsBD.length; i++){
-    //         if(productsBD[i].name.includes(querySearch)){
-    //             productSearch.push(productsBD[i]);
+    //     for(let i =0; i < product.length; i++){
+    //         if(product[i].name.includes(querySearch)){
+    //             productSearch.push(product[i]);
     //         }
     //     }
     //     res.render("search",{"products":productSearch});

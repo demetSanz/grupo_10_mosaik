@@ -33,3 +33,8 @@ password:123456
 * ADMIN
 email: admin@dh.com
 password:123456
+
+# UPDATE SPRINT 6
+
+* Ruta al DER
+../src/script/DER DRAWIO.pdf o /DER DRAWIO.hml

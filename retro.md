@@ -99,3 +99,24 @@
 ## Deberiamos dejar de hacer
 * Tener cuidado con los nombres de las carpetas.
 * 
+
+# Retrospectiva Sprint 5
+
+## Que hicimos bien
+* Aumento en las frecuencias de meetings
+* Distribucion eficiente de los requisitos para el cumplimiento del sprint
+
+
+## Que podemos mejorar
+* Hacer mas actualizaciónes en Trello.
+* Deberiamos realizar mas consultas con los profes de manera mas seguida.
+* 
+
+## Deberiamos empezar a hacer
+* Cuando editamos un producto deberia traer el mismo.
+* Al editar el producto deberia cargar la imagen.
+* Apoyarnos mas en trello para la distribucion de tareas
+
+## Deberiamos dejar de hacer
+* Tener cuidado con los nombres de las carpetas.
+* 
