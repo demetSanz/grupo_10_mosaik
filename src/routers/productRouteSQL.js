@@ -10,14 +10,16 @@ const uploadProducts =require("../middleware/multerProducts");
 //Formulario de Registro
 //router.get('/',productController.index);
 
-
-
  /*** CREATE ONE PRODUCT ***/ 
-    router.get('/pedro',productController.pedro);
-    router.post('/',productController.nicolas);
+    router.get('/create',productController.create);
+    router.post('/',uploadProducts.single('image'),productController.storage);
+
+/*** EDIT ONE PRODUCT ***/ 
+    router.get('/edit/:id',productController.edit);
+    router.post('/edit/:id',uploadProducts.single('image'),productController.editPost);
 
 /*** DELETE ONE PRODUCT***/ 
-    router.post('/borrar/:id', productController.luis);
+    router.post('/borrar/:id', productController.destroy);
 
 
 /*** VISTA DE PRODUCTOS */

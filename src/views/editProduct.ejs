@@ -10,34 +10,36 @@
 
         <div class="titulo-form">
                        
-            <h3>Ingresá el producto</h3>
+            <h3>Edición del producto</h3>
             
         </div>
 
-        <form action="/product" method="POST" class="create-form" enctype="multipart/form-data">
+        <form action="/product/edit/<%= product.id %>" method="POST" class="create-form" enctype="multipart/form-data">
             
             <div class="control-formulario" >
-                <input type="text" name="name" placeholder="Nombre del producto" class="control" value="">
+                <input type="text" name="name" placeholder="Nombre del producto" class="control" value="<%= product.name %> ">
             </div>
 
+            <!-- Resolver type="number" -->
             <div class="control-formulario">
-                <input type="number" name="price" placeholder="Ingresá un precio" class="control" value= "" >
+                <input type="text" name="price" placeholder="Ingresá un precio" class="control" value= "<%= product.price %> " >
             </div> 
 
             <div class="control-formulario">
-                <input type="text" name="description" placeholder="descripcion del producto" class="control" value="" >
+                <input type="text" name="description" placeholder="descripcion del producto" class="control" value="<%= product.description %> " >
             </div>
 
             <div class="control-formulario">
                 <input type="file" name="image" placeholder="Ingresá una imagen" class="control" value= "" >
             </div> 
 
+            <!-- Resolver type="number" -->
             <div class="control-formulario">
-                <input type="number" name="stock" placeholder="Ingresá un stock" class="control" value= "" >
+                <input type="text" name="stock" placeholder="Ingresá un stock" class="control" value= "<%= product.stock %> " >
             </div> 
 
             <div class="control-formulario" >
-                <input type="text" name="brand" placeholder="marca del producto" class="control" value="">
+                <input type="text" name="brand" placeholder="marca del producto" class="control" value="<%= product.brand %> ">
             </div>
 
             <div class="control-formulario">
@@ -45,7 +47,7 @@
                 <select 
                     name="category_id" 
                     class="control-form-select">
-                    <option value="">Seleccioná la categoria</option>
+                    <option value="<%= product.category.id %> "> <%= product.category.name %> </option>
                     <% for (let i = 0; i<category.length; i++) { %> 
                     <option value="<%= category[i].id %> ">
                         <%= category[i].name %> 
@@ -60,7 +62,7 @@
                 <select 
                     name="size_id" 
                     class="control-form-select">
-                    <option value="">Seleccioná tu tamaño</option>
+                    <option value="<%= product.sizes.id %>" > <%= product.sizes.name %> </option>
                     <% for (let i = 0; i < sizes.length; i++) { %> 
                     <option value="<%= sizes[i].id %> ">
                         <%= sizes[i].name %> 
@@ -73,7 +75,7 @@
 
 
             <div class="boton-centrado">
-                <button type="submit" class="boton-formulario">Crear Producto</button>
+                <button type="submit" class="boton-formulario">Editar Producto</button>
             </div>
 
             
