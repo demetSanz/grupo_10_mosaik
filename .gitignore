@@ -3,5 +3,5 @@
 package-lock.json
 app(ExpressLayouts).js
 tempData.zip
-src/database/config/config.js
+src/database/config
 src/JSONviews

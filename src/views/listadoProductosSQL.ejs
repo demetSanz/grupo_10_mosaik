@@ -10,18 +10,18 @@
 
   <h1>Listado de Productos</h1>
   <ul>
-    <% for (let i = 0; i< products.length; i++) { %> 
+    <% products.forEach(product=> { %>
+     <a> <li>  <%= product.name %>  
+      <%= product.price  %>    
+       <img src='../images/products/<%= product.image %>' class="img-producto">
+         </li> </a>
+   <%  }) %>  
+          
     
-      <li>
-          <a href="/listar/<%= products[i].id %> ">
-          
-              <%= products[i].name %> </li>
-          
-          </a>
 
-    <% } %> 
+ 
 </ul>
-  </ul>
+ 
 
 
   <%- include('./partials/footer'); %>

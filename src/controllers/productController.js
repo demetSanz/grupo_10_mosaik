@@ -26,7 +26,7 @@ const productController ={
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
-                image: req.body.image,
+                image: req.file.filename,
                 stock: req.body.stock,
                 brand: req.body.brand,
                 category_id: req.body.category_id, 
@@ -50,16 +50,30 @@ const productController ={
         res.send("borrado")
 
      },
+     /*******metodo para listar y mostrar todos los productos*** */
+     carlos: (req,res)=>{
 
-    //  carlos: (req,res)=>{
-
-    //    db.Product.findAll()
-    //      .then(products=>
-    //             res.render('listadoProductosSQL',{products:products})
-    //     )        
-    //     .catch(error=>console.log(error));
+       db.Product.findAll({include:['category', 'sizes']})
+       
+         .then(products=>{
+            console.log(products);
+                res.render('listadoProductosSQL',{products})
+         } )      
+        .catch(error=>console.log(error));
               
-    // }
+    },
+
+    pancho: (req,res)=>{
+
+        db.Product.findByPK(req.params.id,{include:['category', 'sizes']})
+        
+          .then(products=>{
+             console.log(products);
+                 res.render('listadoProductosSQL',{products})
+          } )      
+         .catch(error=>console.log(error));
+               
+     }
 
         
 

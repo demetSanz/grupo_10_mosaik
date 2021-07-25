@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const productController = require('../controllers/productController');
+const multer = require('multer');
+const uploadProducts =require("../middleware/multerProducts");
 
 
 
@@ -19,6 +21,6 @@ const productController = require('../controllers/productController');
 
 
 /*** VISTA DE PRODUCTOS */
- 
+   router.get('/listadoProductosSQL',uploadProducts.single('image-product'),productController.carlos)
     
 module.exports = router;

@@ -37,13 +37,13 @@ let userController={
      },
 
      processLogin: function (req, res) {
-
-        let userToLogin = db.User.findOne({
+        
+      db.User.findOne({
             where: {
                 email: req.body.email
             }
         
-        }).then ((userToLogin) => {
+        }).then (userToLogin => {
             if (userToLogin) {
                 let passwordUser = bcrypt.compareSync(req.body.password, userToLogin.password);
                 if (passwordUser) {
@@ -75,7 +75,8 @@ let userController={
             })
         })
         
-    },
+  }
+    ,
     
     detail: (req,res)=>{
 
@@ -89,11 +90,9 @@ let userController={
 
         let id= req.params.id;
 
-        db.User.findByPk(id, {
-            include:[{association:"roles"}]
-         })
+        db.User.findByPk(id, {include:["roles"]})
           .then(user=>
-               res.render('profile',{user:user}))
+               res.render('profile',{user}))
         .catch(error=>console.log(error))
         
     

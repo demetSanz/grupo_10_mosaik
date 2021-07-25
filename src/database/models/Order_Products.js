@@ -28,12 +28,12 @@ module.exports = (sequelize, dataTypes) =>{
 
     Order_Products.associate = function(models){
         
-        Order_Products.hasMany(models.Order, {
+        Order_Products.belongsTo(models.Order, {
             as: "orders",
             foreignKey: "order_id"
         }),
 
-        Order_Products.hasMany(models.Product, {
+        Order_Products.belongsTo(models.Product, {
             as: "products",
             foreignKey: "products_id"
         })

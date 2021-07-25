@@ -35,7 +35,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'porcelanato');
+INSERT INTO `category` VALUES (1,'Pisos'),(2,'Griferias'),(3,'Sanitarios');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `products` (
   KEY `size_id_idx` (`size_id`),
   CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `size_id` FOREIGN KEY (`size_id`) REFERENCES `sizes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +132,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'producto1',50,'producto 1','carlos',2,'1',1,1),(2,'producto 2',50,'producto 2','carlos 2',1,'1',1,1);
+INSERT INTO `products` VALUES (1,'Mosaico Sanchez',10000,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','imagen-2.jpg',100,'Ilva',1,1),(2,'Inodoro con mochila Largo Axis',500,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','sanitarios_3.jpg',100,'DECA',3,2),(3,'Bidet 3 Agujero Blanco Varese',72999,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','sanitarios_2.jpg',100,'FERRUM',3,2),(4,'Lavatorio Andina 3 Agujeros Blanco',47900,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','sanitarios_1.jpg',100,'FERRUM',3,2),(5,'Grifería para Lavatorio Gredos',53000,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','griferia_1.jpg',100,'FV',2,3),(6,'Grifería para Cocina de Mesada Self',20999,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','griferia_2.jpg',100,'HIDROMET',2,1),(7,'Grifería para Cocina Pico Flexible negro',36700,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','griferia_3.jpg',100,'PIAZZA',2,3),(8,'Grifería para Cocina de Mesada Self',148000,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','griferia_2.jpg',100,'HIDROMET',2,1),(9,'Mosaico Crescente',11399,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','imagen-1.jpg',100,'Ilva',1,3),(10,'Mosaico Clementi',1200,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore nihil saepe porro consequatur odio maiores temporibus cum, perspiciatis, deb','imagen-3.jpg',100,'Ilva',1,2);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +171,7 @@ CREATE TABLE `sizes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,7 +180,7 @@ CREATE TABLE `sizes` (
 
 LOCK TABLES `sizes` WRITE;
 /*!40000 ALTER TABLE `sizes` DISABLE KEYS */;
-INSERT INTO `sizes` VALUES (1,'small');
+INSERT INTO `sizes` VALUES (1,'small'),(2,'medium'),(3,'large');
 /*!40000 ALTER TABLE `sizes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -229,7 +229,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `email_UNIQUE` (`email`),
   KEY `roles_id_idx` (`roles_id`),
   CONSTRAINT `roles_id` FOREIGN KEY (`roles_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,7 +238,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nicoClem','nico@dh.com','san luis','123456','$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW','1623885037788_img.jpg',1),(2,'luis Crescente','luis@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(3,'NahuiiGH','nahuii@dh.com','CABA','12315245','$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq','1623885642557_img.jpg',2),(4,'Carlos Salvucci','carlos@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(5,'Elías Sanchez','elias@dh.com','capital federal','1155555555','$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva','1624741357437_img.jpg',1),(6,'uri','admin@dh.com','capital federal','1155555555','$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi','1624741768923_img.jpg',1),(7,'seba','cliente@dh.com','capital federal','1155555555','$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne','1624741814078_img.jpg',2),(10,'Maria','maria@dh.com','Cordoba','123456','123456','',1),(12,'Jacky','jacky@dh.com','mendoza','123456','123456','',1),(13,'peter','peter@dh.com','peter','123456','123456','',1);
+INSERT INTO `users` VALUES (1,'nicoClem','nico@dh.com','san luis','123456','$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW','1623885037788_img.jpg',1),(2,'luis Crescente','luis@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(3,'NahuiiGH','nahuii@dh.com','CABA','12315245','$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq','1623885642557_img.jpg',2),(4,'Carlos Salvucci','carlos@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(5,'Elías Sanchez','elias@dh.com','capital federal','1155555555','$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva','1624741357437_img.jpg',1),(6,'uri','admin@dh.com','capital federal','1155555555','$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi','1624741768923_img.jpg',1),(7,'seba','cliente@dh.com','capital federal','1155555555','$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne','1624741814078_img.jpg',2),(10,'Maria','maria@dh.com','Cordoba','123456','123456','',1),(12,'Jacky','jacky@dh.com','mendoza','123456','123456','',1),(13,'peter','peter@dh.com','peter','123456','123456','',1),(14,'Lucho','lucho@dh.com','Corrientes','124564','123456','',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -251,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-23  1:21:32
+-- Dump completed on 2021-07-24 21:40:35
