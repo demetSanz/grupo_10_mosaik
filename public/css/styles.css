@@ -1061,8 +1061,19 @@ ul.breadcrumb li a:hover {
 
 }
 
+.seccion-mas-visto3{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
+
 .caja-envolvedora-producto2{
     margin: 10px;
+    border-radius: 5%;
+    background-color: white;
 
 }
 
@@ -1115,11 +1126,12 @@ ul.breadcrumb li a:hover {
 .nombre-producto-alt{
     display: flex;
     align-items: center;
-    margin: 20px 10px 5px 10px;
+    margin: 20px 0px 5px 0px;
     font-size: 25px;
     color: rgba(0,0,0,.8);
     font-weight: 400;
-    padding-left: 20px;
+    padding-left: 3px;
+    text-align: center;
 
 }
 
@@ -1512,7 +1524,7 @@ ul.breadcrumb li a:hover {
 @media screen and (min-width:769px){
 
 .producto-marca{
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 .producto-div-article{
@@ -1890,7 +1902,7 @@ color: #999;
     margin-bottom: 20px;
 }
 
-.producto-elias:hover{
+.caja-envolvedora-producto2:hover{
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
 }
 

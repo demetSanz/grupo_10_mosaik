@@ -51,25 +51,26 @@ const productController ={
 
      },
      /*******metodo para listar y mostrar todos los productos*** */
-     carlos: (req,res)=>{
+     detail: (req,res)=>{
 
-       db.Product.findAll({include:['category', 'sizes']})
-       
+       db.Product.findAll({include:[{association: 'category'}, {association: 'sizes'}]})
+ 
          .then(products=>{
-            console.log(products);
-                res.render('listadoProductosSQL',{products})
+             console.log(products + "HOLAAA");
+           
+           res.render('listadoProductosSQL',{products:products})
          } )      
         .catch(error=>console.log(error));
               
     },
 
-    pancho: (req,res)=>{
+    view: (req,res)=>{
 
-        db.Product.findByPK(req.params.id,{include:['category', 'sizes']})
+       db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
         
-          .then(products=>{
-             console.log(products);
-                 res.render('listadoProductosSQL',{products})
+          .then(product=>{
+             console.log(product);
+                 res.render('detalleSQL',{product:product})
           } )      
          .catch(error=>console.log(error));
                

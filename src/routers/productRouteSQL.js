@@ -21,6 +21,10 @@ const uploadProducts =require("../middleware/multerProducts");
 
 
 /*** VISTA DE PRODUCTOS */
-   router.get('/listadoProductosSQL',uploadProducts.single('image-product'),productController.carlos)
+   router.get('/detail',uploadProducts.single('image-product'),productController.detail)
+
+/* DETALLE DE PRODUCTO*/
+
+   router.get('/detail/:id',productController.view)
     
 module.exports = router;

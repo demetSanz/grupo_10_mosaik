@@ -50,10 +50,11 @@ let userController={
                     delete userToLogin.password;
     
                     req.session.userLogged = userToLogin.email;
-    
-                    if(req.body.remember){
+                    
+                    //Deberia funcionar para cookie con el if, pero se quita para testeo de login exitoso con sql
+                    // if(req.body.remember){
                         res.cookie('userEmail',req.body.email,{maxAge:1000*300})
-                    }
+                    // }
     
                     return res.redirect('detail/'+ userToLogin.id);
                 }

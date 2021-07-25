@@ -12,15 +12,13 @@
 
         <ul class="breadcrumb">
 
-            <li><a href="/products">Listado de Productos</a></li>
-            <li><a href="/products?categoria=<%= product.category%>"><%= product.category[0].toUpperCase() + product.category.slice(1)%></a></li><!-- Esto permite poner el primer caracter en mayuscula y el resto en minuscula -->
+            <li><a href="/product/detail">Listado de Productos</a></li>
+            <!-- <li><a href="/products?categoria=<%#= product.category%>"><%#= product.category[0].toUpperCase() + product.category.slice(1)%></a></li>
+            Esto permite poner el primer caracter en mayuscula y el resto en minuscula -->
             <li><%=product.name%></li>
 
         </ul>
 
-        <!-- <div class = 'producto-banner'>
-            <img src="/images/banner3.jpg" alt="imagen-banner" >
-        </div> -->
         <article class=producto-main-art>
             
             <h3 class="producto-marca"><%=product.name%></h3>
@@ -46,23 +44,23 @@
                     <div class="cantidad-precio">
 
                         <label class="producto-cantidad">Marca: 
-                        <span class="span-producto"><%= product.marca%></span></label>
+                        <span class="span-producto"><%= product.brand%></span></label>
 
-                        <label class="producto-medidas">Medidas:
-                        <span class="span-producto"><%=product.size%></span></label>
+                        <label class="producto-medidas">Medida:
+                        <span class="span-producto"><%=product.sizes.name%></span></label>
                         
                         <p class="producto-precio">$<%=product.price%></p>
                         <% if (locals.isLogged){ %>
                         <label class="producto-cantidad">Cantidad: 
                         <input class="producto-inp-cantidad" type="number" ></label>
-
+                        <% }  %>
 
                     </div>
-                
+                    
                     <div class="botones-detail">
                         
                         <button class="producto-button-add">Agregar al carrito</button>
-                        <% }  %>
+                        
                         <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
                         <a href="/products/<%= product.id %>/edit/" class="button-link-style" ><button class="producto-button-edit">Editar producto</button></a>
 
@@ -91,56 +89,7 @@
            
         </article>
         
-        <section>
-            <h1 class="producto-sub-titulo">Quizas te pueda interesar</h1>
-
-            <div class="producto-intereses">
-                <div class="producto-cajita">
-                    <article class="producto-article-section">
-
-                        <img src="/images/products/imagen-2.jpg" alt="foto-interesantes" class="producto-pie-de-foto2">
-                
-                        <div class="caja-extra">
-                            <div class ="producto-sub-descripcion">  
-                            <p class="producto-precio-article">$6.770</p>
-                            <p class="producto-descuento-article">40% OFF</p>
-                        </div>
-                        <p class="producto-descripcion-article"> POSITANO BRILLANTE</p>
-                    </div> 
-                    </article>
-                </div>
-                
-                <div class="producto-cajita">
-                <article class="producto-article-section">
-                    
-                    <img src="/images/products/imagen-3.jpg" alt="foto-interesantes" class="producto-pie-de-foto2">
-
-                    <div class="caja-extra">
-                    <div class ="producto-sub-descripcion">  
-                        <p class="producto-precio-article">$6.770</p>
-                        <p class="producto-descuento-article">40% OFF</p>
-                    </div>
-                    <p class="producto-descripcion-article"> ATELIER ARENA</p>
-                    </div>
-                </article>
-                </div>
-
-                <div class="producto-cajita">
-                <article class="producto-article-section">
-                    <img src="/images/products/imagen-4.jpg" alt="foto-interesantes" class="producto-pie-de-foto2">
-                    
-                    <div class="caja-extra">
-                    <div class ="producto-sub-descripcion">  
-                        <p class="producto-precio-article">$6.770</p>
-                        <p class="producto-descuento-article">40% OFF</p>
-                    </div>
-                    <p class="producto-descripcion-article"> FORTEZZE ARENA</p>
-                    </div>
-                </article>
-            </div>
-            </div>
-
-        </section>
+        
 
         <% if (!locals.isLogged) { %>
         

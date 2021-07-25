@@ -32,4 +32,3 @@ router.post('/', uploadProducts.single('image-product') ,productsController.stor
     /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy); 
 
-module.exports = router; 

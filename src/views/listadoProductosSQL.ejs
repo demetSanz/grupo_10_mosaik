@@ -6,23 +6,42 @@
 <body>
     <%- include('./partials/header'); %>
 
+    <main class="producto-main">
 
+    <ul class="breadcrumb" style="margin-bottom: 15px;">
 
-  <h1>Listado de Productos</h1>
-  <ul>
-    <% products.forEach(product=> { %>
-     <a> <li>  <%= product.name %>  
-      <%= product.price  %>    
-       <img src='../images/products/<%= product.image %>' class="img-producto">
-         </li> </a>
-   <%  }) %>  
-          
+      <li><a href="/product/detail">Listado de Productos</a></li>
+
+    </ul>
+
+    <article class=producto-main-art>
+
+    <section class="seccion-mas-visto3">
     
+     <% products.forEach(product=> { %>
 
- 
-</ul>
- 
+      <div class="caja-envolvedora-producto2">
 
+            <article class="producto-elias" >
+                <div class="producto-cajita2">
+                  <img src='../images/products/<%= product.image %>' class="img-producto">
+                  <p class="nombre-producto-alt"><%= product.name %></p>
+                  <p class="precio-elias-alt">$<%= product.price %></p>
+                    <div class="producto-descripcion-2">
+                    
+                        <a href="/product/detail/<%= product.id %>" class="producto-enrutador"><button class="ver-detalle-producto"> Ver producto</button></a>
+
+                    </div>
+                </div>
+            </article>
+      </div>
+      <%  }) %>  
+
+    </section>
+
+  </article>
+
+  </main>
 
   <%- include('./partials/footer'); %>
 </body>
