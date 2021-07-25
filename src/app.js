@@ -14,7 +14,7 @@ const routertest = require('./routers/testRoutes')
 const userRoutesSQL = require('./routers/userRoutesSQL'); // Rutas Usuario SQL
 const routerMain = require('./routers/mainRoutes'); // importamos routers main
 
-const productRoutesSql = require('./routers/productRouteSQL');
+const productRoutes = require('./routers/productRoutes');
 
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -57,7 +57,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use('/', routerMain);
 
-app.use('/product',productRoutesSql);
+app.use('/product',productRoutes);
 app.use ('/users', userRoutesSQL)
 
 /**************test*/

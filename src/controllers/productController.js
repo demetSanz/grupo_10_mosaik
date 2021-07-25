@@ -34,7 +34,7 @@ const productController ={
      
              })
              
-            res.redirect ("/product/create")
+            res.redirect ("/product/detail")
    
      },
 
