@@ -43,18 +43,19 @@ let userController={
                 email: req.body.email
             }
         
-        }).then (userToLogin => {
+        })
+        .then (userToLogin => {
             if (userToLogin) {
                 let passwordUser = bcrypt.compareSync(req.body.password, userToLogin.password);
                 if (passwordUser) {
-                    delete userToLogin.password;
+                    // console.log('MAIL PRE DELETE USERTOLOGIN PASS '+userToLogin.email)
     
                     req.session.userLogged = userToLogin.email;
                     
                     //Deberia funcionar para cookie con el if, pero se quita para testeo de login exitoso con sql
-                    // if(req.body.remember){
+                    if(req.body.remember){
                         res.cookie('userEmail',req.body.email,{maxAge:1000*300})
-                    // }
+                    }
     
                     return res.redirect('detail/'+ userToLogin.id);
                 }
@@ -89,9 +90,12 @@ let userController={
 
     profile:(req,res)=>{
 
-        let id= req.params.id;
+        let id = req.params.id;
 
-        db.User.findByPk(id, {include:["roles"]})
+        db.User.findByPk(
+            id, 
+            {include:["roles"]}
+            )
           .then(user=>
                res.render('profile',{user}))
         .catch(error=>console.log(error))
