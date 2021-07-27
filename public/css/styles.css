@@ -1070,6 +1070,18 @@ ul.breadcrumb li a:hover {
 
 }
 
+.seccion-mas-visto4{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 70%;
+    flex-wrap: wrap;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+
+}
+
 .caja-envolvedora-producto2{
     margin: 10px;
     border-radius: 5%;
@@ -1116,7 +1128,7 @@ ul.breadcrumb li a:hover {
 
 
 .precio-elias-alt{
-    font-size: 25px;
+    font-size: 15px;
     margin: 10px 20px 5px 20px;
     padding-left: 10px;
     color: rgba(0,0,0,.8);
@@ -1127,7 +1139,7 @@ ul.breadcrumb li a:hover {
     display: flex;
     align-items: center;
     margin: 20px 0px 5px 0px;
-    font-size: 25px;
+    font-size: 15px;
     color: rgba(0,0,0,.8);
     font-weight: 400;
     padding-left: 3px;
@@ -1274,6 +1286,13 @@ ul.breadcrumb li a:hover {
     flex-wrap: wrap;
     margin: 10px auto;
     justify-content: center;
+}
+
+.producto-main-search{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+
 }
 
 .producto-marca{
@@ -1868,8 +1887,8 @@ color: #999;
 /*Seccion Home Lo Mas Visto*/
 
 .titular{
-    color: #FF6666;
-    font-size: 20px ;
+    color: rgba(0, 0, 0, 0.589);
+    font-size: 28px ;
     font-weight: bold;
     width: 90%;
     margin: 15px auto;
@@ -2684,3 +2703,80 @@ div.icon-menu:hover article.modify-profile{ display: block }
 
   
   /*---------------*/
+
+.titular5{
+    text-align: left;
+    color: #FF6666;
+    margin: 5px 5px;
+    font-size: 25px;
+    width: 100%;
+    font-weight: 600;
+
+}
+
+
+/*---- NOSOTROS ---------*/
+
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  .text-us{
+      text-decoration: none;
+      color: white;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  /*------------*/
+

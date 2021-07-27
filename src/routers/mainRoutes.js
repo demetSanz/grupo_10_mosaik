@@ -11,5 +11,9 @@ router.get('/',mainController.index);
 //buscar los productos en el search
 router.get("/search", mainController.search);
 
+// Nosotros
+
+router.get ("/nosotros", mainController.aboutUs)
+
 
 module.exports = router; 

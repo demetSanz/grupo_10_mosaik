@@ -123,7 +123,7 @@ CREATE TABLE `products` (
   KEY `size_id_idx` (`size_id`),
   CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `size_id` FOREIGN KEY (`size_id`) REFERENCES `sizes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,7 +238,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nicoClem','nico@dh.com','san luis','123456','$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW','1623885037788_img.jpg',1),(2,'luis Crescente','luis@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(3,'NahuiiGH','nahuii@dh.com','CABA','12315245','$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq','1623885642557_img.jpg',2),(4,'Carlos Salvucci','carlos@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(5,'Elías Sanchez','elias@dh.com','capital federal','1155555555','$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva','1624741357437_img.jpg',1),(6,'uri','admin@dh.com','capital federal','1155555555','$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi','1624741768923_img.jpg',1),(7,'seba','cliente@dh.com','capital federal','1155555555','$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne','1624741814078_img.jpg',2),(10,'Maria','maria@dh.com','Cordoba','123456','123456','',1),(12,'Jacky','jacky@dh.com','mendoza','123456','123456','',1),(13,'peter','peter@dh.com','peter','123456','123456','',1),(14,'Lucho','lucho@dh.com','Corrientes','124564','123456','',1);
+INSERT INTO `users` VALUES (1,'nicoClem','nico@dh.com','san luis','123456','$2a$10$hfOXYKMCIg.mePs/4rG8g.KXIqeTr3qK3sDCB1rb5Wn2DCplU7hzW','1623885037788_img.jpg',1),(2,'luis Crescente','luis@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(3,'NahuiiGH','nahuii@dh.com','CABA','12315245','$2a$10$6d7UbVtAyfeRqPJ68z3GO.XaIXZuOJd652yvOHvc0yyURuY/BElLq','1623885642558_img.jpg',2),(4,'Carlos Salvucci','carlos@dh.com','capital federal','11555555','$2a$10$DrQ46ybsRnZM9n0RebrkD.0TLOGCUeAwH9hKPzQMOfpluWa2FzL3m','1623885485858_img.jpg',1),(5,'Elías Sanchez','elias@dh.com','capital federal','1155555555','$2a$10$uihb3fdJxhp2Lm0TrRMrKOsMlefmuSIKwrPMLqs3P8xil4y.OGwva','1624741357437_img.jpg',1),(6,'uri','admin@dh.com','capital federal','1155555555','$2a$10$JAt6IX3U828PakiAdnKP8OW5NLxr77mJfgG3ROZjM29a.ieZ/zyxi','1624741768923_img.jpg',1),(7,'seba','cliente@dh.com','capital federal','1155555555','$2a$10$BmVKeUS7WrOc86teJrGFBOenK/om0DzfeCOzzSaFLIWiOVHyQU3Ne','1624741814078_img.jpg',2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -251,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-25  3:21:25
+-- Dump completed on 2021-07-27  1:33:48

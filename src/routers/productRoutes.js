@@ -34,5 +34,7 @@ router.get('/carts',productController.cart);
 /* DETALLE DE PRODUCTO*/
 
    router.get('/detail/:id',productController.view)
+
+
     
 module.exports = router;

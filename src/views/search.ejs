@@ -4,40 +4,44 @@
 <body>
     <%- include("./partials/header"); %>
 
+    <main class="producto-main">
 
+        <ul class="breadcrumb" style="margin-bottom: 15px;">
     
-    <main class="main-elias-producto">
+          <li><a href="/product/detail">Listado de Productos</a></li>
+    
+        </ul>
+    <h2 class="titular5" >RESULTADO DE LA BÚSQUEDA</h2>
+    
+    
+    <article class=producto-main-search>
         
-        
-        <h2 class="titular2" >RESULTADO DE LA BÚSQUEDA</h2>
-        
+        <% for(let i =0; i < products.length; i++) {%>    
 
-        <div class="caja-envolvedora-producto3">   
-            <% for(let i =0; i < products.length; i++) {%>
+            
             <div class="caja-envolvedora-producto2">
-            <section class="producto-elias">
-                
+            
+            
+                <article class="producto-elias" >
+                    <div class="producto-cajita2">          
                
-                    <figure >
                         <img src="/images/products/<%= products[i].image %>" alt="imagen del producto" class="img-producto">
-                    </figure>
-                    <article>
                         <div class="producto-cajita2">
                         <p class="nombre-producto-alt"> <%= products[i].name %> </p>
                         <p class="precio-elias-alt">$ <%= products[i].price %></p>
                         <div class="producto-descripcion-2">
                             <a href="/product/detail/<%= products[i].id %>"<%= products[i] %>><button class="ver-detalle-producto"> Ver producto</button></a>
                         </div>
-                        </div>
-                    </article>
-                </a>
-                
-                        
-            </section>
+                    </div>
+                    </div>
+                </article>
+          
             </div>
+
+            
             <% } %>
             
-        </div>
+    </article>
     </main>
 
     <%- include("./partials/footer"); %>

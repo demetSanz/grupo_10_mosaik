@@ -26,6 +26,11 @@ let mainController = {
            res.render('search',{products:products})
          } )      
         .catch(error=>console.log(error));
+    },
+
+    aboutUs: function (req,res){
+
+        res.render('about-us')
     }
 
 }
