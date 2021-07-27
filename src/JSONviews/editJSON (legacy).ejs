@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>  
+    <%- include('./partials/header'); %>
+    <main>
+
+        <!--Formularios-->
+            <div class="contenedor-formularios-edit">
+                <form action="/products/edit/<%= productToEdit.id%>?_method=PUT"  method="POST"  enctype="multipart/form-data" class="create-form-edit">
+    
+                    <div class="titulo-form-edit">
+                        <h3>Editar el producto</h3>
+                    </div>  
+
+                    <div class="caja-extra-form-edit">
+                
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="name">Nombre de producto</label>
+                        <input type="text" name="name" class="control" value="<%= productToEdit.name %>" >
+                    </div>
+    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="marca">Marca del producto</label>
+                        <input type="text" name="marca" class="control" value="<%= productToEdit.marca %>" >
+                    </div>
+                    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="description">Descripción del producto</label>
+                        <input type="textarea" name="description" id="description" class="control" value="<%= productToEdit.description %>">
+                    </div>
+
+                    <div class="control-formulario-edit">
+                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subí una imagen del producto
+                            <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png"  class="control-foto"></label>   
+                    </div> 
+    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit">Categoría</label>
+                        <div class="elecciones-edit">
+                            <label><input type="radio" name="category" value="griferias" >Griferia</label>
+                            <label><input type="radio" name="category" value="sanitarios" >Sanitarios</label>
+                            <label><input type="radio" name="category" value="pisos">Pisos</label>
+                            <!-- <%= //categoria.toLowerCase() == "pisos" ? "checked" : "" %> -->
+                        </div>
+                
+                    </div>
+                    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="price">Precio</label>
+                        <label class="label-title-edit"  for="price">$<input type="number" name="price" value="<%= productToEdit.price %>" class="control-edit" value="$"></label>
+                    </div>
+ 
+                    <!-- Agregar campo de Oferta -->
+
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="size">Medidas</label>
+                        <div class="elecciones-edit">
+                            <label><input type="checkbox" name="size" value="35x60"  >35x60</label>
+                            <label><input type="checkbox" name="size" value="30x45"  >30x45</label>
+                            <label><input type="checkbox" name="size" value="45x90"  >45x90</label>
+                            <label><input type="checkbox" name="size" value="20x120"  >20x120</label>
+                            <!-- <%= //medidas== "20x120" ? "checked" : "" %> -->
+                        </div>
+                        
+                    </div>
+
+                    </div>
+    
+                    <div class="botones-edit">
+                        <button type="reset" class="boton-borrado">Reiniciar</button>
+                        <button type="submit" class="boton-registro-edit">Guardar</button>
+                    </div>
+            
+                </form>
+            </div>
+    
+    
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+</html>

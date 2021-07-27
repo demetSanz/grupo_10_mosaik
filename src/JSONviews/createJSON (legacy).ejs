@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>  
+    <%- include('./partials/header'); %>
+    <main>
+
+        <!--Formularios-->
+            <div class="contenedor-formularios-edit">
+                <form action="/products" method="POST" enctype="multipart/form-data" class="create-form-edit">
+                    <div class="titulo-form-edit">
+                        <h3>Ingresá el producto</h3>
+                    </div>  
+                    
+                    <div class="caja-extra-form-edit">
+                
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="name">Nombre de producto</label>
+                        <input type="text" id="name" name="name" class="control" placeholder="Ej: parque cerezo">
+                    </div>
+    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="marca">Marca del producto</label>
+                        <input type="text" id="marca" name="marca" class="control" placeholder="Ej: Ilva">
+                    </div> 
+                    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="description">Descripción del producto</label>
+                        <input type="textarea" id="description" name="description" class="control" placeholder="Ingresá una descripcion">
+                    </div>
+ 
+                    <div class="control-formulario-edit">
+                        <label for="image-product" class="foto"><i class="fas fa-camera"></i>Subí una imagen del producto
+                        <input type="file" name="image-product" id="image-product" accept="image/.jpg, image/.png" required class="control-foto"></label>   
+                    </div> 
+    
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit">Categoría</label>
+                        <div class="elecciones-edit">
+                            <label><input type="radio" name="category" value="griferias">Griferia</label>
+                            <label><input type="radio" name="category" value="sanitarios">Sanitarios</label>
+                            <label><input type="radio" name="category" value="pisos">Pisos</label>
+                        </div> 
+                
+                    </div>
+
+                                        
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="price">Precio</label>
+                        <label class="label-title-edit" for="price">$<input type="number" name="price" placeholder="Precio" class="control-edit" value="$"></label>   
+                    </div>
+
+                    <!-- Agregar campo de Oferta -->
+
+                    <div class="control-formulario-edit">
+                        <label class="label-title-edit" for="size">Medidas</label>
+                        <div class="elecciones-edit">
+                            <label><input type="checkbox" name="size" value="35x60">35x60</label>
+                            <label><input type="checkbox" name="size" value="30x45">30x45</label>
+                            <label><input type="checkbox" name="size" value="45x90">45x90</label>
+                            <label><input type="checkbox" name="size" value="20x120">20x120</label>
+                        </div>
+                        
+                    </div>
+
+                    </div>
+    
+                    <div class="botones-edit">
+                        <button type="reset" class="boton-borrado">Borrar</button>
+                       <button type="submit" class="boton-registro-edit">Crear</button>
+                    </div>
+            
+                </form>
+            </div>
+    
+    
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+</html>
