@@ -50,7 +50,7 @@
                         <span class="span-producto"><%=product.sizes.name%></span></label>
                         
                         <p class="producto-precio">$<%=product.price%></p>
-                        <% if (locals.isLogged){ %>
+                        <% if (locals.userLogged){ %>
                         <label class="producto-cantidad">Cantidad: 
                         <input class="producto-inp-cantidad" type="number" ></label>
                         <% }  %>
@@ -61,7 +61,7 @@
                         
                         <button class="producto-button-add">Agregar al carrito</button>
                         
-                        <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
+                        <% if (locals.userLogged && locals.userLogged.roles_id == 1 ) { %>
                         <a href="/product/edit/<%= product.id %>" class="button-link-style" ><button class="producto-button-edit">Editar producto</button></a>
 
                    
@@ -91,7 +91,7 @@
         
         
 
-        <% if (!locals.isLogged) { %>
+        <% if (!locals.userLogged) { %>
         
             <%- include('./partials/callout') %>
         

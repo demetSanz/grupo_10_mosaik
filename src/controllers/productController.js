@@ -1,4 +1,6 @@
 const db = require("../database/models");
+const fs = require("fs");
+const path = require("path");
 
 
 const productController ={
@@ -44,23 +46,41 @@ const productController ={
      
              })
              
-            res.redirect ("/product/detail")
+        .then(()=>
+            {res.redirect ("/product/detail")}
+            )
    
      },
 
-
     destroy:function(req,res){
+
+        db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
+        .then((producto)=>{
+            // Usamos try para poder verificar que la ruta funcione correctamente para la eliminación del archivo de imagen del producto
+            try { 
+                // Elimina la imagen y luego continúa la secuencia para borrar el producto de la db con destroy()
+                fs.unlinkSync(path.resolve(__dirname+'../../../public/images/products')+'/'+producto.image)
+            }
+            catch(e){
+                console.log(e)
+            }
+        })
+        .catch(e=>{
+            console.log(e)
+        })  
 
         db.Product.destroy({   
             include:[{association: 'category'}, {association: 'sizes'}],
             where:{id : req.params.id}  
-        })  
-        
-        res.redirect ("/product/detail")
+        })
+        .then(()=>
+            {res.redirect ("/product/detail")}
+            )
      },
 
      /*******metodo para listar y mostrar todos los productos*** */
     detail: (req,res)=>{
+
 
        db.Product.findAll({include:[{association: 'category'}, {association: 'sizes'}]})
  
@@ -142,8 +162,10 @@ const productController ={
                 {
                     where: {id : req.params.id}
                 })
-                 
-                res.redirect("/product/detail/"+req.params.id)
+                .then(()=>
+                {res.redirect ("/product/detail/"+req.params.id)}
+                )
+       
         })
       
         

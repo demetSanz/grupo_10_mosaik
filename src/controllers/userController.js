@@ -25,10 +25,12 @@ let userController={
                 file: req.body.file,
                 roles_id: req.body.roles_id,                
      
-            });
+            })
 
              
-        res.redirect ("/users/login")
+        .then(()=>
+        {res.redirect ("/users/login")}
+        )
    
      },
 
@@ -48,10 +50,9 @@ let userController={
             if (userToLogin) {
                 let passwordUser = bcrypt.compareSync(req.body.password, userToLogin.password);
                 if (passwordUser) {
-                    // console.log('MAIL PRE DELETE USERTOLOGIN PASS '+userToLogin.email)
     
-                    req.session.userLogged = userToLogin;
-                    
+                    req.session.userLogged = userToLogin
+
                     //Deberia funcionar para cookie con el if, pero se quita para testeo de login exitoso con sql
                     if(req.body.remember){
                         res.cookie('userEmail',req.body.email,{maxAge:1000*300})
