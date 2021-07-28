@@ -5,13 +5,13 @@
 
             <li>
                 <div class="dropdown">
-                    <% if (locals.isLogged) { %>
+                    <% if (locals.userLogged) { %>
                     <button class="dropbtn">
                         <div class="cuadrito-login">
-                            <p>¡HOLA <%= user.name %>!</p>
+                            <p>¡HOLA <%= locals.userLogged.name %>!</p>
                             <p>&nbsp;</p>
                             <div class="avatar">
-                                <img src="/images/imagesPerfil/<%= user.file %>" alt="avatar" width="20%"
+                                <img src="/images/imagesPerfil/<%= locals.userLogged.file %>" alt="avatar" width="20%"
                                     class="avatar-img"> <i class="fas fa-sort-down"></i>
                             </div>
 
@@ -19,7 +19,7 @@
                     </button>
 
                     <div class="dropdown-content">
-                        <a href="/users/detail/<%=  user.id %>" >Perfil</a>
+                        <a href="/users/detail/<%=  locals.userLogged.id %>" >Perfil</a>
                         <a href="/users/logout">Salir</a>
                         <!--Work in Progress - Login con Google-->
                         <!--<a href="#" onclick="signOut();">Sign out</a>

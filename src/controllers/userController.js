@@ -50,7 +50,7 @@ let userController={
                 if (passwordUser) {
                     // console.log('MAIL PRE DELETE USERTOLOGIN PASS '+userToLogin.email)
     
-                    req.session.userLogged = userToLogin.email;
+                    req.session.userLogged = userToLogin;
                     
                     //Deberia funcionar para cookie con el if, pero se quita para testeo de login exitoso con sql
                     if(req.body.remember){
