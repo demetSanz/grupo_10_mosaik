@@ -37,9 +37,10 @@
 
                 <% } %>
 
-                <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control">
-                </div>
+                <div class="control-formulario passconteiner">
+
+                    <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control" id="inputP">
+                    <i class="fas fa-eye-slash" id="showP"></i>
                 <% if (locals.errors && errors.password) { %>
 
                 <div class="text-danger">
@@ -88,7 +89,7 @@
             </script>
 
     </main>
-
+    <script src="/js/login.js" defer></script>
     <%- include('./partials/footer'); %>
 </body>
 

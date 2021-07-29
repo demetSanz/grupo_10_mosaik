@@ -9,6 +9,20 @@ a:hover{
     opacity: 0.8;
 }
 
+.span{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+.passconteiner{
+    position: relative;
+}
+#showP{
+    color: grey;
+    position: absolute;
+    top: 15px;
+    padding-left: 450px;
+}
 
 .simg {
     width: 30%;
