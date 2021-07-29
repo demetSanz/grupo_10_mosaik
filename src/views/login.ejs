@@ -3,6 +3,7 @@
 
 <head>
     <%- include('./partials/head'); %>
+  
 </head>
 
 <body>
@@ -37,8 +38,11 @@
 
                 <% } %>
 
-                <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control">
+                <div class="control-formulario passconteiner">
+                    
+                    <input type="password" name="password" placeholder="Ingresá tu contraseña" class="control" id="inputP">
+                    <i class="fas fa-eye-slash" id="showP"></i>
+                
                 </div>
                 <% if (locals.errors && errors.password) { %>
 
@@ -88,7 +92,7 @@
             </script> -->
 
     </main>
-
+    <script src="/js/login.js" defer></script>
     <%- include('./partials/footer'); %>
 </body>
 
