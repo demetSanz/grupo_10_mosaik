@@ -1,13 +1,17 @@
 const db = require("../database/models");
 const fs = require("fs");
 const path = require("path");
+const { Op } = require("sequelize");
 
 
 const productController ={
 
+  
     cart: function(req,res){
         res.render('cart');
     },
+
+
     create:function (req,res){
 
         let categories = db.Category.findAll()
@@ -52,7 +56,7 @@ const productController ={
    
      },
 
-    destroy:function(req,res){
+    destroy: function(req,res){
 
         db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
         .then((producto)=>{
@@ -173,7 +177,84 @@ const productController ={
       
         
    
+     },
+
+     /**LISTADO API**/
+
+    detailApi: (req,res)=>{
+        db.Product
+            .findAll({include:[{association: 'category'}, {association: 'sizes'}]})
+            .then(products=>{
+            return  res.status(200).json({
+                total: products.length,
+                data: products,
+                status: 200
+            })
+                
+          })      
+         .catch(error=>console.log(error));
+               
+     },
+
+    showApi: (req, res) =>{
+        db.Product
+            .findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
+            .then(product=>{
+            return  res.status(200).json({
+                data: product,
+                status: 200
+            })
+        })
+
+    },
+
+    storeApi: (req, res) =>{
+        db.Product
+            .create(req.body,{include:[{association: 'category'}, {association: 'sizes'}]})
+            .then(product=>{
+            return  res.status(200).json({
+                data: product,
+                status: 200,
+                created: 'ok'
+            })
+        })
+
+    },
+
+    deleteApi: (req, res) =>{
+        db.Product
+            .destroy ({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(response=>{
+                return res.status(200).json(response)
+            })
+    },
+
+    searchApi: (req, res) =>{
+        db.Product.findAll(
+            {include:[
+                {association: 'category'}, 
+                {association: 'sizes'}
+            ],
+            where:{name : {[Op.like]: '%' + req.query.search + '%'}} , 
+        })
+            .then(products=>{
+                if(products.length > 0){
+                    return  res.status(200).json({products}
+                    )}
+
+                return res.status(200).json('No existe el producto')
+            })
+                      
+         .catch(error=>console.log(error));
+               
      }
+
+     /**-------------------------------------------------------------- */
+
     }
 
 module.exports = productController ;
