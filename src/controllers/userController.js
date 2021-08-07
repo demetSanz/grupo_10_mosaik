@@ -1,7 +1,5 @@
 const db = require('../database/models');
-const { validationResult
-} = require('express-validator');
-
+const { validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 let userController={
@@ -11,36 +9,36 @@ let userController={
             .then (function (roles){
                 return res.render ("register", {roles:roles})
             })
-      
-         },  
-       
-     processRegister: function (req,res){
+    
+        },  
+    
+    processRegister: function (req,res){
 
         db.User.create({                                    
                 name: req.body.name,
                 email: req.body.email,
                 address: req.body.address,
                 phone: req.body.phone,
-                password: req.body.password,
-                file: req.body.file,
+                password: bcrypt.hashSync(req.body.password, 10),
+                file:req.file.filename,
                 roles_id: req.body.roles_id,                
-     
+    
             })
 
-             
+        
         .then(()=>
         {res.redirect ("/users/login")}
         )
-   
-     },
 
-     login: function (req,res){
-         return res.render ("login")
-     },
+    },
 
-     processLogin: function (req, res) {
+    login: function (req,res){
+        return res.render ("login")
+    },
+
+    processLogin: function (req, res) {
         
-      db.User.findOne({
+    db.User.findOne({
             where: {
                 email: req.body.email
             }
@@ -78,13 +76,13 @@ let userController={
             })
         })
         
-  }
+}
     ,
     
     detail: (req,res)=>{
 
         db.User.findAll()
-          .then(users=>
+        .then(users=>
             res.render('listadoUsers',{users})
         )},
 
@@ -97,8 +95,8 @@ let userController={
             id, 
             {include:["roles"]}
             )
-          .then(user=>
-               res.render('profile',{user}))
+        .then(user=>
+            res.render('profile',{user}))
         .catch(error=>console.log(error))
         
     
