@@ -10,7 +10,8 @@ window.onload = function(){
     let product = document.querySelector('#nameProduct');
     let price = document.querySelector('#price');
     let description = document.querySelector('#description');
-    let stock = document.querySelector('#stock')
+    let stock = document.querySelector('#stock');
+    let brand = document.querySelector('#brand');
         
     if(product.value == ""){
         product.classList.add('is-invalid');
@@ -53,8 +54,18 @@ window.onload = function(){
     }else{
         stock.classList.remove('is-invalid');
         stock.classList.add('is-valid');
-        description.focus();
+        brand.focus();
     };
+    if(brand.value == ""){
+        brand.classList.add('is-invalid');
+        errors.push('Debe ingresar un nombre de marca')
+    }else if (product.value.length < 5){
+        brand.classList.add('is-invalid');
+        errors.push('Debe ingresar al menos 5 caracteres')
+    }else{
+        brand.classList.remove('is-invalid');
+        brand.classList.add('is-valid');
+    }
 
     if(errors.length >0){
         e.preventDefault();
@@ -65,8 +76,8 @@ window.onload = function(){
         MessagesErrors.innerHTML += `<li> ${errors[i]} <li>`
         }
     }else{
-        alert('subio con exito');
-        //form.submit();
+        //alert('subio con exito');
+        form.submit();
     }
     })
 }
