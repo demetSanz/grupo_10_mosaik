@@ -14,32 +14,33 @@
             
         </div>
 
-        <form action="/product/edit/<%= product.id %>" method="POST" class="create-form" enctype="multipart/form-data">
+        <form action="/product/edit/<%= product.id %>" method="POST" id="formEdit" class="create-form" enctype="multipart/form-data">
+            <ul class="errors"></ul>
+            <div class="control-formulario" >
+                <input type="text" name="name" placeholder="Nombre del producto"id="nameEdit" class="control" value="<%= product.name %> ">
+            </div>
+
+            <!-- Resolver type="number" -->
+            <div class="control-formulario">
+                <input type="text" name="price" placeholder="Ingresá un precio" id="priceEdit"class="control" value= "<%= product.price %> " >
+            </div> 
+
+            <div class="control-formulario">
+                <input type="text" name="description" placeholder="descripcion del producto" id="descriptionEdit"class="control" value="<%= product.description %>" >
+            </div>
+
+            <div class="control-formulario">
+                <input type="file" name="image" placeholder="Ingresá una imagen" id="imageEdit" class="control" value="<%= product.description %>" >
             
-            <div class="control-formulario" >
-                <input type="text" name="name" placeholder="Nombre del producto" class="control" value="<%= product.name %> ">
-            </div>
-
-            <!-- Resolver type="number" -->
-            <div class="control-formulario">
-                <input type="text" name="price" placeholder="Ingresá un precio" class="control" value= "<%= product.price %> " >
-            </div> 
-
-            <div class="control-formulario">
-                <input type="text" name="description" placeholder="descripcion del producto" class="control" value="<%= product.description %>" >
-            </div>
-
-            <div class="control-formulario">
-                <input type="file" name="image" placeholder="Ingresá una imagen" class="control" value="./images/products/<%= product.image %> " >
             </div> 
 
             <!-- Resolver type="number" -->
             <div class="control-formulario">
-                <input type="text" name="stock" placeholder="Ingresá un stock" class="control" value= "<%= product.stock %> " >
+                <input type="text" name="stock" placeholder="Ingresá un stock" id="stockEdit" class="control" value= "<%= product.stock %>" >
             </div> 
 
             <div class="control-formulario" >
-                <input type="text" name="brand" placeholder="marca del producto" class="control" value="<%= product.brand %> ">
+                <input type="text" name="brand" placeholder="marca del producto" id="brandEdit" class="control" value="<%= product.brand %>">
             </div>
 
             <div class="control-formulario">
@@ -82,6 +83,7 @@
         
         </form>
     </div>
+    <script src="/js/validationEditProduct.js" defer></script>
 </main>
     <%- include('./partials/footer'); %>
 </body>
