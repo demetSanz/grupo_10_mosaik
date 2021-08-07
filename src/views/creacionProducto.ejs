@@ -6,80 +6,81 @@
 <body>
     <%- include('./partials/header-login'); %>
     <main>
-    <div class="contenedor-formularios">
-
-        <div class="titulo-form">
-                       
-            <h3>Ingresá el producto</h3>
+        <div class="contenedor-formularios">
             
-        </div>
-
-        <form action="/product" method="POST" class="create-form" enctype="multipart/form-data">
+            <div class="titulo-form">
+                
+                <h3>Ingresá el producto</h3>
+                
+            </div>
             
-            <div class="control-formulario" >
-                <input type="text" name="name" placeholder="Nombre del producto" class="control" value="">
+            <form action="/product" method="POST" id ='form' class="create-form" enctype="multipart/form-data">
+            <ul class="errors"></ul>
+                <div class="control-formulario" >
+                    <input type="text" name="name" placeholder="Nombre del producto" id='nameProduct' class="control" value="">
+                </div>
+
+                <div class="control-formulario">
+                    <input type="number" name="price" placeholder="Ingresá un precio" id="price" class="control" value= "" >
+                </div> 
+                <span></span>
+                <div class="control-formulario">
+                <input type="text" name="description" placeholder="descripcion del producto" id="description" class="control" value="" >
             </div>
-
+            
             <div class="control-formulario">
-                <input type="number" name="price" placeholder="Ingresá un precio" class="control" value= "" >
+                <input type="file" name="image" placeholder="Ingresá una imagen" id="imgFile" class="control" value= "" >
             </div> 
-
+            
             <div class="control-formulario">
-                <input type="text" name="description" placeholder="descripcion del producto" class="control" value="" >
-            </div>
-
-            <div class="control-formulario">
-                <input type="file" name="image" placeholder="Ingresá una imagen" class="control" value= "" >
+                <input type="number" name="stock" placeholder="Ingresá un stock" id="stock" class="control" value= "" >
             </div> 
-
-            <div class="control-formulario">
-                <input type="number" name="stock" placeholder="Ingresá un stock" class="control" value= "" >
-            </div> 
-
+            
             <div class="control-formulario" >
                 <input type="text" name="brand" placeholder="marca del producto" class="control" value="">
             </div>
-
+            
             <div class="control-formulario">
                 <div class="control-payment">
-                <select 
+                    <select 
                     name="category_id" 
                     class="control-form-select">
                     <option value="">Seleccioná la categoria</option>
                     <% for (let i = 0; i<category.length; i++) { %> 
-                    <option value="<%= category[i].id %> ">
-                        <%= category[i].name %> 
-                    </option>
-                    <% } %> 
-                </select>
-            </div>
+                        <option value="<%= category[i].id %> ">
+                            <%= category[i].name %> 
+                        </option>
+                        <% } %> 
+                    </select>
+                </div>
             </div>  
-
-           <div class="control-formulario">
+            
+            <div class="control-formulario">
                 <div class="control-payment">
-                <select 
+                    <select 
                     name="size_id" 
                     class="control-form-select">
                     <option value="">Seleccioná tu tamaño</option>
                     <% for (let i = 0; i < sizes.length; i++) { %> 
-                    <option value="<%= sizes[i].id %> ">
-                        <%= sizes[i].name %> 
-                    </option>
-                    <% } %> 
-                </select>
-            </div>
+                        <option value="<%= sizes[i].id %> ">
+                            <%= sizes[i].name %> 
+                        </option>
+                        <% } %> 
+                    </select>
+                </div>
             </div> 
-
-
-
+            
+            
+            
             <div class="boton-centrado">
                 <button type="submit" class="boton-formulario">Crear Producto</button>
             </div>
-
             
-        
+            
+            
         </form>
     </div>
+    <script src="/js/validationCreateProduct.js" defer></script>
 </main>
     <%- include('./partials/footer'); %>
 </body>
