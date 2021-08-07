@@ -1,3 +1,5 @@
+
+
 window.onload = function(){
     let name = document.querySelector('#nameRegister');
     name.focus();    
@@ -51,7 +53,7 @@ window.onload = function(){
         errorsRegister.push('Debe ingresar una numero de telefono')
     }else if (celular.value.length < 10){
             celular.classList.add('is-invalid');
-            errorsRegister.push('El nombre debe tener 10 caracteres')
+            errorsRegister.push('El numero debe tener 10 caracteres')
     }else{
         celular.classList.remove('is-invalid');
         celular.classList.add('is-valid');
@@ -71,8 +73,11 @@ window.onload = function(){
         MessagesErrors.innerHTML += `<li> ${errorsRegister[i]} <li>`
         }
     }else{
-        alert('subio con exito');
-        //form.submit();
+       alert('subio con exito');
+     
+       
+       // form.submit();
+       
     }
     })
 }

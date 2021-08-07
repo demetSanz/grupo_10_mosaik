@@ -1,3 +1,5 @@
+
+
 window.onload = function(){
     let product = document.querySelector('#nameProduct');
     product.focus();    
@@ -76,8 +78,10 @@ window.onload = function(){
         MessagesErrors.innerHTML += `<li> ${errors[i]} <li>`
         }
     }else{
-        //alert('subio con exito');
-        form.submit();
+        alert('subio con exito');
+       // form.submit();
+
+      
     }
     })
 }
