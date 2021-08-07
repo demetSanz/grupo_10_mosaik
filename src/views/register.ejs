@@ -18,28 +18,28 @@
             
         </div>
 
-        <form action="/users/register" method="POST" class="create-form"enctype="multipart/form-data">
-            
+        <form action="/users/register" method="POST" id="formRegister"class="create-form"enctype="multipart/form-data">
+            <ul class="errors"></ul>
             <div class="control-formulario" >
-                <input type="text" name="name" placeholder="Nombre completo" class="control" value="<%= locals.oldData ? oldData.name : null %>">
+                <input type="text" name="name" placeholder="Nombre completo" id="nameRegister" class="control" value="<%= locals.oldData ? oldData.name : null %>">
             </div>
             <div class="control-formulario">
-                <input type="email" name="email" placeholder="Ingresá tu e-mail" class="control" value= "<%= locals.oldData ? oldData.email : null %>" >
+                <input type="email" name="email" placeholder="Ingresá tu e-mail" id="emailRegister" class="control" value= "<%= locals.oldData ? oldData.email : null %>" >
             </div> 
             <div class="control-formulario">
-                <input type="text" name="address" placeholder="Dirección" class="control" value="<%= locals.oldData ? oldData.address : null %>" >
+                <input type="text" name="address" placeholder="Dirección" id="addressRegister"  class="control" value="<%= locals.oldData ? oldData.address : null %>" >
             </div>
             <div class="control-formulario">
-                <input type="text" name="phone" placeholder="Ingresá tu número de celular" class="control" value= "<%= locals.oldData ? oldData.celular : null %>" >
+                <input type="text" name="phone" placeholder="Ingresá tu número de celular" id="phoneRegister" class="control" value= "<%= locals.oldData ? oldData.celular : null %>" >
                 
             </div> 
             <div class="control-formulario">
-                <input type="password" name="password" placeholder="Elegí tu contraseña" class="control" >
+                <input type="password" name="password" placeholder="Elegí tu contraseña" id="passRegister"class="control" >
             </div>
-            <div class="control-formulario">
+            <!-- <div class="control-formulario">
                 <label for="imagePerfil" class="foto"><i class="fas fa-camera"></i> Subí una imagen de perfil
                 <input type="file" name="imagePerfil" id="imagePerfil" accept="image/.jpg, image/.png" class="control-foto "<%= locals.errors && errors.imagePerfil ? 'is-invalid' : null %>></label>   
-            </div> 
+            </div>  -->
             <div class="control-formulario">
                 <div class="control-payment">
                 <select 
@@ -65,6 +65,7 @@
         
         </form>
     </div>
+    <script src="/js/validationRegisterUser.js" defer></script>
 </main>
     <%- include('./partials/footer'); %>
 </body>

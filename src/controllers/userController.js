@@ -21,7 +21,7 @@ let userController={
                 address: req.body.address,
                 phone: req.body.phone,
                 password: bcrypt.hashSync(req.body.password, 10),
-                file:req.file.filename,
+                // file:req.file.filename,
                 roles_id: req.body.roles_id,                
     
             })

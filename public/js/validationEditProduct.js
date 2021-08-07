@@ -58,7 +58,7 @@ window.onload = function(){
     };
 
     if(brand.value == ""){
-        stock.classList.add('is-invalid');
+        brand.classList.add('is-invalid');
         errorsEdit.push('Debe ingresar una marca')
     }
     if(errorsEdit.length >0){
