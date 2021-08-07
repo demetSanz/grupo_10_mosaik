@@ -9,6 +9,7 @@ let userController={
             .then (function (roles){
                 return res.render ("register", {roles:roles})
             })
+            .catch(error=>console.log(error))
     
         },  
     
@@ -29,6 +30,7 @@ let userController={
         .then(()=>
         {res.redirect ("/users/login")}
         )
+        .catch(error=>console.log(error))
 
     },
 
@@ -65,6 +67,7 @@ let userController={
                         }
                     }
                 })
+                .catch(error=>console.log(error))
     
             }
             return res.render('login', {
@@ -84,6 +87,7 @@ let userController={
         db.User.findAll()
         .then(users=>
             res.render('listadoUsers',{users})
+            .catch(error=>console.log(error))
         )},
 
 

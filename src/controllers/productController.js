@@ -6,7 +6,7 @@ const { Op } = require("sequelize");
 
 const productController ={
 
-  
+
     cart: function(req,res){
         res.render('cart');
     },
@@ -24,12 +24,11 @@ const productController ={
                 let category = responses[0];
                 let sizes = responses[1];
                 return res.render('creacionProducto',{category,sizes})
-
-            }
-        )
+            })
+            .catch(error=>console.log(error))
     },
-       
-   storage: function (req,res){
+    
+    storage: function (req,res){
         
         let imageUpload
 
@@ -38,7 +37,7 @@ const productController ={
         } else {
             imageUpload = req.file.filename
         }
-      
+    
         db.Product.create({                                    
                 name: req.body.name,
                 price: req.body.price,
@@ -47,14 +46,14 @@ const productController ={
                 brand: req.body.brand,
                 category_id: req.body.category_id, 
                 size_id:req.body.size_id               
-     
-             })
-             
+    
+            })
+            
         .then(()=>
             {res.redirect ("/product/detail")}
             )
-   
-     },
+            .catch(error=>console.log(error))
+    },
 
     destroy: function(req,res){
 
@@ -83,33 +82,34 @@ const productController ={
         .then(()=>
             {res.redirect ("/product/detail")}
             )
-     },
+            .catch(error=>console.log(error))
+    },
 
      /*******metodo para listar y mostrar todos los productos*** */
     detail: (req,res)=>{
 
 
-       db.Product.findAll({include:[{association: 'category'}, {association: 'sizes'}]})
- 
-         .then(products=>{
-           res.render('listadoProductosSQL',{products:products})
-         } )      
+    db.Product.findAll({include:[{association: 'category'}, {association: 'sizes'}]})
+
+        .then(products=>{
+        res.render('listadoProductosSQL',{products:products})
+        } )      
         .catch(error=>console.log(error));
-              
+        
     },
 
     view: (req,res)=>{
 
-       db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
+    db.Product.findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
         
-          .then(product=>{
-                 res.render('detalleSQL',{product:product})
-          } )      
-         .catch(error=>console.log(error));
-               
-     },
+        .then(product=>{
+            res.render('detalleSQL',{product:product})
+        } )      
+        .catch(error=>console.log(error));
+            
+    },
 
-     edit: (req,res)=>{
+    edit: (req,res)=>{
 
         let categories = db.Category.findAll()
         let sizes = db.Size.findAll()
@@ -131,7 +131,8 @@ const productController ={
                 let product = responses[2];
                 return res.render('editProduct',{category,sizes,product})
             }
-        )         
+        )
+        .catch(error=>console.log(error))       
     },
 
     editPost: function (req,res){
@@ -172,14 +173,15 @@ const productController ={
                 .then(()=>
                 {res.redirect ("/product/detail/"+req.params.id)}
                 )
-       
+                .catch(error=>console.log(error))
         })
-      
+        .catch(error=>console.log(error))
+    
         
-   
-     },
 
-     /**LISTADO API**/
+    },
+
+    /**LISTADO API**/
 
     detailApi: (req,res)=>{
         db.Product
@@ -191,10 +193,10 @@ const productController ={
                 status: 200
             })
                 
-          })      
-         .catch(error=>console.log(error));
-               
-     },
+        })      
+        .catch(error=>console.log(error));
+            
+    },
 
     showApi: (req, res) =>{
         db.Product
@@ -205,6 +207,7 @@ const productController ={
                 status: 200
             })
         })
+        .catch(error=>console.log(error))
 
     },
 
@@ -218,6 +221,7 @@ const productController ={
                 created: 'ok'
             })
         })
+        .catch(error=>console.log(error))
 
     },
 
@@ -231,6 +235,7 @@ const productController ={
             .then(response=>{
                 return res.status(200).json(response)
             })
+            .catch(error=>console.log(error))
     },
 
     searchApi: (req, res) =>{
@@ -248,10 +253,10 @@ const productController ={
 
                 return res.status(200).json('No existe el producto')
             })
-                      
-         .catch(error=>console.log(error));
-               
-     }
+                    
+        .catch(error=>console.log(error));
+            
+    }
 
      /**-------------------------------------------------------------- */
 
