@@ -6,32 +6,64 @@ let userController={
     register: function(req,res){
 
         db.Role.findAll()
-            .then (function (roles){
-                return res.render ("register", {roles:roles})
+            .then(function(roles){
+                return res.render ("register", {roles})
             })
             .catch(error=>console.log(error))
-    
         },  
     
-    processRegister: function (req,res){
-
-        db.User.create({                                    
-                name: req.body.name,
-                email: req.body.email,
-                address: req.body.address,
-                phone: req.body.phone,
-                password: bcrypt.hashSync(req.body.password, 10),
-                // file:req.file.filename,
-                roles_id: req.body.roles_id,                
-    
+        processRegister: function (req,res){
+            // validar el mail
+        const validation = validationResult(req);
+        if(validation.errors.length > 0){
+            db.Role.findAll()
+            .then(function (roles){
+                return res.render("register",
+                    {
+                    errors:validation.mapped(),
+                    oldData: req.body,
+                    roles
+                    }
+                );
+                
             })
+        };
+            db.User.findOne({
+                where:{
+                    email:req.body.email,
+                } 
+            })
+            .then((user)=>{
+                if(user){
+                    db.Role.findAll()
+                    .then(function(roles){
+                        return res.render("register",{
+                            errors:{
+                                email:{
+                                    msg:   "este email ya esta registrado",
+                                },
+                            },
+                            oldData: req.body,
+                            roles
+                    })
+                })
+                }else{
+                    db.User.create({                                    
+                        name: req.body.name,
+                        email: req.body.email,
+                        address: req.body.address,
+                        phone: req.body.phone,
+                        password: bcrypt.hashSync(req.body.password, 10),
+                        file:req.file.filename,
+                        roles_id: req.body.roles_id,                
+                    })
+                    .then(()=>
+                    {res.redirect ("/users/login")
+                })
+                .catch(error=>console.log(error))
 
-        
-        .then(()=>
-        {res.redirect ("/users/login")}
-        )
-        .catch(error=>console.log(error))
-
+                }
+            }).catch(error=>console.log(error))
     },
 
     login: function (req,res){

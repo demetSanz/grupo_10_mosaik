@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING(45),
             
         }
-       
+    
     };
     
     let config = {
@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) =>{
             as: "users",
             foreignKey: "roles_id"
         })
-       
+    
     }
 
     return Role;
