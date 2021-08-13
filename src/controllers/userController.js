@@ -11,59 +11,61 @@ let userController={
             })
             .catch(error=>console.log(error))
         },  
-    
-        processRegister: function (req,res){
-            // validar el mail
-        const validation = validationResult(req);
-        if(validation.errors.length > 0){
-            db.Role.findAll()
-            .then(function (roles){
-                return res.render("register",
-                    {
-                    errors:validation.mapped(),
-                    oldData: req.body,
-                    roles
-                    }
-                );
-                
-            })
-        };
-            db.User.findOne({
-                where:{
-                    email:req.body.email,
-                } 
-            })
-            .then((user)=>{
-                if(user){
-                    db.Role.findAll()
-                    .then(function(roles){
-                        return res.render("register",{
-                            errors:{
-                                email:{
-                                    msg:   "este email ya esta registrado",
-                                },
-                            },
+        processRegister: async function (req,res){
+            let roles = await db.Role.findAll();
+            // valida el mail
+            try{
+                const validation = validationResult(req);
+                if(validation.errors.length > 0){
+                        return res.render("register",
+                            {
+                            errors:validation.mapped(),
                             oldData: req.body,
                             roles
-                    })
+                            }
+                        );
+                };
+                db.User.findOne({
+                    where:{
+                        email:req.body.email,
+                    } 
                 })
-                }else{
-                    db.User.create({                                    
-                        name: req.body.name,
-                        email: req.body.email,
-                        address: req.body.address,
-                        phone: req.body.phone,
-                        password: bcrypt.hashSync(req.body.password, 10),
-                        file:req.file.filename,
-                        roles_id: req.body.roles_id,                
+                .then((user)=>{
+                    if(user){
+                            return res.render("register",{
+                                errors:{
+                                    email:{
+                                        msg:   "este email ya esta registrado",
+                                    },
+                                },
+                                oldData: req.body,
+                                roles
+                        })
+                    }else{
+                        db.User.create({                                    
+                            name: req.body.name,
+                            email: req.body.email,
+                            address: req.body.address,
+                            phone: req.body.phone,
+                            password: bcrypt.hashSync(req.body.password, 10),
+                            file:req.file.filename,
+                            roles_id: req.body.roles_id,                
+                        })
+                        .then(()=>
+                        {res.redirect ("/users/login")
                     })
-                    .then(()=>
-                    {res.redirect ("/users/login")
-                })
-                .catch(error=>console.log(error))
+                    .catch(error=>console.log(error))
+    
+                    }
+                }).catch(error=>console.log(error))
 
-                }
-            }).catch(error=>console.log(error))
+
+                
+            }catch(error ){
+                console.log(error)
+            }
+
+
     },
 
     login: function (req,res){
