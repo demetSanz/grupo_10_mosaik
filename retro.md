@@ -120,3 +120,19 @@
 ## Deberiamos dejar de hacer
 * Tener cuidado con los nombres de las carpetas.
 * 
+
+
+# Retrospectiva Sprint 6
+
+## Que hicimos bien
+* Mejoramos la division de tareas.
+* Mejoramos la dinamica de las reuniones.
+
+## Que podemos mejorar
+* Deberiamos aprovechar mejor el tiempo y deberiamos trabajar con prioridades de tareas.
+
+## Deberiamos empezar a hacer
+* Separar las tareas para cada integrante del equipo.
+* Definir aquellas tareas que son mas importantes que otras.
+## Deberiamos dejar de hacer
+* Deberiamos dejar de procrastinar las tareas.
