@@ -121,6 +121,10 @@
 * Tener cuidado con los nombres de las carpetas.
 * 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76a0fa9bea08073f8beda0f01df599abb71ef674
 # Retrospectiva Sprint 6
 
 ## Que hicimos bien
