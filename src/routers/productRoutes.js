@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const productController = require('../controllers/productController');
-const multer = require('multer');
+const validation=require('../middleware/validationProducts');
 const uploadProducts =require("../middleware/multerProducts");
 
 
@@ -18,7 +18,7 @@ router.get('/carts',productController.cart);
 
  /*** CREATE ONE PRODUCT ***/ 
     router.get('/create',productController.create);
-    router.post('/',uploadProducts.single('image'),productController.storage);
+    router.post('/',uploadProducts.single('image'),validation,productController.storage);
 
 /*** EDIT ONE PRODUCT ***/ 
     router.get('/edit/:id',productController.edit);

@@ -17,8 +17,13 @@
             <form action="/product" method="POST" id ='form' class="create-form" enctype="multipart/form-data">
             <ul class="errors"></ul>
                 <div class="control-formulario" >
-                    <input type="text" name="name" placeholder="Nombre del producto" id='nameProduct' class="control" value="">
+                    <input type="text" name="name" placeholder="Nombre del producto" id='nameProduct' class="control <%= locals.oldData ? oldData.name : null %>" value="<%=locals.oldData ? oldData.name: null %>">
                 </div>
+                <% if(locals.errors && errors.name) {%>
+                    <div class="text-danger">
+                        <%= errors.name.msg  %> 
+                    </div>
+                    <%} %> 
 
                 <div class="control-formulario">
                     <input type="number" name="price" placeholder="Ingresá un precio" id="price" class="control" value= "" >
@@ -27,10 +32,16 @@
                 <div class="control-formulario">
                 <input type="text" name="description" placeholder="descripcion del producto" id="description" class="control" value="" >
             </div>
-            
+
             <div class="control-formulario">
-                <input type="file" name="image" placeholder="Ingresá una imagen" id="imgFile" class="control" value= "" >
+                <input type="file" name="image" placeholder="Ingresá una imagen" id="imgFile" accept="image/.jpg, image/.png" class="control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> 
             </div> 
+            <% if(locals.errors && errors.image) {%>
+                <div class="text-danger">
+                    <%= errors.image.msg  %> 
+                </div>
+                <%} %> 
+            
             
             <div class="control-formulario">
                 <input type="number" name="stock" placeholder="Ingresá un stock" id="stock" class="control" value= "" >
@@ -44,31 +55,33 @@
                 <div class="control-payment">
                     <select 
                     name="category_id" 
-                    class="control-form-select">
-                    <option value="">Seleccioná la categoria</option>
+                    class="control-form-select">               
                     <% for (let i = 0; i<category.length; i++) { %> 
-                        <option value="<%= category[i].id %> ">
+                        <option value="<%= category[i].id %>">
                             <%= category[i].name %> 
                         </option>
                         <% } %> 
                     </select>
-                </div>
+                </div>                
             </div>  
+           
+
             
             <div class="control-formulario">
-                <div class="control-payment">
+                <div div class="control-payment">
                     <select 
                     name="size_id" 
-                    class="control-form-select">
-                    <option value="">Seleccioná tu tamaño</option>
+                    class="control-form-select">                   
                     <% for (let i = 0; i < sizes.length; i++) { %> 
-                        <option value="<%= sizes[i].id %> ">
+                        <option value="<%= sizes[i].id %>">
                             <%= sizes[i].name %> 
                         </option>
                         <% } %> 
+                    
                     </select>
                 </div>
             </div> 
+          
             
             
             

@@ -77,11 +77,12 @@ window.onload = function(){
         for(let i = 0; i <errors.length; i++){
         MessagesErrors.innerHTML += `<li> ${errors[i]} <li>`
         }
-    }else{
-        alert('subio con exito');
-       // form.submit();
+     }
+    //  else{
+    //     alert('subio con exito');
+    //    // form.submit();
 
       
-    }
+    // }
     })
 }

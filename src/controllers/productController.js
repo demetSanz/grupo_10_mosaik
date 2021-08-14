@@ -2,6 +2,7 @@ const db = require("../database/models");
 const fs = require("fs");
 const path = require("path");
 const { Op } = require("sequelize");
+const {validationResult}=require('express-validator');
 
 
 const productController ={
@@ -28,31 +29,48 @@ const productController ={
             .catch(error=>console.log(error))
     },
     
-    storage: function (req,res){
+    storage: async  (req,res)=>{
+        let category = await db.Category.findAll();
+        let sizes = await db.Size.findAll();
         
-        let imageUpload
-
+        let imageUpload;
         if(!req.file){
             imageUpload = 'noImage.jpg'
         } else {
             imageUpload = req.file.filename
         }
-    
-        db.Product.create({                                    
-                name: req.body.name,
-                price: req.body.price,
-                image: imageUpload,
-                stock: req.body.stock,
-                brand: req.body.brand,
-                category_id: req.body.category_id, 
-                size_id:req.body.size_id               
-    
-            })
+        try{
+            const validation = validationResult(req);
             
-        .then(()=>
-            {res.redirect ("/product/detail")}
-            )
-            .catch(error=>console.log(error))
+            if(validation.errors.length > 0){
+    
+                return res.render('creacionProducto',
+                {
+                    errors: validation.mapped(),
+                    oldData: req.body,
+                    category,
+                    sizes
+                });
+            }; 
+            db.Product.create({                                    
+                    name: req.body.name,
+                    price: req.body.price,
+                    image: imageUpload,
+                    stock: req.body.stock,
+                    brand: req.body.brand,
+                    category_id: req.body.category_id, 
+                    size_id:req.body.size_id               
+                })
+                .then(()=>
+                {res.redirect ("/product/detail")
+    
+                })
+                .catch(e=>console.log(e))
+            
+        }catch(e){
+            console.log(e)
+        }
+       
     },
 
     destroy: function(req,res){
