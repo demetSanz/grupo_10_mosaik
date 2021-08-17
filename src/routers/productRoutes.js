@@ -39,23 +39,23 @@ router.get('/carts',productController.cart);
 
 /* DETALLE PRODUCTOS API*/
 
-    router.get ('/apiview', productController.detailApi)
+//     router.get ('/apiview', productController.detailApi)
 
-/* BUSCAR PRODUCTO API */
+// /* BUSCAR PRODUCTO API */
 
-    router.get ('/apiview/search', productController.searchApi)
+//     router.get ('/apiview/search', productController.searchApi)
 
-/* MOSTRAR PRODUCTO API*/
+// /* MOSTRAR PRODUCTO API*/
 
-    router.get ('/apiview/:id', productController.showApi)
+//     router.get ('/apiview/:id', productController.showApi)
 
-/* CREAR PRODUCTO API*/
+// /* CREAR PRODUCTO API*/
 
-    router.post('/apiview',productController.storeApi);
+//     router.post('/apiview',productController.storeApi);
 
-/* BORRAR PRODUCTO API*/
+// /* BORRAR PRODUCTO API*/
 
-    router.delete('/apiview/:id',productController.deleteApi);
+//     router.delete('/apiview/:id',productController.deleteApi);
 
 
     

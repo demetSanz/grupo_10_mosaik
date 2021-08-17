@@ -15,6 +15,8 @@ const userRoutesSQL = require('./routers/userRoutesSQL'); // Rutas Usuario SQL
 const routerMain = require('./routers/mainRoutes'); // importamos routers main
 
 const productRoutes = require('./routers/productRoutes');
+const productApiRoutes=require('./routers/API/productApiRoutes');
+const userApiRoutes=require('./routers/API/userApiRoutes')
 
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -59,6 +61,8 @@ app.use('/', routerMain);
 
 app.use('/product',productRoutes);
 app.use ('/users', userRoutesSQL)
+app.use('/product',productApiRoutes);
+app.use ('/users', userApiRoutes);
 
 /**************test*/
 //app.use('/test',routertest)
