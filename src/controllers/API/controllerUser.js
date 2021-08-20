@@ -7,30 +7,43 @@ const { Op } = require("sequelize");
 const userControllerApi ={
 
 
-/******************************SON LOS METODOS DE PRODUCTS***************** */
+/******************************SON LOS METODOS DE USERS***************** */
     /**LISTADO API**/
 
     detailApi: (req,res)=>{
-        db.USer
-            .findAll({include:[{association: 'category'}, {association: 'sizes'}]})
-            .then(products=>{
+        db.User
+            .findAll({include:[{association: 'roles'}]})           
+            .then(users=>{
+
+                let variableUsers = users.map(user =>{
+                    delete user.dataValues.password;
+                    delete user.dataValues.roles;
+                    delete user.dataValues.roles_id;
+                    user.file =`http://localhost:3003/images/imagesPerfil/${user.dataValues.file}`;
+                    return user.dataValues;
+                });
+                console.log(variableUsers);
             return  res.status(200).json({
-                total: products.length,
-                data: products,
+                total: variableUsers.length,
+                data: variableUsers,
                 status: 200
             })
-                
+            
         })      
         .catch(error=>console.log(error));
             
     },
 
     showApi: (req, res) =>{
-        db.Product
-            .findByPk(req.params.id,{include:[{association: 'category'}, {association: 'sizes'}]})
-            .then(product=>{
+        db.User
+            .findByPk(req.params.id,{include:[{association: 'roles'}]})
+            .then(user=>{
+                delete user.dataValues.password;
+                delete user.dataValues.roles;
+                delete user.dataValues.roles_id;
+                user.file =`http://localhost:3003/images/imagesPerfil/${user.dataValues.file}`;
             return  res.status(200).json({
-                data: product,
+                data: user,
                 status: 200
             })
         })
@@ -39,11 +52,12 @@ const userControllerApi ={
     },
 
     storeApi: (req, res) =>{
-        db.Product
-            .create(req.body,{include:[{association: 'category'}, {association: 'sizes'}]})
-            .then(product=>{
+        db.User
+            .create(req.body,{include:[{association: 'roles'}]})
+            .then(user=>{
+            
             return  res.status(200).json({
-                data: product,
+                data: user,
                 status: 200,
                 created: 'ok'
             })
@@ -53,7 +67,7 @@ const userControllerApi ={
     },
 
     deleteApi: (req, res) =>{
-        db.Product
+        db.User
             .destroy ({
                 where: {
                     id: req.params.id
@@ -66,26 +80,25 @@ const userControllerApi ={
     },
 
     searchApi: (req, res) =>{
-        db.Product.findAll(
+        db.User.findAll(
             {include:[
-                {association: 'category'}, 
-                {association: 'sizes'}
+                {association: 'roles'}
             ],
             where:{name : {[Op.like]: '%' + req.query.search + '%'}} , 
         })
-            .then(products=>{
-                if(products.length > 0){
-                    return  res.status(200).json({products}
+            .then(users=>{
+                if(users.length > 0){
+                    return  res.status(200).json({users}
                     )}
 
-                return res.status(200).json('No existe el producto')
+                return res.status(200).json('No existe el usuario')
             })
-                    
-        .catch(error=>console.log(error));
             
+        .catch(error=>console.log(error));
+        
     }
 
-     /**-------------------------------------------------------------- */
+    /**-------------------------------------------------------------- */
 
     }
 
