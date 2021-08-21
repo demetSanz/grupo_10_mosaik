@@ -10,14 +10,25 @@ const productControllerApi ={
 
  /**** Puntos a terminar  ****/
 // Middleware que solo puedan acceder los administradores
-// un array que obtenga el total por cada categoria y size
-// url para obtener detalles de los productos y user, llevar a la vista
 
 
     detailApi: (req,res)=>{
         db.Product
             .findAll({include:[{association: 'category'}, {association: 'sizes'}]})
             .then(products=>{
+                
+                let arrayPisos =  products.filter(product =>{
+                return  product.dataValues.category_id ==  1;
+                });
+
+                let arrayGriferias =  products.filter(product =>{
+                return  product.dataValues.category_id ==  2;
+                });
+
+                let arraySanitarios =  products.filter(product =>{
+                return  product.dataValues.category_id ==  3;
+                });
+
                 let variableProduct = products.map(product =>{
                 
                 delete product.dataValues.category_id,
@@ -25,9 +36,10 @@ const productControllerApi ={
                 product.image =`http://localhost:3003/images/products/${product.dataValues.image}`;
                 return product.dataValues;
                 });
-            return  res.status(200).json({
+                return  res.status(200).json({
                 total: variableProduct.length,
-                countByCategory: "pisos 2 , sanitarios 4, griferias 5" ,
+                detail:`http://localhost:3003/product/detail`,
+                countByCategory: `Pisos  ${arrayPisos.length}  , Griferias   ${arrayGriferias.length} , Sanitarios ${arraySanitarios.length}`,
                 data: variableProduct,
                 status: 200
             })
@@ -45,6 +57,7 @@ const productControllerApi ={
                 delete product.dataValues.size_id
                 product.image =`http://localhost:3003/images/products/${product.dataValues.image}`;
             return  res.status(200).json({
+                detail:`http://localhost:3003/product/detail/${req.params.id}`,
                 data: product,
                 status: 200
             })

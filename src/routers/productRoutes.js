@@ -4,7 +4,7 @@ const path = require('path');
 const productController = require('../controllers/productController');
 const validation=require('../middleware/validationProducts');
 const uploadProducts =require("../middleware/multerProducts");
-
+//const userAccces = require('../middleware/usersAcces')
 
 
 //Formulario de Registro

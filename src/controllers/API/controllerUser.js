@@ -25,6 +25,7 @@ const userControllerApi ={
                 console.log(variableUsers);
             return  res.status(200).json({
                 total: variableUsers.length,
+                detail:`http://localhost:3003/nosotros`,
                 data: variableUsers,
                 status: 200
             })
@@ -43,6 +44,7 @@ const userControllerApi ={
                 delete user.dataValues.roles_id;
                 user.file =`http://localhost:3003/images/imagesPerfil/${user.dataValues.file}`;
             return  res.status(200).json({
+                detial:`http://localhost:3003/users/detail/${req.params.id}`,
                 data: user,
                 status: 200
             })
