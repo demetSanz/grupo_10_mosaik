@@ -38,7 +38,7 @@ a:hover{
     color: grey;
     position: absolute;
     top: 15px;
-    padding-left: 450px;
+    margin-left: 450px;
 }
 .simg {
     width: 30%;

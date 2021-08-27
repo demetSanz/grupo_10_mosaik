@@ -73,10 +73,10 @@ window.onload = function(){
         MessagesErrors.innerHTML += `<li> ${errorsRegister[i]} <li>`
         }
     }else{
-       alert('subio con exito');
+       //alert('subio con exito');
      
        
-       // form.submit();
+    form.submit();
        
     }
     })

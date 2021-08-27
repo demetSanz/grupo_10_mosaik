@@ -81,16 +81,24 @@
 
             <div class="control-formulario">
                 <div class="control-payment">
-                <select 
+
+                    <select 
+                    name="roles_id" 
+                    class="control-form-select <%#= locals.errors && errors.payment ? 'is-invalid' : null %>">
+                    <option value="">Usted sera</option>
+                    <option value="<%= roles[1].id %>"> <%= roles[1].name %> </option>
+                    </select>
+                    <!-- desde la linea 84 a la 94 nos sirve para seleccionar todos los roles -->
+                <!-- <select 
                     name="roles_id" 
                     class="control-form-select <%#= locals.errors && errors.payment ? 'is-invalid' : null %>">
                     <option value="">Seleccioná tu rol</option>
-                    <% for (let i = 0; i < roles.length; i++) { %> 
-                    <option value="<%= roles[i].id %>">
-                        <%= roles[i].name %> 
+                    <%# for (let i = 0; i < roles.length; i++) { %> 
+                    <option value="<%#= roles[i].id %>">
+                        <%#= roles[i].name %> 
                     </option>
-                    <% } %> 
-                </select>
+                    <%# } %> 
+                </select> -->
             </div>
             </div>   
 
