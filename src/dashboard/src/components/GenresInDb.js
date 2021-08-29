@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function GenresInDb() {
   return (
     <div className="col-lg-6 mb-4">
@@ -10,6 +11,7 @@ function GenresInDb() {
           </h5>
         </div>
         <div className="card-body">
+          map 
           <div className="row">
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">

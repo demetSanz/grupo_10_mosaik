@@ -4,6 +4,7 @@ const cookies = require ('cookie-parser');// requierimos cookie-parser para trab
 const app = express(); // Llamamos express dentro de la constante app
 const path = require('path');
 const port = 3003; // Colocamos el puerto en una constante para que pueda modificarse facilmente
+const cors = require('cors');
 /******TEST */
 
 
@@ -35,6 +36,8 @@ app.use(express.urlencoded({extended: false}));
 app.listen(port, () =>
     console.log('Servidor corriendo Grupo 10 DH en el puerto ' + port)
 );
+
+app.use(cors());
 
 //middleware de session (proximamente mover a middlewares)
 //Lo que se coloca aqui es obligatorio para que no tire errores, no tiene funcionalidad per se para el uso de la sesion
@@ -68,6 +71,7 @@ app.use ('/users', userApiRoutes);
 //app.use('/test',routertest)
 
 /**********test****** */
+
 
 app.use((req, res, next)=>{
     res.status(404).render('error404');

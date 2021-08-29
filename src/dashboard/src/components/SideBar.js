@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
+import LastProduct from './LastProduct';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
@@ -47,53 +47,22 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Usuarios -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/LastProduct">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Ultimo Usuario</span></Link>
                 </li>
                 {/*<!-- Nav Item - Producto -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/LastProduct">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Ultimo Producto</span></Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
-                </li>
-                
-                {/*<!-- Buscador -->*/}
-                <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/SearchMovies">
-                        <i className="fas fa-search"></i>
-                        <span>Search a movie</span>
-                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
-            {/*<!-- End of Sidebar -->*/}
-
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
+           
+           
             <Switch>
                 <Route exact path="/">
                     <ContentWrapper />
@@ -101,8 +70,8 @@ function SideBar(){
                 <Route path="/GenresInDb">
                     <GenresInDb />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/LastProduct">
+                    <LastProduct />
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
@@ -112,7 +81,7 @@ function SideBar(){
                 </Route>
                 <Route component={NotFound} />
             </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
+
         </React.Fragment>
     )
 }

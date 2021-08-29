@@ -14,7 +14,12 @@ const productControllerApi ={
 
     detailApi: (req,res)=>{
         db.Product
-            .findAll({include:[{association: 'category'}, {association: 'sizes'}]})
+            .findAll({include:[{association: 'category'}, {association: 'sizes'}],
+            order : [
+                ['id', 'ASC'],
+                ],
+          
+        })
             .then(products=>{
                 
                 let arrayPisos =  products.filter(product =>{
