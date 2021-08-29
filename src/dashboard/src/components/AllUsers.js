@@ -1,14 +1,14 @@
 import React,{useState,useEffect} from 'react';
 
 
-function AllProducts(){
-    const [products, setProducts] = useState([]);
+function AllUsers(){
+    const [users, setUsers] = useState([]);
 
     const obtenerDatos = async ()=>{
-        const data = await  fetch('http://localhost:3003/product/apiview')
-        const products = await data.json()
+        const data = await  fetch('http://localhost:3003/users/apiview')
+        const users = await data.json()
        
-        setProducts(products.data);
+        setUsers(users.data);
       
     }
     useEffect(() => {
@@ -19,15 +19,15 @@ function AllProducts(){
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h5 className="m-0 font-weight-bold text-gray-800">Todos los Productos</h5>
+                    <h5 className="m-0 font-weight-bold text-gray-800">Todos los Usuarios</h5>
                 </div>
                 <div className="card-body">
                     <div className="text-center">
                     {
                         
-                        products.map((product , i) =>{
-                          return  <li key = {product + i}>
-                                {product.id} -{product.name}
+                        users.map((user , i) =>{
+                          return  <li key = {user + i}>
+                                {user.id} -{user.name}
                             </li>
                         })
                         
@@ -41,4 +41,4 @@ function AllProducts(){
     )
 }
 
-export default AllProducts;
+export default AllUsers;
