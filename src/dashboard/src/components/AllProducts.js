@@ -22,19 +22,22 @@ function AllProducts(){
                     <h5 className="m-0 font-weight-bold text-gray-800">Todos los Productos</h5>
                 </div>
                 <div className="card-body">
-                    <div className="text-center">
-                    {
+                    <div>
+                        <ul className="list-group list-group-flush">
+                        {
                         
                         products.map((product , i) =>{
-                          return  <li key = {product + i}>
-                                {product.id} -{product.name}
+                          return  <li className="list-group-item" key = {product + i}>
+                               ID: {product.id} - {product.name}
                             </li>
                         })
                         
                     }
+                        </ul>
+                    
                     </div>
                     <p></p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Usuario</a>
+                    
                 </div>
             </div>
         </div>

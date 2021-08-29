@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
 
-
 function LastUser(){
     const [users, setUsers] = useState([]);
 
@@ -27,11 +26,24 @@ function LastUser(){
                 <div className="card-body">
                     <div className="text-center">
                     {
-                       users.length > 0 ? users[users.length -1].name : "Cargando API..."
+                       users.length > 0 ? 
+
+                        <div className="card" >
+                        <img className="card-img-top" src={users[users.length -1].file} /> 
+                        <div className="card-body">
+                            <p className="card-text">{users[users.length -1].email}</p>
+                        </div>
+                        </div>
+
+
+                       : "Cargando API..."
                     }
+
+
+
                     </div>
                     <p></p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Usuario</a>
+                    
                 </div>
             </div>
         </div>

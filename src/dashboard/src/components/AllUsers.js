@@ -22,19 +22,21 @@ function AllUsers(){
                     <h5 className="m-0 font-weight-bold text-gray-800">Todos los Usuarios</h5>
                 </div>
                 <div className="card-body">
-                    <div className="text-center">
+                    <div>
+                    <ul className="list-group list-group-flush">
                     {
                         
                         users.map((user , i) =>{
-                          return  <li key = {user + i}>
-                                {user.id} -{user.name}
+                          return  <li className="list-group-item" key = {user + i}>
+                                ID: {user.id} - {user.email}
                             </li>
                         })
                         
                     }
+                    </ul>
                     </div>
                     <p></p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Usuario</a>
+                    
                 </div>
             </div>
         </div>

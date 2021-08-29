@@ -27,11 +27,19 @@ function LastProduct(){
                 <div className="card-body">
                     <div className="text-center">
                     {
-                        products.length > 0 ? products[products.length -1].name : "Cargando API..."
+                        products.length > 0 ?                       
+                        <div className="card" >
+                        <img className="card-img-top" src={products[products.length -1].image} /> 
+                        <div className="card-body">
+                            <p className="card-text">{products[products.length -1].name }</p>
+                        </div>
+                        </div>
+                        
+                        : "Cargando API..."
                     }
                     </div>
                     <p></p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Usuario</a>
+                    
                 </div>
             </div>
         </div>

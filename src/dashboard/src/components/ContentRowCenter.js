@@ -14,13 +14,9 @@ function ContentRowCenter(){
             <LastProduct />
             {/*<!-- allProduct Product -->*/}
             <AllProducts />
-
-            <AllUsers />
-
             <LastUser />
-           
-             
-            {/*<!-- Categorys -->*/}
+            <AllUsers />
+            {/*<!-- Categories -->*/}
             <Categories />
 
         </div>

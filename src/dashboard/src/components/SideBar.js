@@ -1,5 +1,6 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/mosaik-logo.png';
+import image2 from '../assets/images/mosaikLema.jpg';
 import ContentWrapper from './ContentWrapper';
 import Categories from './Categories';
 import LastProduct from './LastProduct';
@@ -18,7 +19,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-25" src={image} alt="Mosaik"/> <img className="w-50" src={image2} alt="Mosaik"/>
                     </div>
                 </a>
 
@@ -29,14 +30,14 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - Mosaik Productos</span></Link>
+                        <span>Dashboard</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Tablas</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
@@ -46,14 +47,8 @@ function SideBar(){
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Usuarios -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/LastProduct">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Ultimo Producto</span></Link>
-                </li>
-                {/*<!-- Nav Item - Producto -->*/}
-                <li className="nav-item">
+                 {/*<!-- Nav Item - Producto -->*/}
+                 <li className="nav-item">
                     <Link className="nav-link" to="/AllProducts">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Todos los Productos</span></Link>
@@ -62,6 +57,13 @@ function SideBar(){
                     <Link className="nav-link" to="/AllUsers">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Todos los Usuarios</span></Link>
+                </li>
+
+                {/*<!-- Nav Item - Usuarios -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/LastProduct">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Ultimo Producto</span></Link>
                 </li>
 
                 <li className="nav-item">
