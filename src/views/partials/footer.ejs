@@ -24,9 +24,9 @@
       <h2>
     Servicios al cliente</h2>
       <ul class="box h-box">
-        
+        <%if(!locals.userLogged){ %> 
         <li><a href="/users/login"><i class="fas fa-user-lock"></i>Iniciar sesión</a></li>
-        
+        <% } %> 
       </ul>
     </li>
     <li>
