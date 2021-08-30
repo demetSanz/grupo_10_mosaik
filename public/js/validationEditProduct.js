@@ -70,8 +70,8 @@ window.onload = function(){
         MessagesErrors.innerHTML += `<li> ${errorsEdit[i]} <li>`
         }
     }else{
-        alert('subio con exito');
-        //form.submit();
+       // alert('subio con exito');
+        form.submit();
     }
     })
 }
