@@ -240,7 +240,8 @@ html, body {
     color: rgba(0,0,0,.8);
 }
 
-.fa-user{
+.fa-user,
+.fa-cog{
     font-size: 20px;
 
 }
@@ -2149,10 +2150,16 @@ color: #999;
 
 .control-foto{
     width: 100%;
-    padding: 8px 5px;
+    padding: 8px 2px;
     border: 1px solid #bebebe;
     border-radius: 5px;
 
+}
+
+.foto-form{
+    
+    text-align: left;
+    width: 70%;
 }
 
 
@@ -2485,7 +2492,7 @@ div.icon-menu:hover article.modify-profile{ display: block }
 
 .control-foto{
     width: 100%;
-    padding: 8px 5px;
+    padding: 8px 2px;
     border: 1px solid #bebebe;
     border-radius: 5px;
 

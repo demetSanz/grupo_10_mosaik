@@ -4,7 +4,7 @@
     <%- include('./partials/head'); %>
 </head>
 <body>
-    <%- include('./partials/header-login'); %>
+    <%- include('./partials/header-edit'); %>
     <main>
     <div class="contenedor-formularios">
 
@@ -25,13 +25,14 @@
                 <input type="text" name="price" placeholder="Ingresá un precio" id="priceEdit"class="control" value= "<%= product.price %> " >
             </div> 
 
-            <div class="control-formulario">
+            <div class="control-formulario">                
                 <input type="text" name="description" placeholder="descripcion del producto" id="descriptionEdit"class="control" value="<%= product.description %>" >
             </div>
 
             <div class="control-formulario">
+                <label for="imagePerfil" class="foto-form"><i class="fas fa-camera"></i> Modificá la imagen</label>
                 <input type="file" name="image" placeholder="Ingresá una imagen" id="imageEdit" class="control" value="<%= product.description %>" >
-            
+                
             </div> 
 
             <!-- Resolver type="number" -->
