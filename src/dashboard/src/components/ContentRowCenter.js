@@ -14,7 +14,9 @@ function ContentRowCenter(){
             <LastProduct />
             {/*<!-- allProduct Product -->*/}
             <AllProducts />
+            {/*<!-- Last User -->*/}
             <LastUser />
+            {/*<!-- AllUSers -->*/}
             <AllUsers />
             {/*<!-- Categories -->*/}
             <Categories />

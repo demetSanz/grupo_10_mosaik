@@ -29,7 +29,7 @@ function LastProduct(){
                     {
                         products.length > 0 ?                       
                         <div className="card" >
-                        <img className="card-img-top" src={products[products.length -1].image} /> 
+                        <img className="card-img-top" src={products[products.length -1].image} alt="imagen de producto"/> 
                         <div className="card-body">
                             <p className="card-text">{products[products.length -1].name }</p>
                         </div>

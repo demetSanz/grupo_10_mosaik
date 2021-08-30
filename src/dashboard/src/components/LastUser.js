@@ -29,9 +29,9 @@ function LastUser(){
                        users.length > 0 ? 
 
                         <div className="card" >
-                        <img className="card-img-top" src={users[users.length -1].file} /> 
+                        <img className="card-img-top" src={users[users.length -1].file} alt="imagen de usuario" /> 
                         <div className="card-body">
-                            <p className="card-text">{users[users.length -1].email}</p>
+                            <p className="card-text">{users[users.length -1].name}</p>
                         </div>
                         </div>
 

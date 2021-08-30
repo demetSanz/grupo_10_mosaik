@@ -26,7 +26,7 @@ function AllCategories(){
       <div className="card-body">
       <div className="row">
       {
-                        
+       category.length > 0 ?              
        category.map((category , i) =>{
             
           return  <div className="col-lg-6 mb-4" key = {category + i}>
@@ -35,7 +35,7 @@ function AllCategories(){
                      </div>                               
                   </div>
       })                    
-                 
+      :"Cargando API..."           
                         
         }
        

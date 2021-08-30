@@ -25,13 +25,13 @@ function AllUsers(){
                     <div>
                     <ul className="list-group list-group-flush">
                     {
-                        
+                        users.length >0 ?
                         users.map((user , i) =>{
                           return  <li className="list-group-item" key = {user + i}>
                                 ID: {user.id} - {user.email}
                             </li>
                         })
-                        
+                        :"Cargando API..."
                     }
                     </ul>
                     </div>

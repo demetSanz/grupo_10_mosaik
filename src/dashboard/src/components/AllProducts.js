@@ -25,12 +25,13 @@ function AllProducts(){
                     <div>
                         <ul className="list-group list-group-flush">
                         {
-                        
+                        products.length > 0 ?
                         products.map((product , i) =>{
                           return  <li className="list-group-item" key = {product + i}>
                                ID: {product.id} - {product.name}
                             </li>
                         })
+                        :"Cargando API..."
                         
                     }
                         </ul>
