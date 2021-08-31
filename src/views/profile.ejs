@@ -26,6 +26,9 @@
                     <li class="selection-list"><i class="fas fa-money-check-alt"></i>Cambiá tus datos de pago</li>
                     <li class="selection-list"><i class="fas fa-map-marked-alt"></i>Cambiá tus dirección</li>
                     <li class="selection-list"><i class="fas fa-history"></i>Historial de compras</li> -->
+                    <% if (locals.userLogged && locals.user.roles_id == 1) { %>
+                        <a href="http://localhost:3000/" target="_blank" class="selection-list-a"><li class="selection-list"><i class="fas fa-plus"></i>Ir a Dashboard</li></a>
+                        <% } %>
 
                     <% if (locals.userLogged && locals.user.roles_id == 1) { %>
                     <a href="/product/create" class="selection-list-a"><li class="selection-list"><i class="fas fa-plus"></i>Crear producto</li></a>
