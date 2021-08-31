@@ -30,7 +30,7 @@
                 </div> 
                 <span></span>
                 <div class="control-formulario">
-                <input type="text" name="description" placeholder="Descripción del producto" id="description" class="control" value="" >
+                <input type="text" name="description" placeholder="Descripción del producto" id="description" class="control <%= locals.oldData ? oldData.description : null %>" value="<%=locals.oldData ? oldData.description: null %>">
             </div>
 
             <div class="control-formulario">

@@ -55,6 +55,7 @@ const productController ={
             db.Product.create({                                    
                     name: req.body.name,
                     price: req.body.price,
+                    description:req.body.description,
                     image: imageUpload,
                     stock: req.body.stock,
                     brand: req.body.brand,
