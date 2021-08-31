@@ -20,9 +20,9 @@ window.onload = function(){
         name.classList.add('is-invalid');
         errorsRegister.push('El nombre no puede estar vacio');
 
-    }else if (name.value.length < 2){
+    }else if (name.value.length < 5){
         name.classList.add('is-invalid');
-        errorsRegister.push('El nombre debe tener minimo 52 caracteres')
+        errorsRegister.push('El nombre debe tener minimo 5 caracteres')
     }else{
         name.classList.remove('is-invalid');
         name.classList.add('is-valid');
@@ -53,7 +53,7 @@ window.onload = function(){
         errorsRegister.push('Debe ingresar una numero de telefono')
     }else if (celular.value.length < 10){
             celular.classList.add('is-invalid');
-            errorsRegister.push('El numero debe tener 10 caracteres')
+            errorsRegister.push('El numero de telefono  debe tener 10 caracteres')
     }else{
         celular.classList.remove('is-invalid');
         celular.classList.add('is-valid');
