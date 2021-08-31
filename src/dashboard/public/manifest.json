@@ -1,6 +1,6 @@
 {
-  "short_name": "Mosaik API",
-  "name": "Create Mosaik API Sample",
+  "short_name": "Mosaik Dashboard",
+  "name": "Create Mosaik Dashboard Sample",
   "icons": [
     {
       "src": "favicon.ico",
