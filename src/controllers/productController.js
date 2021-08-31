@@ -106,13 +106,30 @@ const productController ={
      /*******metodo para listar y mostrar todos los productos*** */
     detail: (req,res)=>{
 
-
-    db.Product.findAll({include:[{association: 'category'}, {association: 'sizes'}]})
-
+    if(req.query.category){
+        db.Product.findAll({
+            include:[{association: 'category'}, {association: 'sizes'}],
+            where: {category_id: req.query.category}
+        })
         .then(products=>{
-        res.render('listadoProductosSQL',{products:products})
+            let queryExists = 1;
+            res.render('listadoProductosSQL',{products:products,queryExists:queryExists})
         } )      
-        .catch(error=>console.log(error));
+            .catch(error=>console.log(error));
+    } else {
+        db.Product.findAll({
+            include:[{association: 'category'}, {association: 'sizes'}]
+            
+        })
+        .then(products=>{
+            let queryExists = 0;
+            res.render('listadoProductosSQL',{products:products,queryExists:queryExists})
+            } )      
+            .catch(error=>console.log(error));
+    }
+    
+
+        
         
     },
 

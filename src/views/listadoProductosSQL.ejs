@@ -12,6 +12,9 @@
 
       <li><a href="/product/detail">Listado de Productos</a></li>
 
+      <%if(queryExists==1){%>
+      <li><a href="/product/detail?category=<%= products[0].category_id%>"><%= products[0].category.name %></a></li>
+      <%}%>
     </ul>
 
     <article class=producto-main-art>
