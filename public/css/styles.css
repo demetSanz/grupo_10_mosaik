@@ -1338,6 +1338,7 @@ ul.breadcrumb li a:hover {
     margin: 0px auto;
     background-color: white;
     text-align: center;
+    
 }
 
 .producto-img-producto,
@@ -1587,12 +1588,14 @@ ul.breadcrumb li a:hover {
 .producto-div-mobile{
     width: 70%;
     padding-top: 10px;
+    min-width: 600px;
 }
 
 
 .producto-precio-botones{
     width: 30%;
     padding-top: 10px;
+    min-width: 250px;
 
 }
 
