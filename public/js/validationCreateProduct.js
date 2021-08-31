@@ -21,7 +21,7 @@ window.onload = function(){
 
     }else if (product.value.length < 5){
         product.classList.add('is-invalid');
-        errors.push('El campo debe tener minimo 5 caracteres')
+        errors.push('El nombre del producto debe tener minimo 5 caracteres')
     }else{
         product.classList.remove('is-invalid');
         product.classList.add('is-valid');
@@ -61,9 +61,9 @@ window.onload = function(){
     if(brand.value == ""){
         brand.classList.add('is-invalid');
         errors.push('Debe ingresar un nombre de marca')
-    }else if (product.value.length < 5){
+    }else if (brand.value.length < 5){
         brand.classList.add('is-invalid');
-        errors.push('Debe ingresar al menos 5 caracteres')
+        errors.push('nombre de la marca debe tener al menos 5 caracteres')
     }else{
         brand.classList.remove('is-invalid');
         brand.classList.add('is-valid');
